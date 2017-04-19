@@ -1,0 +1,795 @@
+
+@import 'base';
+
+$font_size_min:0.8rem;  // 10px
+$font_size_middle:1.2rem;  //12px
+$font_size_big:1.4rem;  //14px
+$font_size_sbig:1.6rem;  //16px
+$font_size_ssbig:1.8rem;  //18px
+
+$color_mgray:#999;
+$color_gray:#666;
+$color_sgray:#333;
+$color_red:#FF2741;
+$color_main:#fe9600;
+$color_search_bar_bg:#EFF0F2;  // 搜索条背景色
+$color_border:#F6F6F6;
+$color_bg:#F6F6F6;
+
+$height_top_bar:4rem;
+$height_footer:5rem;
+
+
+$ge_img_path:'';
+$ge_img_path:'../img/v4/';
+
+/**
+ * 商品列表--红色小购物车
+ */
+@mixin ge_icon_red_cart($x,$y,$w,$h){
+	background:url('../'+$ge_img_path+'images/icon/icon_red_cart.png') no-repeat $x $y;
+	background-size:$w $h;
+}
+
+/**
+ * 弹窗--ok标志
+ */
+@mixin ge_icon_layer_ok($x,$y,$w,$h){
+  background:url('../'+$ge_img_path+'images/icon/layer_ok.png') no-repeat $x $y;
+  background-size:$w $h;
+}
+
+
+@mixin ge_icon_layer_waiting($x,$y,$w,$h){
+  background:url('../'+$ge_img_path+'images/icon/layer_waiting.png') no-repeat $x $y;
+  background-size:$w $h;
+}
+
+/**
+ * 字体大小
+ * 
+ */
+.ge_fs_small{
+  font-size: $font_size_min;
+}
+.ge_fs_middle{
+  font-size:$font_size_middle;
+}
+.ge_fs_big{
+  font-size: $font_size_big;
+}
+.ge_fs_sbig{
+  font-size: $font_size_sbig;
+}
+
+
+/**
+ * 背景色
+ * 灰 ge_bg_gray
+ * 白 ge_bg_white
+ */
+.ge_bg_gray{
+  background-color:$color_bg; 
+}
+.ge_bg_white{
+	background-color:white;
+}
+.ge_bg_black{
+  &[opacity='0.5'] {
+    background-color:rgba(0,0,0,0.5);
+  }
+}
+.ge_bg_main{
+  &[opacity='0.5'] {
+    background-color:rgba(254,150,0,0.5);
+  }
+  &[opacity='1'] {
+    background-color:rgba(254,150,0,1);
+  }
+}
+
+
+/**
+ * 字体颜色
+ * 浅灰 ge_font_mgray
+ * 灰 ge_font_gray
+ * 深灰 ge_font_sgray
+ * 红色 ge_font_red
+ * 主色 ge_font_main
+ */
+.ge_font_mgray{
+	color:$color_mgray;
+}
+.ge_font_gray{
+	color:$color_gray;
+}
+.ge_font_sgray{
+	color:$color_sgray;
+}
+.ge_font_red{
+	color:$color_red;
+}
+.ge_font_main{
+  color: $color_main;
+}
+.ge_font_wx{
+  color:#71BC62;
+}
+.ge_font_alipay{
+  color:#02A0E8;
+}
+.ge_font_white{
+  color:#fff;
+}
+
+/**
+ * 文字位置
+ */
+.ge_text_center{
+  text-align: center;
+}
+.ge_text_left{
+  text-align: left;
+}
+.ge_text_right{
+  text-align: right;
+}
+
+/**
+ * 圆角 0.5rem
+ */
+.ge_border_radius{
+  border-radius:0.5rem;
+  overflow: hidden;
+}
+
+/**
+ * 外边距
+ * 上 ge_top_margin
+ * 下 ge_bottom_margin
+ * 左  ge_left_margin
+ * 右  ge_right_margin
+ * 四周  ge_margin
+ */
+.ge_bottom_margin{
+  margin-bottom:0.5rem;
+}
+.ge_top_margin{
+  margin-top:0.5rem;
+}
+.ge_left_margin{
+  margin-left: 0.5rem;
+}
+.ge_right_margin{
+  margin-right:0.5rem;
+}
+.ge_margin{
+  margin:0.5rem;
+}
+
+/**
+ * 内边距
+ * 上 ge_top_padding
+ * 下 ge_bottom_padding
+ * 左 ge_left_padding
+ * 右 ge_right_padding
+ * 四周  ge_padding
+ */
+.ge_top_padding{
+  padding-top:0.5rem;
+}
+.ge_bottom_padding{
+  padding-bottom:0.5rem;
+}
+.ge_left_padding{
+  padding-left:0.5rem;
+}
+.ge_right_padding{
+  padding-right:0.5rem;
+}
+.ge_padding{
+  padding:0.5rem;
+}
+
+
+/**
+ * 边框
+ * 上 ge_top_border
+ * 右 ge_right_border
+ * 下 ge_bottom_border
+ * 左 ge_left_border
+ * 四周 ge_border
+ */
+.ge_bottom_border{
+  border-bottom:1px solid $color_border;
+}
+.ge_top_border{
+  border-top:1px solid $color_border;
+}
+.ge_left_border{
+  border-left:1px solid $color_border;
+}
+.ge_right_border{
+  border-right:1px solid $color_border;
+}
+.ge_border{
+  border:1px solid $color_border;
+}
+
+
+/**
+ * 去除所有样式
+ */
+.ge_no_style{
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  -webkit-appearance: none;
+  outline: none;
+  border:none;
+  outline: none;
+  background: none;
+}
+
+
+/**
+ * 布局--盒模型（旧）
+ */
+.ge_wbox{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+}
+
+/**
+ * 旧-子元素排列顺序
+ * 左右排列  horizontal（默认）
+ * 上下排列  vertical
+ */
+.ge_wbox_vertical{
+	-webkit-box-orient:vertical;
+	-moz-box-orient:vertical;
+	-o-box-orient:vertical;
+	box-orient:vertical;
+}
+
+/**
+ * 旧-子元素占用所有剩余空间
+ */
+.ge_flex_1{
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+/**
+ * 设置或检索对象的盒模型组成模式
+ * 标准盒模型值：content-box  不包含padding和border
+ * 怪异盒模型值：border-box  包含padding和border
+ */
+.ge_bbox{
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+/**
+ * 一行显示
+ */
+.ge_line1{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+/**
+ * 两行显示
+ * -webkit-line-clamp是一个不规范的属性，用来显示一个块元素显示的文本行数
+ */
+.ge_line2{
+  @extend .ge_wbox,.ge_wbox_vertical;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:2;
+}
+
+/**
+ * 旧-居中
+ */
+.ge_ccenter{
+  @extend .ge_wbox;
+  -webkit-box-align:center;
+  -moz-box-align:center;
+  box-align:center;
+  -webkit-box-pack:center;
+  -moz-box-pack:center;
+  box-pack:center;
+}
+/**
+ * 旧-垂直居中
+ */
+.ge_vcenter{
+  @extend .ge_wbox;
+  -webkit-box-align:center;
+  -moz-box-align:center;
+  box-align:center;
+}
+/**
+ * 旧-水平居中
+ */
+.ge_acenter{
+  @extend .ge_wbox;
+  -webkit-box-pack:center;
+  -moz-box-pack:center;
+  box-pack:center;
+}
+
+
+/**
+ * 内容区
+ * 最大宽度 640px
+ */
+.ge_wrapper{
+	width:100%;
+	margin:0 auto;
+	max-width:640px;
+}
+
+/**
+ * body
+ */
+.ge_body{
+	width:100%;
+	height:auto;
+}
+
+/**
+ * header
+ */
+header.ge_header{
+	height:$height_top_bar;
+	width:100%;
+  .ge_header_container{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+		height: $height_top_bar;
+		border-bottom:1px solid $color_border;
+		background: white;
+	}
+}
+
+
+@mixin ge_footer_icon($icon_name){
+  &:before{
+    background:url('../'+$ge_img_path+'images/icon/'+$icon_name+'.png') no-repeat center center;
+    background-size:2rem;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2rem;
+  }
+}
+
+
+/**
+ * footer
+ */
+footer.ge_footer{
+	width:100%;
+	height:$height_footer;
+	.ge_footer_container{
+		position: fixed;
+		bottom: 0;
+    z-index: 9;
+		left: 0;
+		right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+		height: $height_footer;
+		border-top:1px solid $color_border;
+		// background:white;
+    &.no_border{
+      border-top:0;
+    }
+    @extend .ge_wbox;
+    .ge_footer_nav{
+      @extend .ge_no_style,.ge_flex_1;
+      display: block;
+      color:$color_gray;
+      text-align: center;
+      padding-top:1rem;
+      &.ge_footer_home{
+        @include ge_footer_icon(foot_icon_home);
+      }
+       &.ge_footer_classify{
+        @include ge_footer_icon(foot_icon_classify);
+      }
+       &.ge_footer_sale{
+        @include ge_footer_icon(foot_icon_sale);
+      }
+       &.ge_footer_cart{
+        @include ge_footer_icon(foot_icon_cart);
+      }
+       &.ge_footer_user{
+        @include ge_footer_icon(foot_icon_user);
+      }
+    }
+	}
+}
+
+
+/**
+ * iconfont
+ * 引用iconfont.js
+ */
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+
+/**
+ * 控制图片比例
+ */
+.ge_square_img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    &.ge_circle{
+    	border-radius:100%;
+    }
+    &.ge_ratio_35{
+      &:before{
+        content: '';
+        width: 100%;
+        display: block;
+        padding-top:35%;
+      }
+    }
+    &:before{
+    	content: '';
+    	width: 100%;
+    	display: block;
+    	padding-top:100%;
+    }
+    img.square{
+  		position:absolute;
+  		left: 0;
+  		top: 0;
+     	width: 100%;
+     	height: 100%;
+    }
+}
+/**
+ * tip img
+ */
+.ge_tip_img{
+  position: absolute;
+  width:25%;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+/**
+ * 不控制图片比例
+ */
+.ge_auto_img{
+	width:100%;
+	position:relative;
+	img.ge_img_auto{
+		width: 100%;
+		display: block;
+	}
+}
+
+/**
+ * 绝对定位的图片！！！
+ */
+.ge_img_absolute{
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * 标题：
+ * 【-----XXXX------】
+ */
+.ge_center_title{
+  padding:1rem;
+  margin: 2rem;
+  color:$color_sgray;
+  font-size: $font_size_sbig;
+  text-align: center;
+  border-bottom:1px solid $color_border;
+  height: 0.01rem;
+  span{
+    position:relative;
+    display: inline-block;
+    background-color:white;
+    padding:0 1rem;
+  }
+}
+
+
+/**
+ * 行内按钮
+ * 颜色自配
+ */
+
+@mixin ge_button_min($c,$size){
+  color: $c;
+  border:1px solid $c;
+  @extend .ge_border_radius;
+  padding:0.5rem 1rem;
+  font-size:$size;
+  display: inline-block;
+}
+
+@mixin ge_button_big($c,$size,$bg){
+  @extend .ge_border_radius,.ge_no_style;
+  color: $c;
+  border:1px solid $c;
+  text-align: center;
+  position:absolute;
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom:2rem;
+  margin: 0 auto;
+  height: 5rem;
+  line-height: 5rem;
+  background-color:white;
+  font-size:$size;
+  display: block;
+  background-color:$bg;
+}
+
+.ge_btn_big{
+  @include ge_button_big($color_main,$font_size_sbig,white);
+}
+.ge_btn_big_shixin{
+  @include ge_button_big(white,$font_size_sbig,$color_main); 
+}
+
+/**
+ * 下拉框条
+ * ge_select_bar
+ */
+.ge_select_bar{
+  @extend .ge_wbox,.ge_top_border;
+  font-size: $font_size_big;
+  padding:1rem 0;
+  color:$color_sgray;
+  .ge_select_name{
+    @extend .ge_flex_1;
+  }
+  select{
+    @extend .ge_no_style;
+    direction:rtl;
+    option{
+      direction: ltr;
+    }
+  }
+}
+
+/**
+ * 公用-网格（新）
+ * 使用 float
+ * 一行一列 高/宽 = 19% 142.5/750 (默认)
+ * 一行两列 19% * 2
+ *
+ * .ge_gird_24  
+ * 一行一列 高/宽= 24% 180/750
+ */
+.ge_grid{
+  width: 100%;
+  overflow: hidden;
+  @extend .ge_top_border,.ge_bg_white;
+  &.ge_gird_24{
+    .ge_g_item{
+      width: 100%;
+      float: left;
+      position:relative;
+      border-left:1px solid $color_border;
+      border-right:1px solid $color_border;
+      @extend .ge_bottom_border,.ge_bbox;
+      &:before{
+        content: '';
+        display: block;
+        padding-top:24%;
+      }
+      &.ge_g_item_2{
+        width: 50%;
+        &:before{
+          content: '';
+          display: block;
+          padding-top:24% * 2;
+        }
+      }
+      &.ge_g_item_3{
+        width: 33.33333%;
+        &:before{
+          content: '';
+          display: block;
+          padding-top:24% * 3;
+        }
+      }
+      .ge_g_item_con{
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .ge_g_item{
+    width: 100%;
+    float: left;
+    position:relative;
+    border-left:1px solid $color_border;
+    border-right:1px solid $color_border;
+    @extend .ge_bottom_border,.ge_bbox;
+    &:before{
+      content: '';
+      display: block;
+      padding-top:19%;
+    }
+    &.ge_g_item_2{
+      width: 50%;
+      &:before{
+        content: '';
+        display: block;
+        padding-top:19% * 2;
+      }
+    }
+    &.ge_g_item_3{
+      width: 33.33333%;
+      &:before{
+        content: '';
+        display: block;
+        padding-top:19% * 3;
+      }
+    }
+    .ge_g_item_con{
+      position:absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+
+/**
+ * tab 
+ */
+.ge_tab_wrap{
+  @extend .ge_bbox;
+  padding: 0.5rem;
+  .ge_tab{
+    &[w='0.5']{
+      width: 50%;
+    }
+    @extend .ge_acenter;
+    width: 100%;
+    border:1px solid $color_main;
+    .ge_item{
+      padding: 0.5rem 0;
+      text-align: center;
+      &.curr{
+        background:$color_main;
+        color:white;
+      }
+    }
+  }
+  .ge_tab_content{
+    .ge_tab_content_item{
+      display: none;
+      overflow: hidden;
+      &.curr{
+        display: block;
+      }
+    }
+  }
+}
+
+
+/**
+ * ge_back_top
+ */
+.ge_back_top{
+  position:fixed;
+  bottom:1rem;
+  right: 1rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  z-index: 99;
+  background:rgba(255,255,255,0.4);
+  border-radius:100%;
+  .icon{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/**
+ * ge_check_list
+ */
+.ge_check_list{
+  .ge_check_list_item{
+    .check_icon_wrap{
+      position:relative;
+      .check_icon{
+        position:absolute;
+        top: 0rem;
+        left: 0;
+        bottom:0;
+        right:0;
+        margin:auto;
+      }
+    }
+    &.curr{
+      .check_icon_wrap{
+        .check_icon{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * 配合第三方插件使用layer
+ * ge_layer_ok
+ */
+.ge_layer_ok{
+  .layui-m-layercont{
+    @include ge_icon_layer_ok(center,0,3rem,3rem)
+    margin-top:1.5rem;
+  }
+  .layui-m-layerbtn{
+    background-color:white;
+    span[yes]{
+      color:$color_gray;
+    }
+  }
+}
+
+.ge_layer_waiting{
+  .layui-m-layercont{
+    @include ge_icon_layer_waiting(center,0,3rem,3rem)
+    margin-top:1.5rem;
+  }
+  .layui-m-layerbtn{
+    background-color:white;
+    span[yes]{
+      color:$color_gray;
+    }
+  }
+}
+
+/**
+ * 一排显示2个文字
+ */
+.ge_2str{
+  font-size:1.4rem;
+  width: 2.8rem;
+  display: inline-block;
+}

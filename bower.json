@@ -1,0 +1,10 @@
+{
+  "name": "webapp",
+  "private": true,
+  "dependencies": {
+    "jquery": "1.9.1",
+    "slick-carousel": "^1.6.0",
+    "Swiper": "swiper#3.3.1",
+    "layer": "^3.0.3"
+  }
+}

@@ -1,0 +1,236 @@
+
+/**
+ * 兼容性参考：http://css.doyoe.com/
+ * 项目公用模块
+ * 命名规则:ge-[name]
+ */
+
+@import "reset";
+@import "page/ge-mart"; // 超市页面
+
+
+
+
+/**
+ * 设置基础变量
+ */
+$color-bg:#f1f1f1;
+$color-main:#fe9600;
+
+body{
+	background:$color-bg;
+}
+
+
+
+// iphone4/5
+@media screen and (max-width: 320px) {
+    body{font-size: 14px;}
+}
+
+// iphone6
+@media screen and (min-width: 321px) and (max-width: 413px) {
+    body{font-size: 16px;}
+}
+
+// iphone6P
+@media screen and (min-width: 414px) and (max-width: 639px) {
+    body{font-size: 17px;}
+}
+
+// 其他
+@media screen and (min-width: 640px) {
+    body{font-size: 18px;}
+}
+
+
+/**
+ * 一像素边框
+ */
+
+
+/**
+ * flexbox布局
+ * IOS可以兼容最新的flex布局
+ * android4.4以下，只能兼容flexbox布局
+ * 兼容写法
+ */
+.ge-flex{
+	display:flex; // 不兼容android4.4-
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-flexbox;
+}
+
+/**
+ * flex布局-子元素垂直排列
+ */
+.ge-flex-ver{
+	flex-direction:column;
+	-webkit-flex-direction:column;
+	-webkit-box-orient:vertical;
+	-moz-box-orient:vertical;
+}
+
+/**
+ * flex布局-不换行
+ */
+.ge-flex-nowrap{
+	flex-wrap:nowrap;
+	-webkit-flex-wrap:nowrap;
+}
+
+
+/**
+ * flex-水平居中
+ */
+.ge-flex-hc{
+	justify-content:center;
+	-webkit-justify-content:center;
+	box-pack:center;
+	-webkit-box-pack:center;
+	-moz-box-pack:center;
+}
+
+
+
+/**
+ * flex布局-垂直居中
+ */
+.ge-flex-vc{
+	align-items:center;
+	-webkit-align-items:center;
+	box-align:center;
+	-webkit-box-align:center;
+	-moz-box-align:center;
+}
+
+/**
+ * flex布局-不定宽高的居中
+ */
+.ge-flex-cc{
+	@extend .ge-flex-vc,.ge-flex-hc;
+}
+
+/**
+ * flex布局-占比
+ */
+@mixin ge-flex-grow($num){
+	flex:$num;
+	-webkit-flex:$num;
+	box-flex:$num;
+	-webkit-box-flex:$num;
+	-moz-box-flex:$num
+}
+.ge-flex-1{
+	@include ge-flex-grow(1);
+}
+
+
+/**
+ * 绝对定位-不定宽高的居中
+ */
+.ge-cc{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+
+/**
+ * 不定宽高的正方形占位
+ * 适用正方形图片占位
+ */
+.ge-square-box{
+	position:relative;
+	overflow: hidden;
+	width:100%;
+	&:before{
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+	img{
+		position:absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+}
+
+
+/**
+ * 一行省略
+ */
+.ge-line-one{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/**
+ * 两行省略
+ */
+.ge-line-two{
+	@extend .ge-flex;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:2;
+}
+
+/**
+ * 浮动布局
+ */
+.ge-fr{
+	// float:right;
+}
+
+/**
+ * 公用商品列表
+ * ge-goods-list
+ */
+.ge-goods-list{
+	overflow:hidden;
+	.ge-list-item{
+		width: 3.65rem;
+		background:white;
+		float: left;
+		margin-right:0.2rem;
+		margin-bottom:0.2rem;
+		&:nth-child(even){
+			margin-right: 0;
+		}
+		.ge-pic{}
+		.ge-name{
+			font-size: 0.26rem;
+			line-height: 0.4rem;
+			height: 0.78rem;
+			padding:0.04rem 0.16rem;
+			@extend .ge-line-two;
+			i{
+				color:$color-main;
+				font-style: normal;
+				font-size: 0.2rem;
+				border:1px solid $color-main;
+			}
+		}
+		.ge-goods-data{
+			padding:0.2rem 0.15rem;
+			.ge-goods-price{
+				color:$color-main;
+				font-size:0.3rem;
+			}
+			.ge-data{
+				color:#999;
+				font-size: 0.22rem;
+			}
+		}
+	}
+}
+

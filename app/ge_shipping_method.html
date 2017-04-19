@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>配送方式</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/Swiper/dist/css/swiper.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <!-- endbuild -->
+  </head>
+  <body class="ge_bg_gray">
+    <div class="ge_wrapper">
+        <!-- 支付方式[ -->
+        <div class="shipping_method ge_bg_white ge_bottom_margin  ge_padding ge_bbox">
+            <!-- title -->
+            <div class="title_box ge_padding">
+                <svg class="icon ge_font_main" aria-hidden="true">
+                  <use xlink:href="#icon-zhifu"></use>
+                </svg>
+                <span>支付方式</span>
+            </div>
+            <!-- 商品图片列表 -->
+            <div class="goods_list">
+                <div class="goods_list_item ">
+                    <div class="ge_square_img ge_border ge_border_radius">
+                        <img src="images/demo.png" alt="" class="square">
+                    </div>
+                </div>
+                <div class="goods_list_item ">
+                    <div class="ge_square_img ge_border ge_border_radius">
+                        <img src="images/demo.png" alt="" class="square">
+                    </div>
+                </div>
+                <div class="goods_list_item ">
+                    <div class="ge_square_img ge_border ge_border_radius">
+                        <img src="images/demo.png" alt="" class="square">
+                    </div>
+                </div>
+            </div>
+            <!-- 支付方式 -->
+            <div class="button_box">
+                <a href="javascript:;" class="button_item">在线支付</a>
+            </div>
+        </div> 
+        <!-- 支付方式] -->
+
+        <!-- 配送方式[ -->
+        <div class="shipping_method ge_bg_white ge_bottom_margin  ge_padding ge_bbox">
+            <!-- title -->
+            <div class="title_box ge_padding">
+                <svg class="icon color_green" aria-hidden="true">
+                  <use xlink:href="#icon-peisongfangshi"></use>
+                </svg>
+                <span>配送方式</span>
+            </div>
+            <!-- ***********快递运输/门店自提 两种情况************* -->
+            <div class="goods_list">
+                <div class="goods_list_item ">
+                    <div class="ge_square_img ge_border ge_border_radius">
+                        <img src="images/demo.png" alt="" class="square">
+                    </div>
+                </div>
+                <div class="goods_list_item ">
+                    <div class="ge_square_img ge_border ge_border_radius">
+                        <img src="images/demo.png" alt="" class="square">
+                    </div>
+                </div>
+            </div>
+            <!-- 支付方式 -->
+            <div class="button_box is_radio_button">
+                <a href="javascript:;" class="button_item current">快递运输</a>
+                <a href="javascript:;" class="button_item">门店自提</a>
+            </div>
+
+            <!-- ***********快递运输 1种情况************* -->
+            <div class="goods_list">
+                <div class="goods_list_item ">
+                    <div class="ge_square_img ge_border ge_border_radius">
+                        <img src="images/demo.png" alt="" class="square">
+                    </div>
+                </div>
+            </div>
+            <!-- 支付方式 -->
+            <div class="button_box ">
+                <a href="javascript:;" class="button_item">快递运输</a>
+            </div>
+
+            <!-- ***********门店自提 1种情况************* -->
+            <div class="goods_list">
+                <div class="goods_list_item ">
+                    <div class="ge_square_img ge_border ge_border_radius">
+                        <img src="images/demo.png" alt="" class="square">
+                    </div>
+                </div>
+            </div>
+            <!-- 支付方式 -->
+            <div class="button_box ">
+                <a href="javascript:;" class="button_item">门店自提</a>
+            </div>
+            <!-- ************自提地点 下拉列表**************** -->
+            <div class="ge_select_bar">
+                <p class="ge_select_name">自提地点</p>
+                <select name="location" id="" >
+                    <option value="0">新街口</option>
+                    <option value="1">珠江路</option>
+                    <option value="2">仙林金鹰</option>
+                </select>
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-gengduo"></use>
+                </svg>
+            </div>
+            <!-- ************自提时间 下拉列表**************** -->
+            <div class="ge_select_bar">
+                <p class="ge_select_name">自提时间</p>
+                <p class="ge_select_time ge_right_padding" id='datapicker'>2017-3-30</p>
+                <!-- <input type="date">                 -->
+            </div>
+
+        </div>
+        <!-- 配送方式] -->
+
+    </div>
+    <footer class="ge_footer">
+        <div class="ge_footer_container no_border">
+            <a href="#" class="ge_btn_big">保存</a>        
+        </div>
+    </footer>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/Swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="scripts/iconfont.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    
+    
+    <!-- endbuild -->
+  </body>
+</html>
