@@ -5,10 +5,32 @@
 
 $color-nav:#363636;
 
+
+
+/**
+ * 超市特色购
+ */
+.ge-mart-grid{
+	overflow: hidden;
+	background:white;
+	.grid-wrap{
+		overflow: hidden;
+		.grid-item{
+			float: left;
+			&.grid-item-2{
+				width: 50%;
+			}
+		}
+	}
+}
+
+
+/**
+ * 超市导航
+ */
 .ge-mart-nav{
 	padding:0.4rem 0 0.3rem;
 	background:white;
-	margin-bottom:0.2rem;
 	.nav-item{
 		width: 1.2rem;
 		margin-right: 0.35rem;
@@ -25,7 +47,19 @@ $color-nav:#363636;
 			text-align: center;
 			padding-top:0.25rem;
 			color:$color-nav;
-
 		}
+	}
+}
+
+
+/**
+ * 超市页面轮播
+ * 
+ */
+.ge-mart-banner{
+	background:white;
+	.banner-item{
+		width: 7.5rem;
+		height: 2.72rem;
 	}
 }

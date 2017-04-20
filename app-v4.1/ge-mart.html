@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ge-mart</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1" >
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
 	<!-- build:css styles/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
 	<link rel="stylesheet" href="/bower_components/Swiper/dist/css/swiper.css" />
+	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -19,46 +20,75 @@
 
 
 	<!-- 搜索:start -->
+	<div class="ge-comm-gray-search">
+		<div class="search-wrap">
+			<div class="search-icon">
+				<svg class="icon iconfont" aria-hidden="true">
+				  <use xlink:href="#icon-sousuo"></use>
+				</svg>
+			</div>
+			<form action="" class="search-input">
+				<input type="text" placeholder="请输入您要搜索的商品名称" type="search">
+			</form>
+		</div>
+	</div>
 	<!-- 搜索:end -->
 	<!-- 轮播:start -->
+	<div class="ge-mart-banner">
+		<div class="ge-comm-banner">
+			<div class="banner-wrap ge-flex">
+				<div class="banner-item">
+					<div class="ge-max-box">
+						<img data-src="images/banner.jpeg" alt="" class="swiper-lazy">
+					</div>
+				</div>
+				<div class="banner-item">
+					<div class="ge-max-box">
+						<img data-src="images/banner.jpeg" alt="" class="swiper-lazy">
+					</div>
+				</div>
+			</div>
+			<div class="banner-dots"></div>
+		</div>
+	</div>
 	<!-- 轮播:end -->
 	<!-- 导航:start -->
-	<div class="ge-mart-nav ge-flex">
-		<div class="nav-item ">
-			<div class="nav-icon ge-square-box">
-				<img src="images/url/1.png" alt="">
+	<div class="ge-mart-nav ge-flex ge-group">
+		<div class="nav-item " >
+			<div class="nav-icon ge-square-box ge-lazy-pic">
+				<img data-original="images/url/1.png" alt="">
 			</div>
 			<p class="nav-name ge-line-one">
 				专柜扫货
 			</p>
 		</div>
 		<div class="nav-item ">
-			<div class="nav-icon ge-square-box">
-				<img src="images/url/2.png" alt="">
+			<div class="nav-icon ge-square-box ge-lazy-pic">
+				<!-- <img data-original="images/url/2.png" alt=""> -->
 			</div>
 			<p class="nav-name ge-line-one">
 				积分兑换
 			</p>
 		</div>
 		<div class="nav-item ">
-			<div class="nav-icon ge-square-box">
-				<img src="images/url/3.png" alt="">
+			<div class="nav-icon ge-square-box ge-lazy-pic">
+				<img data-original="images/url/3.png" alt="">
 			</div>
 			<p class="nav-name ge-line-one">
 				外购
 			</p>
 		</div>
 		<div class="nav-item ">
-			<div class="nav-icon ge-square-box">
-				<img src="images/url/4.png" alt="">
+			<div class="nav-icon ge-square-box ge-lazy-pic">
+				<img data-original="images/url/4.png" alt="">
 			</div>
 			<p class="nav-name ge-line-one">
 				尾货集市
 			</p>
 		</div>
 		<div class="nav-item ">
-			<div class="nav-icon ge-square-box">
-				<img src="images/url/5.png" alt="">
+			<div class="nav-icon ge-square-box ge-lazy-pic">
+				<img data-original="images/url/5.png" alt="">
 			</div>
 			<p class="nav-name ge-line-one">
 				海外购1
@@ -67,58 +97,281 @@
 	</div>
 	<!-- 导航:end -->
 	<!-- 特色购:start -->
-
+	<div class="ge-title">
+		<p class="title-name">
+			超市特色购
+			<span class="title-sub">
+				集你所需
+			</span>
+		</p>
+		<p class="title-more">
+			<a href="javascript:;">更多</a>
+		</p>
+	</div>
+	<div class="ge-mart-grid ge-group">
+		<div class="grid-wrap">
+			<div class="grid-item grid-item-2">
+				<div class="ge-square-box ge-lazy-pic">
+					<img data-original="images/ad1.jpg" alt="">
+				</div>
+			</div>
+			<div class="grid-item grid-item-2">
+				<div class="ge-square-box ge-lazy-pic">
+					<!-- <img data-original="images/ad2.jpg" alt=""> -->
+				</div>
+			</div>
+			<div class="grid-item grid-item-2">
+				<div class="ge-square-box ge-lazy-pic">
+					<img data-original="images/ad2.jpg" alt="">
+				</div>
+			</div>
+			<div class="grid-item grid-item-2">
+				<div class="ge-square-box ge-lazy-pic">
+					<img data-original="images/ad1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- 特色购:end -->
 	<!-- 促销会场:start -->
+	<div class="ge-title ge-group">
+		<p class="title-name">
+			促销会场
+		</p>
+		<p class="title-more">
+			<a href="javascript:;">更多</a>
+		</p>
+	</div>
+	<div class="ge-comm-grid ge-group">
+		<div class="grid-wrap">
+			<div class="grid-item-2">
+				<div class="ge-max-box ge-lazy-pic">
+					<!-- <img src="" data-original="images/ad11.jpg" alt=""> -->
+				</div>
+			</div>
+			<div class="grid-item-2">
+				<div class="ge-max-box ge-lazy-pic">
+					<img src="" data-original="images/ad11.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="grid-wrap">
+			<div class="grid-item-3">
+				<div class="ge-max-box ge-lazy-pic">
+					<img src="" data-original="images/ad22.png" alt="">
+				</div>
+			</div>
+			<div class="grid-item-3">
+				<div class="ge-max-box ge-lazy-pic">
+					<img src="" data-original="images/ad22.png" alt="">
+				</div>
+			</div>
+			<div class="grid-item-3">
+				<div class="ge-max-box ge-lazy-pic">
+					<!-- <img src="" data-original="images/ad22.png" alt=""> -->
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- 促销会场:end -->
 	<!-- 商品列表:start -->
-	<ul class="ge-goods-list">
-		<li class="ge-list-item">
-			<div class="ge-pic ge-square-box">
-				<img src="images/goods.jpeg" alt="">
+	<ul class="ge-comm-list">
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
 			</div>
-			<p class="ge-name">
-				<i>专柜商品</i>
-				兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
-			</p>
-			<div class="ge-goods-data">
-				<span class="ge-goods-price">¥205.00</span>
-				<del class="ge-data">¥569</del>
-				<span class="ge-data ge-fr">2313人评价</span>
-			</div>
-		</li>
-		<li class="ge-list-item">
-			<div class="ge-pic ge-square-box">
-				<img src="images/goods.jpeg" alt="">
-			</div>
-			<p class="ge-name">
-				<i>专柜商品</i>
-				兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
-			</p>
-			<div class="ge-goods-data">
-				<span class="ge-goods-price">¥205.00</span>
-				<del class="ge-data">¥569</del>
-				<span class="ge-data ge-fr">2313人评价</span>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥2035.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
 			</div>
 		</li>
-		<li class="ge-list-item">
-			<div class="ge-pic ge-square-box">
-				<img src="images/goods.jpeg" alt="">
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
 			</div>
-			<p class="ge-name">
-				<i>专柜商品</i>
-				兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
-			</p>
-			<div class="ge-goods-data">
-				<span class="ge-goods-price">¥205.00</span>
-				<del class="ge-data">¥569</del>
-				<span class="ge-data ge-fr">2313人评价</span>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
+			</div>
+		</li>
+		<li class="comm-item">
+			<div class="comm-pic ge-square-box ge-lazy-pic">
+				<img data-original="images/goods.jpeg" alt="">
+			</div>
+			<div class="comm-text">
+				<p class="text-name">
+					<i>专柜商品</i>
+					兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+				</p>
+				<div class="text-data">
+					<p class="data-new-price">¥205.00</p>
+					<p class="data-old-price"><del>￥569</del></p>
+					<p class="data-eval-num">2314人评价</p>
+				</div>
 			</div>
 		</li>
 	</ul>
 	<!-- 商品列表:end -->
 
-
+	
 
 	<!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -126,12 +379,14 @@
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <script src="/bower_components/Swiper/dist/js/swiper.js"></script>
     <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+    <script src="iconfont/iconfont.js"></script>
     <script src="scripts/css-base.js"></script>
-    <script src="scripts/iconfont.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
