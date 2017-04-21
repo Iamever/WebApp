@@ -1,40 +1,49 @@
 
 $(".ge-lazy-pic img").lazyload({effect : "fadeIn"});
 
-var banner = new Swiper('.ge-comm-banner', {
+// $("#sticker").sticky({topSpacing:0});
+
+
+
+var banner = new Swiper('.banner-swiper-container', {
 	autoplay: 5000,
-	wrapperClass :'banner-wrap',
-	slideClass :'banner-item',
+	wrapperClass :'banner-swiper-wrap',
+	slideClass :'banner-swiper-item',
+	pagination : '.banner-swiper-dots',
 	lazyLoading : true,
-	pagination : '.banner-dots',
-	paginationClickable :true
+	paginationClickable :true,
+	loop:true,
 })
 
+var s_nav = new Swiper('.nav-swiper-container',{
+	wrapperClass :'nav-swiper-wrap',
+	slideClass :'nav-swiper-item',
 
+	// freeMode : true,
+	slidesPerView : 'auto',
+	// spaceBetween :25,
+	// slidesOffsetAfter:20,
+	// slidesOffsetBefore:20,
 
-// <div class="ge-mart-banner">
-// 		<div class="ge-comm-banner">
-// 			<div class="banner-item">
-// 				<div class="ge-max-box">
-// 					<img data-lazy="images/banner.jpeg" alt="">
-// 				</div>
-// 			</div>
-// 			<div class="banner-item">
-// 				<div class="ge-max-box">
-// 					<img data-lazy="images/banner.jpeg" alt="">
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</div>
+	// watchSlidesProgress :true,
+	// watchSlidesVisibility : true,
 
+	// slideToClickedSlide:true,
 
-// $('.ge-comm-banner').slick({
-// 	autoplay:false,
-// 	arrows:false,
-// 	dots:true,
-// 	dotsClass:'ge-dots',
-// 	speed:500,
-// 	// infinite:false,// 循环
-// 	// fade:true,// 淡入淡出
-// });
+	// loop:true,
+	// loopedSlides:7,
 
+	// centeredSlides : true,
+	onClick: function(swiper){
+    	swiper.slideTo(swiper.clickedIndex);
+
+    	for (var i = 0; i < swiper.slides.length ; i++) {
+	        swiper.slides[i].className ='nav-swiper-item'; 
+	    }
+	    	swiper.clickedSlide.className +=" "+ 'nav-swiper-active'; 
+    },
+    onInit:function (swiper) {
+    	swiper.slideTo(0);
+    	swiper.slides[0].className +=" "+ 'nav-swiper-active'; 
+    }
+})

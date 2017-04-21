@@ -4,6 +4,7 @@
  * 项目公用模块
  * 命名规则:ge-[name]
  */
+
 @import "reset","page/ge-mart";
 
 
@@ -322,7 +323,7 @@ body{
  * sub-title
  * more
  */
-.ge-title{
+.ge-comm-title{
 	background:white;
 	padding:0.3rem 0.2rem;
 	@extend .ge-flex,.ge-flex-vc;
@@ -379,19 +380,3 @@ body{
 }
 
 
-/**
- * 公用轮播器
- * 比例通过外界来定
- */
-.ge-comm-banner{
-	position:relative;
-	.banner-item{}
-	.banner-dots{
-		position: absolute;
-		bottom:0.1rem;
-		text-align: center;
-		.swiper-pagination-bullet-active{
-			background: $color-main;
-		}
-	}
-}
