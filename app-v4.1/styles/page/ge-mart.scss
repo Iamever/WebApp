@@ -29,7 +29,7 @@ $color-main:#fe9600;
 
 
 /**
- * 超市导航
+ * 超市导航-5个按钮
  */
 .ge-mart-nav{
 	padding:0.4rem 0 0.3rem;
@@ -59,46 +59,25 @@ $color-main:#fe9600;
  * 超市-轮播
  * 尺寸：750*272
  */
-.ge-mart-banner{
+
+
+/**
+ * 超市-滑动导航
+ */
+.ge-mart-slide-tab{
 	background:white;
-	.banner-swiper-container{
-		position:relative;
-		overflow: hidden;
-		.banner-swiper-wrap{
-			@extend .ge-flex;
-			width: 7.5rem;
-			height: 2.72rem;
-			.banner-swiper-item{}
-		}
-		.banner-swiper-dots{
-			position: absolute;
-			bottom:0.1rem;
-			text-align: center;
-			.swiper-pagination-bullet-active{
-				background: $color-main;
+	overflow: hidden;
+	.slide-wrapper{
+		.slide-item{
+			padding:0.3rem 0;
+			cursor: pointer;
+			&.curr{
+				border-bottom:0.03rem solid $color-main;
+				span{
+					color:$color-main;
+				}
 			}
 		}
 	}
 }
 
-/**
- * 超市-滑动导航
- */
-.ge-mart-s-nav{
-	background:white;
-	.nav-swiper-container{
-		position:relative;
-		// overflow: hidden;
-		.nav-swiper-wrap{
-			@extend .ge-flex;
-			.nav-swiper-item{
-				padding:0.3rem 0;
-				font-size: 0.32rem;
-			}
-		}
-	}
-	.nav-swiper-active{
-		color:$color-main;
-		border-bottom: 0.05rem solid $color-main;
-	}
-}
