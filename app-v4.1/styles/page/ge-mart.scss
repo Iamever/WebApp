@@ -59,25 +59,34 @@ $color-main:#fe9600;
  * 超市-轮播
  * 尺寸：750*272
  */
-
-
-/**
- * 超市-滑动导航
- */
-.ge-mart-slide-tab{
-	background:white;
-	overflow: hidden;
-	.slide-wrapper{
-		.slide-item{
-			padding:0.3rem 0;
-			cursor: pointer;
-			&.curr{
-				border-bottom:0.03rem solid $color-main;
-				span{
-					color:$color-main;
-				}
+.ge-mart-banner{
+	width:7.5rem;
+	height:2.27rem;
+	overflow:hidden;
+	position: relative;
+	.slick-dots{
+		position:absolute;
+		bottom:0.1rem;
+		left:50%;
+		-webkit-transform: translateX(-50%,-50%);
+		transform: translateX(-50%,-50%);
+		li{
+			width: 0.2rem;
+			height: 0.2rem;
+			background:rgba(0,0,0,0.5);
+			float: left;
+			margin: 0 0.1rem;
+			border-radius: 100%;
+			button{
+				opacity:0;
+			}
+			&.slick-active{
+				background:$color-main;
 			}
 		}
 	}
 }
+
+
+
 

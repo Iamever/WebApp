@@ -7,7 +7,7 @@
 	<!-- build:css styles/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
-	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+	<link rel="stylesheet" href="/bower_components/Swiper/dist/css/swiper.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -34,7 +34,12 @@
 	<!-- 搜索:end -->
 	<!-- 轮播:start -->
 	<div class="ge-mart-banner">
-		
+		<div class="ge-max-box">
+			<img data-lazy="images/banner.jpeg" alt="">
+		</div>
+		<div class="ge-max-box">
+			<img data-lazy="images/banner.jpeg" alt="">
+		</div>
 	</div>
 	<!-- 轮播:end -->
 	<!-- 导航:start -->
@@ -161,39 +166,23 @@
 	<!-- 促销会场:end -->
 	<!-- 商品列表:start -->
 	<div class="ge-group">
-		<div class="ge-mart-slide-tab">
-		  <div class="slide-wrapper ge-flex">
-		    <div class="slide-item">
-		    	<span>小家电1</span>
+		<div class="find_nav">
+		    <div class="find_nav_left">
+		        <div class="find_nav_list">
+		            <ul>
+		                <li class="find_nav_cur"><a href="javascript:void(0)">资讯</a></li>
+		                <li><a href="javascript:void(0)">分析</a></li>
+		                <li><a href="javascript:void(0)">原创</a></li>
+		                <li><a href="javascript:void(0)">评论</a></li>
+		                <li><a href="javascript:void(0)">技术</a></li>
+		                <li><a href="javascript:void(0)">项目</a></li>
+		                <li><a href="javascript:void(0)">黄页</a></li>
+		                <li><a href="javascript:void(0)">股市</a></li>
+		                <li><a href="javascript:void(0)">经济</a></li>
+		                <li class="sideline"></li>
+		            </ul>
+		        </div>
 		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电</span>
-		    </div>
-		    <div class="slide-item">
-		    	<span>小家电0</span>
-		    </div>
-		  </div>
 		</div>
 	</div>
 	<ul class="ge-comm-list">
@@ -400,12 +389,13 @@
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <script src="/bower_components/layer/src/layer.js"></script>
     <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
-    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/Swiper/dist/js/swiper.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
     <script src="iconfont/iconfont.js"></script>
+    <script src="scripts/ge-slide-tab.js"></script>
     <script src="scripts/css-base.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
