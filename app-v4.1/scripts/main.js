@@ -30,7 +30,7 @@ $('.go2pay').click(function() {
 
 $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
 
-$('.ge-mart-banner').slick({
+$('.ge-slick').slick({
 	arrows:false,
 	lazyLoad:'ondemand',
 	// autoplay:5000,

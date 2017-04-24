@@ -368,13 +368,25 @@ body{
 			@extend .ge-boxs,.ge-flex-1;	
 			width: 50%;
 			position:relative;
-			&[ratio="1-1.8"]{
-				width: 100%;
+			border-bottom:0.02rem solid $color-bg;
+			&:nth-child(odd){
+				border-right:0.02rem solid $color-bg;
+			}
+			&:nth-child(even){
+				border-left:0rem solid $color-bg;
+			}
+			&[ratio="18"]{
 				&:before{
 					content: '';
 					display: block;
+					padding-top:55.4667%;
+				}
+				.ge-max-box{
+					position:absolute;
+					top: 0;
+					left: 0;
 					width: 100%;
-					padding-top:180%;
+					height: 100%;
 				}
 			}
 		}
@@ -383,10 +395,18 @@ body{
 			width: 33.3333%;
 			border-right:0.02rem solid $color-bg;
 			border-bottom:0.02rem solid $color-bg;
+			position:relative;
 			&:before{
 				content: '';
 				display: block;
-				padding-top:1.108%;
+				padding-top:110.8%;
+			}
+			.ge-max-box{
+				position:absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
 			}
 			&:nth-child(3){
 				border-right:none;
@@ -488,6 +508,39 @@ body{
 		span{
 			&[yes]{
 				color: #666;
+			}
+		}
+	}
+}
+
+
+
+/**
+ * 轮播 slick插件
+ */
+.ge-slick{
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	.slick-dots{
+		position:absolute;
+		bottom:0.1rem;
+		left:50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		li{
+			width: 0.2rem;
+			height: 0.2rem;
+			background:rgba(0,0,0,0.5);
+			float: left;
+			margin: 0 0.1rem;
+			border-radius: 100%;
+			button{
+				opacity:0;
+			}
+			&.slick-active{
+				background:$color-main;
 			}
 		}
 	}

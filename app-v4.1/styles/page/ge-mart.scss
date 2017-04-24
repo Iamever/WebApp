@@ -11,6 +11,20 @@ $color-main:#fe9600;
 
 
 /**
+ * 轮播尺寸
+ * 尺寸：750*272 
+ */
+.ge-mart-banner{
+	width:100%;
+	position:relative;
+	&:before{
+		content:'';
+		display: block;
+		padding-top:36.26667%;
+	}
+}
+
+/**
  * 超市特色购
  */
 .ge-mart-grid{
@@ -50,52 +64,6 @@ $color-main:#fe9600;
 			text-align: center;
 			padding-top:0.25rem;
 			color:$color-nav;
-		}
-	}
-}
-
-
-/**
- * 超市-轮播
- * 尺寸：750*272
- */
-.ge-mart-banner-wrap{
-	width:100%;
-	overflow: hidden;
-	position:relative;
-	background:white;
-	&:before{
-		content: '';
-		display: block;
-		padding-top:36.26667%;
-	}
-	.ge-mart-banner{
-		overflow:hidden;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		.slick-dots{
-			position:absolute;
-			bottom:0.1rem;
-			left:50%;
-			-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);
-			li{
-				width: 0.2rem;
-				height: 0.2rem;
-				background:rgba(0,0,0,0.5);
-				float: left;
-				margin: 0 0.1rem;
-				border-radius: 100%;
-				button{
-					opacity:0;
-				}
-				&.slick-active{
-					background:$color-main;
-				}
-			}
 		}
 	}
 }
