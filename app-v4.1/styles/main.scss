@@ -5,7 +5,7 @@
  * 命名规则:ge-[name]
  */
 
-@import "reset","page/ge-mart";
+@import "reset","page/ge-mart","page/ge-pay";
 
 
 /**
@@ -233,6 +233,9 @@ body{
 .ge-group{
 	margin-bottom:0.2rem;
 }
+.ge-group-min{
+	margin-bottom:0.1rem;
+}
 
 
 
@@ -243,15 +246,20 @@ body{
 .ge-comm-list{
 	overflow: hidden;
 	.comm-item{
-		width: 3.65rem;
+		width:50%;
+		@extend .ge-boxs;
 		float: left;
-		margin-right: 0.2rem;
 		margin-bottom: 0.2rem;
-		background:white;
-		&:nth-child(even){
-			margin-right: 0;
+		&:nth-child(odd){
+			padding-right: 0.1rem;
 		}
-		.comm-pic{}
+		&:nth-child(even){
+			padding-left: 0.1rem;
+		}
+		.comm-wrap{
+			width: 100%;
+			background:white;
+		}
 		.comm-text{
 			padding:0 0.15rem;
 			.text-name{
@@ -349,8 +357,8 @@ body{
 /**
  * 模块
  * grid-wrap 一行的外面容器
- * 2列    1 : 1.8
- * 3列    0.9 : 1
+ * 2列    1 : 1.8  375/208
+ * 3列    0.9 : 1  250/277
  */
 .ge-comm-grid{
 	background:white;
@@ -358,20 +366,28 @@ body{
 		@extend .ge-flex;
 		.grid-item-2{
 			@extend .ge-boxs,.ge-flex-1;	
-			width: 3.75rem;
-			height: 2.08rem;
-			border-right:0.02rem solid $color-bg;
-			border-bottom:0.02rem solid $color-bg;
-			&:nth-child(even){
-				border-right:none;
+			width: 50%;
+			position:relative;
+			&[ratio="1-1.8"]{
+				width: 100%;
+				&:before{
+					content: '';
+					display: block;
+					width: 100%;
+					padding-top:180%;
+				}
 			}
 		}
 		.grid-item-3{
 			@extend .ge-boxs,.ge-flex-1;
-			width: 2.5rem;
-			height: 2.77rem;
+			width: 33.3333%;
 			border-right:0.02rem solid $color-bg;
 			border-bottom:0.02rem solid $color-bg;
+			&:before{
+				content: '';
+				display: block;
+				padding-top:1.108%;
+			}
 			&:nth-child(3){
 				border-right:none;
 			}
@@ -380,3 +396,99 @@ body{
 }
 
 
+/**
+ * 单选按钮
+ * 可滑动
+ * 背景可配置
+ */
+@mixin ge-radio($color){
+	width: 1rem;
+	height: 0.6rem;
+	border-radius:0.3rem;
+	position:relative;
+	background:#e5e5e5;
+	&.checked{
+		background:$color;	
+		&:before{
+			-webkit-transform:translatex(0.4rem);
+		}
+	}
+	&:before{
+		content: '';
+		display: inline-block;
+		position:absolute;
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius:100%;
+		background: white;	
+		top: 0.05rem;
+		left: 0.05rem;
+		-webkit-transition:all 0.4s ;
+
+	}
+}
+
+.ge-radio-green{
+	@include ge-radio(#4cd964);
+}
+.ge-radio-main{
+	@include ge-radio($color-main);
+}
+
+/**
+ * 多选按钮
+ * 颜色可配
+ */
+@mixin ge-check($color){
+	width:0.44rem;
+	height:0.44rem;
+	border-radius:100%;
+	border:0.03rem solid $color;
+	&.checked{
+		background:$color;
+		position:relative;
+		&:before{
+			content: '';
+			display: block;
+			position:absolute;
+			left: 0.11rem;
+			top: 0.11rem;
+			width: 0.22rem;
+			height: 0.12rem;
+			border-left:0.03rem solid white;
+			border-bottom:0.03rem solid white;
+			-webkit-transform:rotate(-45deg);
+			-ms-transform:rotate(-45deg);
+		}		
+	}
+}
+
+.ge-check-main{
+	@include ge-check($color-main);
+}
+
+/**
+ * layer
+ * 公用
+ */
+.ge-layer-1{
+	// padding-top:0.7rem;
+	.layui-m-layercont{
+		margin:1.2rem 1rem;
+		position:relative;
+		input{
+			border:1px solid #b3b3b3;
+			line-height: 0.8rem;
+			border-radius:0.1rem;
+			text-align: center;
+		}
+	}
+	.layui-m-layerbtn{
+		background:white;
+		span{
+			&[yes]{
+				color: #666;
+			}
+		}
+	}
+}

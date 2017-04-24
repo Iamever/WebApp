@@ -59,29 +59,42 @@ $color-main:#fe9600;
  * 超市-轮播
  * 尺寸：750*272
  */
-.ge-mart-banner{
-	width:7.5rem;
-	height:2.27rem;
-	overflow:hidden;
-	position: relative;
-	.slick-dots{
-		position:absolute;
-		bottom:0.1rem;
-		left:50%;
-		-webkit-transform: translateX(-50%,-50%);
-		transform: translateX(-50%,-50%);
-		li{
-			width: 0.2rem;
-			height: 0.2rem;
-			background:rgba(0,0,0,0.5);
-			float: left;
-			margin: 0 0.1rem;
-			border-radius: 100%;
-			button{
-				opacity:0;
-			}
-			&.slick-active{
-				background:$color-main;
+.ge-mart-banner-wrap{
+	width:100%;
+	overflow: hidden;
+	position:relative;
+	background:white;
+	&:before{
+		content: '';
+		display: block;
+		padding-top:36.26667%;
+	}
+	.ge-mart-banner{
+		overflow:hidden;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		.slick-dots{
+			position:absolute;
+			bottom:0.1rem;
+			left:50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			li{
+				width: 0.2rem;
+				height: 0.2rem;
+				background:rgba(0,0,0,0.5);
+				float: left;
+				margin: 0 0.1rem;
+				border-radius: 100%;
+				button{
+					opacity:0;
+				}
+				&.slick-active{
+					background:$color-main;
+				}
 			}
 		}
 	}
@@ -89,4 +102,60 @@ $color-main:#fe9600;
 
 
 
+/**
+ * 滑动菜单
+ */
+.ge-mart-slide-tab{
+	overflow: hidden;
+	width:100%;
+	background:white;
+	.swiper-wrapper,.slide-wrap{
+		.swiper-slide,.slide-item{
+			padding:0.3rem 0rem;
+			a{
+				font-size: 0.33rem;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+			&.slide-curr{
+				a{
+					color:$color-main;
+				}
+			}
+		}
+	}
+}
+.ge-mart-slide{
+	width:100%;
+	height:0.8rem;
+	line-height:0.8rem;
+	overflow: hidden;
+	position:relative;
+	background:white;
+	.slide-wrap{
+		position:absolute;
+		left: 0;
+		ul{
+			position:relative;
+			white-space: nowrap;
+			li{
+				display: inline-block;
+				// background: pink;
+				// float: left;
+				padding:0 15px;
+				a{
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+				&.curr{
+					a{
+						color:$color-main !important;
+					}
+				}
+			}
+		}
+	}
+}
 
