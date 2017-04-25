@@ -1,9 +1,9 @@
 $(function(){
-    $(".ge-mart-slide-tab .slide-wrap li").on('click', function(){
+    $('.ge-mart-slide-tab .slide-wrap li').on('click', function(){
         var nav_w=$(this).width();
         // console.log(nav_w);
-        $(this).addClass("curr").siblings().removeClass("curr");
-        var fn_w = ($(".ge-mart-slide-tab").width() - nav_w) / 2;
+        $(this).addClass('curr').siblings().removeClass('curr');
+        var fn_w = ($('.ge-mart-slide-tab').width() - nav_w) / 2;
         var fnl_l;
         var fnl_x = parseInt($(this).position().left);
         if (fnl_x <= fn_w) {
@@ -13,8 +13,8 @@ $(function(){
         } else {
             fnl_l = fn_w - fnl_x;
         }
-        $(".slide-wrap").animate({
-            "left" : fnl_l
+        $('.slide-wrap').animate({
+            'left' : fnl_l
         }, 200);
     });
 

@@ -37,7 +37,7 @@ $('.ge-comm-slick').slick({
 	dots:true,
 })
 
- $("#sticker").sticky({topSpacing:0,zIndex:9});
+ $('#sticker').sticky({topSpacing:0,zIndex:9});
 
  $('.ge-comm-back2top').hide();
           

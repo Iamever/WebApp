@@ -6,7 +6,6 @@
     "slick-carousel": "^1.6.0",
     "layer": "^3.0.3",
     "jieyou_lazyload": "^1.4.2",
-    "Swiper": "swiper#3.3.1",
     "jquery-sticky": "sticky#^1.0.4"
   }
 }
