@@ -30,31 +30,32 @@ $('.go2pay').click(function() {
 
 $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
 
-$('.ge-slick').slick({
+$('.ge-comm-slick').slick({
 	arrows:false,
 	lazyLoad:'ondemand',
-	// autoplay:5000,
+	autoplay:5000,
 	dots:true,
 })
 
+ $("#sticker").sticky({topSpacing:0,zIndex:9});
 
-var mySwiper = new Swiper('.ge-mart-slide-tab', {
-	wrapperClass:'slide-wrap',
-	slideClass :'slide-item',
+// var mySwiper = new Swiper('.ge-mart-slide-tab', {
+// 	wrapperClass:'slide-wrap',
+// 	slideClass :'slide-item',
 
-	slidesPerView :'auto',
-	spaceBetween :20,
+// 	slidesPerView :'auto',
+// 	spaceBetween :20,
 
-	freeMode :true,
+// 	freeMode :true,
 
-	onInit:function (swiper) {
-		// swiper.slides[0].className += ' ' + 'slide-curr' ;
-	},
+// 	onInit:function (swiper) {
+// 		// swiper.slides[0].className += ' ' + 'slide-curr' ;
+// 	},
 
-	onTap:function (swiper) {
-		for(var i = 0;i < swiper.slides.length ; i++){
-			// swiper.slides[i].className = 'slide-item';
-		}
-		// swiper.slides[swiper.clickedIndex].className += ' ' + 'slide-curr' ;
-	}
-})
+// 	onTap:function (swiper) {
+// 		for(var i = 0;i < swiper.slides.length ; i++){
+// 			// swiper.slides[i].className = 'slide-item';
+// 		}
+// 		// swiper.slides[swiper.clickedIndex].className += ' ' + 'slide-curr' ;
+// 	}
+// })
