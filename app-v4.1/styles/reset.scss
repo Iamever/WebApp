@@ -14,6 +14,9 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-size: 100%;
+    max-width:640px; // 参考考拉设置最大宽度和最小宽度
+    min-width:320px;
+    margin:0 auto;
 }
 
 /**

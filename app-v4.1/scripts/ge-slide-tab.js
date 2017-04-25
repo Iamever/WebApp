@@ -1,7 +1,7 @@
 $(function(){
     $(".ge-mart-slide-tab .slide-wrap li").on('click', function(){
         var nav_w=$(this).width();
-        console.log(nav_w);
+        // console.log(nav_w);
         $(this).addClass("curr").siblings().removeClass("curr");
         var fn_w = ($(".ge-mart-slide-tab").width() - nav_w) / 2;
         var fnl_l;
@@ -23,9 +23,10 @@ $(function(){
 
     // 计算视口宽度
     var flb_w=$('.ge-mart-slide-tab').width();
-    console.log(fl_w,flb_w);
+    // console.log(fl_w,flb_w);
 
     var x1,y1,ty_left,x2,y2;
+
     $('.ge-mart-slide-tab .slide-wrap').on('touchstart', function (e) {
         var touch1 = e.originalEvent.targetTouches[0];
         x1 = touch1.pageX;
@@ -51,5 +52,8 @@ $(function(){
             e.preventDefault();
         }
     });
+
+    
+
 });
 
