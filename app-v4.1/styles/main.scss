@@ -5,7 +5,7 @@
  * 命名规则:ge-[name]
  */
 
-@import "./reset","./page/ge-mart","./page/ge-pay","page/ge-waterfall";
+@import "./reset","./page/ge-mart","./page/ge-pay","./page/ge-waterfall","./page/ge-home";
 
 
 /**
@@ -330,6 +330,8 @@ body{
 		}
 	}
 }
+
+
 
 /**
  * 模块标题

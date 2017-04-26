@@ -1,0 +1,53 @@
+/**
+ * flex布局-设置盒模型的组成模式
+ */
+.ge-boxs{
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+
+
+/**
+ * 标题
+ * 居中
+ */
+
+.ge-home-title{
+	height:1rem;
+	line-height:1rem;
+	.title-name{
+		text-align:center;
+		font-size: 0.36rem;
+	}
+}
+
+
+ /**
+  * 专题活动
+  * 720/240
+  */
+ 
+ .ge-home-agrid{
+	@extend .ge-boxs;
+	padding:0.15rem 0.15rem ;
+	background:white;
+ 	.agrid-item{
+ 		width: 100%;
+ 		border-radius:0.2rem;
+ 		position: relative;
+ 		overflow: hidden;
+ 		margin-bottom: 0.15rem;
+ 		&:before{
+ 			content:'';
+ 			display: block;
+ 			padding-top:33.3333%;
+ 		}
+ 		.ge-max-box{
+ 			position:absolute;
+ 			top: 0;
+ 			left: 0;
+ 		}
+ 	}
+ }
