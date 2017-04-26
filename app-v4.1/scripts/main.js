@@ -40,25 +40,3 @@ $('.ge-comm-slick').slick({
  
 
  
-
-
-// var mySwiper = new Swiper('.ge-mart-slide-tab', {
-// 	wrapperClass:'slide-wrap',
-// 	slideClass :'slide-item',
-
-// 	slidesPerView :'auto',
-// 	spaceBetween :20,
-
-// 	freeMode :true,
-
-// 	onInit:function (swiper) {
-// 		// swiper.slides[0].className += ' ' + 'slide-curr' ;
-// 	},
-
-// 	onTap:function (swiper) {
-// 		for(var i = 0;i < swiper.slides.length ; i++){
-// 			// swiper.slides[i].className = 'slide-item';
-// 		}
-// 		// swiper.slides[swiper.clickedIndex].className += ' ' + 'slide-curr' ;
-// 	}
-// })

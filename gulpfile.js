@@ -15,7 +15,7 @@ var app_path_name = 'app-v4.1'; // 修改项目
 
 
 gulp.task('styles', () => {
-  return gulp.src(''+app_path_name+'/styles/*.scss')
+  return gulp.src(''+app_path_name+'/styles/**/*.scss')
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.sass.sync({
@@ -105,7 +105,7 @@ gulp.task('serve', () => {
       port: 9000,
       server: {
         baseDir: ['.tmp', app_path_name],
-        index: "ge-no-data.html",
+        index: "ge-home.html",
         routes: {
           '/bower_components': 'bower_components'
         }
