@@ -38,5 +38,14 @@ $('.ge-comm-slick').slick({
 })
 
  
+ /**
+  * 首页-秒杀
+  */
+ var miaosha = new Swiper('#swiper-miaosha', {
+	slidesPerView : 3.8,
+    spaceBetween : 20,
+    slidesOffsetBefore:10,
+    slidesOffsetAfter:10,
+})
 
  

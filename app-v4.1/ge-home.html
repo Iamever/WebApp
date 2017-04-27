@@ -17,10 +17,44 @@
 </head>
 <body>
     <!-- 搜索：start -->
-    
+    <div class="ge-comm-search">
+        <div class="search-icon">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-saoma"></use>
+            </svg>
+        </div>
+        <div class="search-wrap">
+            <form action="" class="search-input">
+                <input type="text" placeholder="请输入您要搜索的商品名称" type="search">
+            </form>
+        </div>
+        <div class="search-icon">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-kefu"></use>
+            </svg>
+        </div>
+    </div>
     <!-- 搜索：end -->
 
     <!-- 轮播:start -->
+    <div class="ge-home-banner-wrap">
+        <div class="ge-flex ge-home-banner">
+            <div class="ge-comm-slick ge-flex-1 " >
+                <div class="ge-max-box">
+                    <img data-lazy="images/ad11.jpg" alt="">
+                </div>
+                <div class="ge-max-box">
+                    <img data-lazy="images/banner.jpeg" alt="">
+                </div>
+                <div class="ge-max-box">
+                    <img data-lazy="images/banner.jpeg" alt="">
+                </div>
+                <div class="ge-max-box">
+                    <img data-lazy="images/banner.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 轮播:end -->
 
     <!-- 导航：start -->
@@ -69,7 +103,7 @@
     <!-- 导航：end -->
 
     <!-- 秒杀：start -->
-    <div class="ge-comm-title ge-group">
+    <div class="ge-comm-title">
         <p class="title-name">
             秒杀
             <span>10点场</span>
@@ -78,20 +112,64 @@
             <a href="javascript:;">更多秒杀</a>
         </p>
     </div>
-
+    <div class="swiper-container ge-home-miaosha" id="swiper-miaosha">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img src="images/goods.jpeg" alt=""></div>
+              <p  class="miaosha-new-price"><strong>￥139.00</strong></p>
+              <p class="miaosha-old-price"><s >￥169.00</s></p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img src="images/goods.jpeg" alt=""></div>
+              <p  class="miaosha-new-price"><strong>￥139.00</strong></p>
+              <p class="miaosha-old-price"><s >￥169.00</s></p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img src="images/goods.jpeg" alt=""></div>
+              <p  class="miaosha-new-price"><strong>￥139.00</strong></p>
+              <p class="miaosha-old-price"><s >￥169.00</s></p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img src="images/goods.jpeg" alt=""></div>
+              <p  class="miaosha-new-price"><strong>￥139.00</strong></p>
+              <p class="miaosha-old-price"><s >￥169.00</s></p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img src="images/goods.jpeg" alt=""></div>
+              <p  class="miaosha-new-price"><strong>￥139.00</strong></p>
+              <p class="miaosha-old-price"><s >￥169.00</s></p>
+            </div>
+        </div>
+      </div>
     <!-- 秒杀：end -->
 
     <!-- 组件两列：start -->
-    <div class="ge-comm-grid ge-group">
+    <div class="ge-comm-grid">
         <div class="grid-wrap">
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <img src="" data-original="images/ad11.jpg" alt="">
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">使生活变得更加便利使生活变得更加便利</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad1.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <!-- <img src="" data-original="images/ad11.jpg" alt=""> -->
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">￥250.00起</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,25 +183,57 @@
     <div class="ge-comm-grid ge-group">
         <div class="grid-wrap">
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <img src="" data-original="images/ad11.jpg" alt="">
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">￥250.00起</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <!-- <img src="" data-original="images/ad11.jpg" alt=""> -->
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">￥250.00起</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="grid-wrap">
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <img src="" data-original="images/ad11.jpg" alt="">
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">￥250.00起</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <!-- <img src="" data-original="images/ad11.jpg" alt=""> -->
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">￥250.00起</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,30 +248,70 @@
     <div class="ge-comm-grid ge-group">
         <div class="grid-wrap">
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <img src="" data-original="images/ad11.jpg" alt="">
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">使生活变得更加便利使生活变得更加便利</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad1.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-item-2" ratio="18">
-                <div class="ge-max-box ge-lazy-pic">
-                    <!-- <img src="" data-original="images/ad11.jpg" alt=""> -->
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">使生活变得更加便利使生活变得更加便利</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad1.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="grid-wrap">
             <div class="grid-item-3">
-                <div class="ge-max-box ge-lazy-pic">
-                    <img src="" data-original="images/ad22.png" alt="">
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">￥250.00起</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-item-3">
-                <div class="ge-max-box ge-lazy-pic">
-                    <!-- <img src="" data-original="images/ad22.png" alt=""> -->
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福超市福袋袋</strong></p>
+                        <p class="text-sub">￥250.00起</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad2.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-item-3">
-                <div class="ge-max-box ge-lazy-pic">
-                    <img src="" data-original="images/ad22.png" alt="">
+                <div class="grid-detail-content">
+                    <div class="detail-content-text">
+                        <p class="text-main"><strong>超市福袋</strong></p>
+                        <p class="text-sub">使生活变得更加便利使生活变得更加便利</p>
+                    </div>
+                    <div class="detail-content-pic">
+                        <div class="ge-square-box ge-lazy-pic">
+                            <img src="" data-original="images/ad1.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -250,6 +400,10 @@
     </div>
     <!-- 商品推荐：end -->
 
+    <!-- 返回顶部:start -->
+    <div class="ge-comm-back2top"></div>
+    <!-- 返回顶部:end -->
+
 	<!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/jquery.js"></script>
@@ -264,6 +418,7 @@
     <!-- build:js scripts/main.js -->
     <script src="iconfont/iconfont.js"></script>
     <script src="scripts/ge-slide-tab.js"></script>
+    <script src="scripts/ge-back2top.js"></script>
     <script src="scripts/css-base.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
