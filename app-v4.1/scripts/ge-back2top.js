@@ -2,7 +2,7 @@ $(function(){
     $('.ge-comm-back2top').hide();
           
     $(window).scroll(function() {
-        if($(window).scrollTop()>100){
+        if($(window).scrollTop()>500){
             $('.ge-comm-back2top').fadeIn(1500);
         }else{
             $('.ge-comm-back2top').fadeOut(1500);

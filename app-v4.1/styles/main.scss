@@ -272,6 +272,7 @@ body{
 			.text-name{
 				font-size: 0.26rem;
 				line-height: 1.4;
+				height: 0.728rem;
 				@include ge-line(2);
 				i{
 					font-size: .2rem;
@@ -445,6 +446,7 @@ body{
 						@include ge-line(2);
 						font-size: 0.26rem;
 						line-height: 1.1;
+						height: 0.572rem;
 						color: #838383;
 					}
 				}
