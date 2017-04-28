@@ -4,12 +4,12 @@ window.onload = function () {
     waterfall('waterfall','waterfall-item');
 
     // var dataInt={'data':[{'src':'ad1.jpg'},{'src':'ad2.jpg'},{'src':'goods.jpeg'},{'src':'banner.jpeg'},{'src':'ad2.jpg'},{'src':'goods.jpeg'},{'src':'banner.jpeg'},{'src':'ad2.jpg'},{'src':'goods.jpeg'},{'src':'banner.jpeg'}]};
-    var dataInt={"data":[{"src":"ad1.jpg"},{"src":"ad2.jpg"},{"src":"goods.jpeg"},{"src":"banner.jpeg"},{"src":"ad2.jpg"},{"src":"goods.jpeg"},{"src":"banner.jpeg"},{"src":"ad2.jpg"},{"src":"goods.jpeg"},{"src":"banner.jpeg"}]};
+    var dataInt={'data':[{'src':'ad1.jpg'},{'src':'ad2.jpg'},{'src':'goods.jpeg'},{'src':'banner.jpeg'},{'src':'ad2.jpg'},{'src':'goods.jpeg'},{'src':'banner.jpeg'},{'src':'ad2.jpg'},{'src':'goods.jpeg'},{'src':'banner.jpeg'}]};
     window.onscroll=function(){
 
         
         if(checkscrollside()){
-            var oParent = document.getElementById("waterfall");// 父级对象
+            var oParent = document.getElementById('waterfall');// 父级对象
             // console.log(dataInt.data.length);
             for(var i=0;i<dataInt.data.length;i++){
                 

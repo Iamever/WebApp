@@ -50,5 +50,38 @@
 	}
 }
 
+/**
+ * 标题
+ */
+.ge-fixed-wrap{
+	position:relative;
+	width:100%;
+}
+.ge-waterfall-title{
+	background:white;
+	padding:0.3rem 0.2rem;
+	border-bottom:1px solid #ddd;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:9;
+	.title-name{
+		color: #666;
+		font-size: 0.3rem;
+		line-height:1.5;
+	}
+		/**
+	 * 下拉列表
+	 */
+	.ge-comm-select{
+		-webkit-appearance:none;
+		border:none;
+		float:right;
+		font-size:0.3rem;
+		line-height:1.5;
+	}
+}
+
 
 
