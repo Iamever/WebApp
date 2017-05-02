@@ -70,13 +70,69 @@
 	 		padding-top:40%;
 	 	}
 	 	.ge-comm-slick{
-			padding:0.2rem 0.25rem;
+			// padding:0.2rem 0.25rem;
 			img{
-				border-radius:0.12rem;
+				// border-radius:0.12rem;
 			}
 	 	}
 	 }
  }
+
+/**
+ * 轮播下方广告
+ * 750*190
+ */
+.ge-home-ad-box{
+	position:relative;
+	&:before{
+		display: block;
+		content: '';
+		padding-top:25.333%;
+	}
+	.ge-max-box{
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+
+/**
+ * 首页特有悬浮小动画
+ */
+.ge-home-animate{
+	position:fixed;
+	right:0;
+	top:60%;
+	z-index:10;
+	width:160px;
+	transform:translateX(120px);
+	-webkit-transform:translateX(120px);
+	-moz-transform:translateX(120px);
+	-ms-transform:translateX(120px);
+	transition:all 0.4s cubic-bezier(1, -0.34, 0, 1.15);
+	-webkit-transition:all 0.4s cubic-bezier(1, -0.34, 0, 1.15);
+	-moz-transition:all 0.4s cubic-bezier(1, -0.34, 0, 1.15);
+	&.show{
+		transform:translateX(0px);
+		-webkit-transform:translateX(0px);
+		-moz-transform:translateX(0px);
+		-ms-transform:translateX(0px);
+	}
+	img{
+		width: 100%;
+	}
+	.switch-btn{
+		position:absolute;
+		width: 40px;
+		left: 0;
+		top: 0;
+		bottom:0;
+		// background:red;
+	}
+}
+
 
  /**
   * 秒杀

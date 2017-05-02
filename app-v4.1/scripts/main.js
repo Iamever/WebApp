@@ -49,3 +49,14 @@ $('.ge-comm-slick').slick({
 })
 
  
+ /**
+  * 首页 悬浮小动画
+  */
+ $('.ge-home-animate .switch-btn').click(function() {
+ 	if($(this).parents('.ge-home-animate').hasClass('show')){
+ 		$(this).parents('.ge-home-animate').removeClass('show');
+ 	}else{
+ 		setTimeout('$(\'.ge-home-animate\').removeClass(\'show\');',3000)
+ 		$(this).parents('.ge-home-animate').addClass('show');
+ 	}
+ });
