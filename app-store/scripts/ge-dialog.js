@@ -22,19 +22,10 @@
 			// 按钮组
 			buttons:null,
 
-			// 类型 
-			type:null,
-
-			// 延迟关闭时间
-			delay:null,
 
 			// 延迟关闭之后的回调
 			delayCallBack: null,
 
-
-
-			// 是否启用动画
-			effect:true,
 			
 		};
 
@@ -75,17 +66,9 @@
 		
 	};
 
-	geDialog.zIndex = 9999;
 
 	geDialog.prototype= {
-		// 动画
-		animate:function () {
-			// var _this_ = this;
-			// this.win.css('-webkit-transform', 'scale(0,0');
-			// window.setTimeout(function () {
-			// 	_this_.win.css('-webkit-transform', 'scale(1,1)');
-			// },100);
-		},
+		
 
 		// 创建弹出框
 		creat:function () {
@@ -99,9 +82,7 @@
 				body = this.body,
 				footer = this.footer;
 
-				// 增加弹窗层级
-				// geDialog.zIndex ++;
-				// this.mask.css('zIndex', geDialog.zIndex);
+				
 
 
 			// 判断是否传递了参数
@@ -112,24 +93,9 @@
 				box.appendTo(cover);
 				cover.appendTo(_body);
 
-				
-
-
-				// if(config.effect){
-				// 	this.animate();
-				// }
-
-				// if(mask){
-				// 	mask.click(function() {
-				// 		_this_.close();
-				// 	});
-				// }
 
 			}else{
 
-				// 弹窗类型
-				// content.addClass(config.type);
-				// win.append(content);
 
 				// 信息文本
 				if(config.message){
@@ -147,8 +113,10 @@
 
 				// 点击遮罩层 关闭弹框
 				if(config.coverClose){
-					cover.click(function(e) {
+					cover.click(function() {
 						_this_.close();
+					});
+					box.click(function(e) {
 						e.stopPropagation();
 					});
 				}
@@ -182,11 +150,7 @@
 					},config.delay);
 				}
 
-				
 
-				// if(config.effect){
-				// 	this.animate();
-				// }
 
 				box.appendTo(cover);
 				cover.appendTo(_body);

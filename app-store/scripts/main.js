@@ -15,7 +15,8 @@ $('#openLayer').on('click', function() {
 	var dia = new geDialog({
 		message:'<form class="distribution_input"><div class="ge-flex"><label for="name">配送人: </label><input type="text" placeholder="配送人姓名"></div><div class="ge-flex"><label for="name">手机号: </label><input type="tel" placeholder="配送人手机号"></div><div class="ge-flex"><label for="name" class="text-gray">备注:</label><input type="text" ></div></form>',
 		close_btn:true,
-		opacity:0.3,
+		opacity:0.4,
+		coverClose:true,
 		buttons:[
         	{
 	          text:'开始配送',

@@ -372,6 +372,7 @@ body{
 				}
 				&.icon-gray{
 					color:#999;
+
 				}
 				text-decoration: none;
 			}
@@ -483,6 +484,10 @@ body{
 			&.text-gray{
 				color:#999;
 			}
+		}
+		input{
+			display: inline-block;
+			margin-left: 0.2rem;
 		}
 	}
 }
