@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1493718147102'); /* IE9*/
-  src: url('iconfont.eot?t=1493718147102#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1493718147102') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1493718147102') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1493718147102#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1493781234363'); /* IE9*/
+  src: url('iconfont.eot?t=1493781234363#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1493781234363') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1493781234363') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1493781234363#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -15,9 +15,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-peisongfangshi:before { content: "\e631"; }
-
 .icon-lianxi:before { content: "\e60d"; }
 
 .icon-qiangdantubiao:before { content: "\e601"; }
+
+.icon-daisonghuo:before { content: "\e69a"; }
 
