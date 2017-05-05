@@ -8,6 +8,33 @@
 }
 
 
+/**
+ * 超市导航-5个按钮
+ */
+$color-nav:#363636;
+.ge-mart-nav{
+	padding:0.4rem 0 0.3rem;
+	background:white;
+	.nav-item{
+		width: 1.2rem;
+		margin-right: 0.35rem;
+		cursor: pointer;
+		&:last-child{
+			margin-right: 0;
+		}
+		.nav-icon{
+			width: 0.8rem;
+			height: 0.8rem;
+			margin: 0 auto;
+		}
+		.nav-name{
+			font-size: 0.25rem;
+			text-align: center;
+			padding-top:0.25rem;
+			color:$color-nav;
+		}
+	}
+}
 
 /**
  * 标题

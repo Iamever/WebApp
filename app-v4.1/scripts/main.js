@@ -60,3 +60,14 @@ $('.ge-comm-slick').slick({
  		$(this).parents('.ge-home-animate').addClass('show');
  	}
  });
+
+
+ function showCartFoods() {
+ 	if($('.ge-food-bottom-layer').hasClass('show')){
+		$('.ge-food-bottom-layer').removeClass('show');
+		$('.ge-comm-cover').remove();
+	}else{
+		$('.ge-food-bottom-layer').addClass('show');
+		$('<div>').addClass('ge-comm-cover').appendTo('body');
+	}
+ }

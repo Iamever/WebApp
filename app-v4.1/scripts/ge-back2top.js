@@ -13,7 +13,5 @@ $(function(){
         return false;
     });
 
-    
-
 });
 

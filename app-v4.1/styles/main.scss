@@ -5,7 +5,7 @@
  * 命名规则:ge-[name]
  */
 
-@import "./reset","./page/ge-mart","./page/ge-pay","./page/ge-waterfall","./page/ge-home","./page/ge-no-data";
+@import "./reset";
 
 
 /**
@@ -220,6 +220,23 @@ body{
     -webkit-line-clamp:$line;
 }
 
+
+
+/**
+ * 遮罩层
+ */
+@mixin ge-comm-cover($opacity,$index){
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,$opacity);
+	z-index:$index;
+}
+.ge-comm-cover{
+	@include ge-comm-cover(0.5,1);
+}
 
 
 /**
@@ -674,4 +691,61 @@ body{
 
 
 
+
+/**
+ * 数量控制
+ */
+
+.ge-comm-quantity-wrapper{
+	border:1px solid #aeaeae;
+	border-radius:0.1rem;
+	width:1.9rem;
+	height:0.64rem;
+	@extend .ge-flex;
+	.quantity-decrease{
+		width: 0.6rem;
+		height: 100%;
+		display: block;
+		background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABBElEQVRoQ+2V0Q2CMBRFWybACWQEncAVbJmT1hWcQEfACWQCavwwUVHzksuNIbn8+t4pPccE7xb++IW/v9MF/l1QBVQANKC/ECgQXlcBWCEIUAFQILyuArBCEKACoEB4XQVghSBABUCB8PrHAimlHUwmAGKMx3fs5AIppZNzbkM4fw7kOca4fQa9XCDnXJdSrnOcxGJ471chhOHBnxTouq733q9ZL4BwSymXtm2brwXuP+Scm3Ec9865GjmMsDtUVXUIIfQ/L0A4mIrUd4Cq1wBXAYMk6ogKUPUa4CpgkEQdUQGqXgNcBQySqCMqQNVrgKuAQRJ1RAWoeg1wFTBIoo4svsANi+kiMegoVgMAAAAASUVORK5CYII=') center center no-repeat;
+		background-size:0.3rem;
+		position:relative;
+		&:before{
+			content: '';
+			display: block;
+			position:absolute;
+			right: 0;
+			top: 0;
+			width: 0.02rem;
+			height: 100%;
+			background: #aeaeae;
+		}
+	}
+	.quantity-increase{
+		width: 0.6rem;
+		height: 100%;
+		display: block;
+		position:relative;
+		background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABLUlEQVRoQ+2Z/Y3CMAzF7QngJjhYyR7k2OBgAxjEmalMADeBT9H1UPlSI5wItXr923H8nn+N6oZp4g9PvH6CgHd3sFkHzGzDzN9ZoLvvVHXfQmxLAR0zf/ZFdyKynpSAlJIPCxaRJmY1SZoLh4BC3tCBZ0YBISBU6AAQChqFUwgIAaGgA0AoaOD8TqF+kvoiolXQnNrLO3c/3E52dx1IKZ2IaFl790r5ziLyMcx1J8DMzsy8qLRh1TTu/qOqV+Y+ErAhojyQ/8+zVYt4NZm7H4loP4rQqxvcrsM8UOjk/I7RQuGjYUBo1KK/ACCEj7lCVJ6FASEgBISCDgChoIE4hWaLkJldLvnyMKKqTWbsZgjlnwNEtO07tJ3cNWvw3Sxe3qwDxRUEAyEgaGB4+S+pWbkxtmtaIwAAAABJRU5ErkJggg==') center center no-repeat;
+		background-size:0.3rem;
+		&:before{
+			content: '';
+			display: block;
+			position:absolute;
+			left: 0;
+			top: 0;
+			width: 0.02rem;
+			height: 100%;
+			background: #aeaeae;
+		}
+	}
+	.quantity{
+		@extend .ge-flex-1;
+		display: block;
+		text-align: center;
+		position:relative;
+		font-size: 0.34rem;
+		height: 0.64rem;
+		line-height: 0.64rem;
+	}
+}
 

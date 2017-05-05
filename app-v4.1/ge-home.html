@@ -14,7 +14,22 @@
 	<!-- build:css styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <!-- build:css styles/ge-home.css -->
+    <link rel="stylesheet" href="styles/page/ge-home.css">
+    <!-- endbuild -->
+
 </head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
 <body>
     <!-- 搜索：start -->
     <div class="ge-comm-search">
@@ -414,7 +429,7 @@
     </div>
     <!-- 右侧悬浮：end -->
 
-	<!-- build:js scripts/vendor.js -->
+	<!-- build:js vendor/vendor.min.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/jquery.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
@@ -425,12 +440,59 @@
     <!-- endbower -->
     <!-- endbuild -->
     
-    <!-- build:js scripts/main.js -->
+    
+
+
+    <!-- build:js scripts/iconfont.js -->
     <script src="iconfont/iconfont.js"></script>
-    <script src="scripts/ge-slide-tab.js"></script>
-    <script src="scripts/ge-back2top.js"></script>
-    <script src="scripts/css-base.js"></script>
-    <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!-- build:js scripts/ge-slide-tab.js -->
+    <script src="scripts/ge-slide-tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/ge-back2top.js -->
+    <script src="scripts/ge-back2top.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+        /**
+         * 延迟加载
+         */
+        $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
+
+        /**
+         * 轮播
+         */
+        $('.ge-comm-slick').slick({
+            arrows:false,
+            lazyLoad:'ondemand',
+            autoplay:5000,
+            dots:true,
+        })
+
+        /**
+          * 首页-秒杀
+          */
+         var miaosha = new Swiper('#swiper-miaosha', {
+            slidesPerView : 3.8,
+            spaceBetween : 20,
+            slidesOffsetBefore:10,
+            slidesOffsetAfter:10,
+        })
+
+         
+         /**
+          * 首页 悬浮小动画
+          */
+         $('.ge-home-animate .switch-btn').click(function() {
+            if($(this).parents('.ge-home-animate').hasClass('show')){
+                $(this).parents('.ge-home-animate').removeClass('show');
+            }else{
+                setTimeout('$(\'.ge-home-animate\').removeClass(\'show\');',3000)
+                $(this).parents('.ge-home-animate').addClass('show');
+            }
+         });
+    </script>
 </body>
 </html>
