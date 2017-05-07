@@ -15,10 +15,20 @@
 	<link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:css styles/ge-waterfall.css -->
+    <!-- build:css styles/page/ge-waterfall.css -->
     <link rel="stylesheet" href="styles/page/ge-waterfall.css">
     <!-- endbuild -->
 </head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
 <body>
 	<!-- 选择门店:start -->
     <!-- <div class="ge-fixed-wrap">
@@ -274,6 +284,7 @@
 	
 
 	
+    <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/jquery.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
@@ -282,12 +293,11 @@
     <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
     <script src="/bower_components/swiper/dist/js/swiper.js"></script>
     <!-- endbower -->
+    <!-- endbuild -->
     
     
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/css-base.js"></script>
+    <!-- build:js scripts/page/ge-waterfall-jquery.js -->
     <script src="scripts/ge-waterfall-jquery.js"></script>
-    <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
 </html>

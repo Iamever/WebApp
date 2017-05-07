@@ -4,21 +4,26 @@
 	<meta charset="UTF-8">
 	<title>没有数据</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
-	<!-- build:css styles/vendor.css -->
-	<!-- bower:css -->
-	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
-	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
-	<!-- endbower -->
-	<!-- endbuild -->
+	
 
 	<!-- build:css styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:css styles/ge-no-data.css -->
+    <!-- build:css styles/page/ge-no-data.css -->
     <link rel="stylesheet" href="styles/page/ge-no-data.css">
     <!-- endbuild -->
 </head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
 <body>
 	<!-- <div class="ge-comm-no-data">
 		<p class="data">暂无停车券</p>
@@ -30,18 +35,6 @@
     </div>
 
 	
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/jquery.js"></script>
-    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
-    <script src="/bower_components/layer/src/layer.js"></script>
-    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
-    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
-    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
-    <!-- endbower -->
-    
-    
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/css-base.js"></script>
-    <!-- endbuild -->
+   
 </body>
 </html>
