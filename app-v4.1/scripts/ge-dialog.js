@@ -18,13 +18,16 @@
 			// 改变遮罩透明度
 			opacity:null,
 
+			// 延迟关闭时间
+			delay:null,
+
 
 			// 按钮组
 			buttons:null,
 
 
 			// 延迟关闭之后的回调
-			delayCallBack: null,
+			// delayCallBack: null,
 
 			
 		};
@@ -146,7 +149,7 @@
 						_this_.close();
 
 						// 延迟之后的回调
-						config.delayCallBack && config.delayCallBack();
+						// config.delayCallBack && config.delayCallBack();
 					},config.delay);
 				}
 

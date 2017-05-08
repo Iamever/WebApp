@@ -34,41 +34,36 @@
     <!-- 菜单列表：start -->
     <div class="ge-flex ge-food-list">
         <div class="ge-food-list-pic">
-            <div class="ge-square-box">
-                <img src="images/ad1.jpg" alt="">
+            <div class="ge-square-box ge-lazy-pic">
+                <img data-original="images/ad1.jpg" alt="">
             </div>
         </div>
-        <div class="ge-flex-1">
+        <div class="ge-flex-1" onclick="showDetail()">
             <p class="ge-food-list-name ge-aline">五五花肉豆腐锅五花肉豆腐锅五花肉豆腐锅五花肉豆腐锅花肉豆腐锅</p>
             <p class="ge-food-list-price">￥23.00</p>
         </div>
-        <div class="ge-food-list-del ge-flex ge-flex-vc">
-            <div class="btn-wrap ">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-gouwuchefill"></use>
-                </svg>
-            </div>
+        <div class="ge-food-add2cart ge-flex ge-flex-vc icon-add2cart-btn">
+            <svg class="icon icon-add2cart " aria-hidden="true" >
+              <use xlink:href="#icon-gouwuchefill"></use>
+            </svg>
         </div>
     </div>
     <div class="ge-flex ge-food-list">
-        <div class="ge-food-list-pic">
-            <div class="ge-square-box">
-                <img src="images/ad1.jpg" alt="">
+        <div class="ge-food-list-pic" onclick="showDetail()">
+            <div class="ge-square-box ge-lazy-pic">
+                <img data-original="images/ad1.jpg" alt="">
             </div>
         </div>
-        <div class="ge-flex-1">
+        <div class="ge-flex-1" onclick="showDetail()">
             <p class="ge-food-list-name ge-aline">五五花肉豆腐锅五花肉豆腐锅五花肉豆腐锅五花肉豆腐锅花肉豆腐锅</p>
             <p class="ge-food-list-price">￥23.00</p>
         </div>
-        <div class="ge-food-list-del ge-flex ge-flex-vc curr">
-            <div class="btn-wrap ">
-                <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-gouwuchefill"></use>
-                </svg>
-            </div>
+        <div class="ge-food-add2cart ge-flex ge-flex-vc icon-add2cart-btn">
+            <svg class="icon icon-add2cart " aria-hidden="true">
+              <use xlink:href="#icon-gouwuchefill"></use>
+            </svg>
         </div>
     </div>
-    
     <!-- 菜单列表：end -->
 
     <!-- 底部弹出窗：start -->
@@ -85,6 +80,11 @@
                     <a href="javascript:;" class="quantity-increase"></a>
                 </div>
             </div>
+            <div class="ge-flex ge-flex-vc ge-food-del">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-shanchu"></use>
+                </svg>
+            </div>
         </div>
         <div class="ge-flex ge-food-list ">
             <div class="ge-flex-1">
@@ -98,6 +98,11 @@
                     <a href="javascript:;" class="quantity-increase"></a>
                 </div>
             </div>
+            <div class="ge-flex ge-flex-vc ge-food-del">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-shanchu"></use>
+                </svg>
+            </div>
         </div>
     </div>
     <!-- 底部弹出窗：end -->
@@ -105,13 +110,11 @@
     <!-- 底部菜单：start -->
     <div class="ge-food-fixed-wrap">
         <div class="ge-flex ge-food-list ge-food-fixed" >
-            <div class="ge-food-list-del ge-flex ge-flex-vc">
-                <div class="btn-wrap " onclick="showCartFoods()">
-                    <i class="ge-food-select-num">20</i>
-                    <svg class="icon" aria-hidden="true">
-                      <use xlink:href="#icon-gouwuchefill"></use>
-                    </svg>
-                </div>
+            <div class="ge-food-add2cart ge-flex ge-flex-vc" onclick="showCartFoods()">
+                <i class="ge-food-select-num">20</i>
+                <svg class="icon icon-add2cart" aria-hidden="true">
+                  <use xlink:href="#icon-gouwuchefill"></use>
+                </svg>
             </div>
             <div class="ge-flex-1 ge-flex ge-flex-vc">
                 <p class="ge-food-list-price">￥30.00</p>
@@ -123,7 +126,23 @@
     </div>
     <!-- 底部菜单：end -->
 
-
+    
+    <!-- 弹窗内容：start -->
+    <!-- <div class="ge-food-dialog-wrap">
+        <div class="pic">
+            <img src="images/ad1.jpg" alt="">
+        </div>
+        <p class="name">印度飞饼火腿鸡蛋葱油味</p>
+        <div class="ge-flex ge-flex-vc ge-food-add2cart">
+            <p class="price ge-flex-1">￥20.00</p>
+            <div class="btn-wrap ge-flex ge-flex-vc">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-gouwuchefill"></use>
+                </svg>
+            </div>
+        </div>
+    </div> -->
+    <!-- 弹窗内容：end -->
 
     
     <!-- build:js scripts/vendor.js -->
@@ -152,6 +171,40 @@
     <!-- endbuild -->
 
     <script>
+        jQuery(document).ready(function($) {
+
+            // 延迟加载
+            $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
+
+
+            // 点击购物车变亮
+            $('.icon-add2cart-btn').click(function() {
+                $(this).addClass('curr');
+
+                // 提示 
+                // var dia1 = new geDialog({
+                //     message:'已加入购物车',
+                //     opacity:0.2,
+                //     delay:500 // 延迟500毫秒
+                // })
+            });
+
+
+        });
+
+        function showDetail() {
+            var dia = new geDialog({
+                message:'<div class="ge-food-dialog-wrap"><div class="pic"><img src="images/ad1.jpg" alt=""></div><p class="name">印度飞饼火腿鸡蛋葱油味</p><div class="ge-flex ge-flex-vc ge-food-add2cart"><p class="price ge-flex-1">￥20.00</p><div class=" ge-flex ge-flex-vc icon-add2cart-btn"><svg class="icon icon-add2cart " aria-hidden="true"><use xlink:href="#icon-gouwuchefill"></use></svg></div></div></div>',
+                close_btn:true,
+                opacity:0.4,
+                coverClose:true,
+            });
+            $('.icon-add2cart-btn').click(function() {
+                $(this).addClass('curr');
+            });
+        }
+
+
         function showCartFoods() {
             if($('.ge-food-bottom-layer').hasClass('show')){
                 $('.ge-food-bottom-layer').removeClass('show');
@@ -159,8 +212,13 @@
             }else{
                 $('.ge-food-bottom-layer').addClass('show');
                 $('<div>').addClass('ge-comm-cover').appendTo('body');
+                $('.ge-comm-cover').click(function() {
+                    $('.ge-food-bottom-layer').removeClass('show');
+                   $('.ge-comm-cover').remove();
+                });
             }
          }
+
     </script>
 </body>
 </html>

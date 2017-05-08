@@ -235,7 +235,7 @@ body{
 	z-index:$index;
 }
 .ge-comm-cover{
-	@include ge-comm-cover(0.5,1);
+	@include ge-comm-cover(0.5,15);
 }
 
 
@@ -628,6 +628,85 @@ body{
 }
 
 
+/**
+ * 自定义弹窗
+ * 
+ */
+.ge-layer-cover{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:rgba(0,0,0,0.5);
+	z-index:9;
+	.ge-layer-box{
+		@extend .ge-cc;
+		width: 80%;
+		max-width: 512px;
+		height: auto;
+		border-radius:0.2rem;
+		background:white;
+		z-index:10;
+		.ge-layer-header{
+			width: 100%;
+			height: 0.75rem;
+			position:relative;
+			.close-btn{
+				width: 0.5rem;
+				height: 0.5rem;
+				border-radius:100%;
+				color:white;
+				// background:$color-main;
+				position:absolute;
+				right:0.3rem;
+				bottom:0;
+				-webkit-transform:rotate(45deg);
+				cursor: pointer;
+				&:before{
+					content: '';
+					width: 0.4rem;
+					height: 0.02rem;
+					background:#666;
+					@extend .ge-cc;
+				}
+				&:after{
+					content: '';
+					width: 0.4rem;
+					height: 0.02rem;
+					background:#666;
+					-webkit-transform:rotate(90deg) translateY(0.2rem);
+					@extend .ge-cc;
+				}
+			}
+		}
+		.ge-layer-body{
+			padding:0.4rem 0.3rem;
+			text-align: center;
+		}
+		.ge-layer-footer{
+			width: 100%;
+			height: 1.2rem;
+			text-align:center;
+			div{
+				display: inline-block;
+				color:white;
+				padding:0.25rem 0.6rem;
+				border-radius:0.1rem;
+				cursor: pointer;
+				margin:0 0.1rem;
+				&.ok{
+					background:$color-main;
+				}
+				&.no{
+					background:#999;
+				}
+			}
+		}
+	}
+}
+
+
 
 /**
  * 轮播 slick插件
@@ -695,20 +774,21 @@ body{
 /**
  * 数量控制
  */
-
 .ge-comm-quantity-wrapper{
 	border:1px solid #aeaeae;
 	border-radius:0.1rem;
 	width:1.9rem;
-	height:0.64rem;
-	@extend .ge-flex;
+	height:0.62rem;
+	position:relative;
 	.quantity-decrease{
+		position:absolute;
+		left: 0;
+		top: 0;
 		width: 0.6rem;
-		height: 100%;
+		height:100%;
 		display: block;
 		background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABBElEQVRoQ+2V0Q2CMBRFWybACWQEncAVbJmT1hWcQEfACWQCavwwUVHzksuNIbn8+t4pPccE7xb++IW/v9MF/l1QBVQANKC/ECgQXlcBWCEIUAFQILyuArBCEKACoEB4XQVghSBABUCB8PrHAimlHUwmAGKMx3fs5AIppZNzbkM4fw7kOca4fQa9XCDnXJdSrnOcxGJ471chhOHBnxTouq733q9ZL4BwSymXtm2brwXuP+Scm3Ec9865GjmMsDtUVXUIIfQ/L0A4mIrUd4Cq1wBXAYMk6ogKUPUa4CpgkEQdUQGqXgNcBQySqCMqQNVrgKuAQRJ1RAWoeg1wFTBIoo4svsANi+kiMegoVgMAAAAASUVORK5CYII=') center center no-repeat;
 		background-size:0.3rem;
-		position:relative;
 		&:before{
 			content: '';
 			display: block;
@@ -721,10 +801,12 @@ body{
 		}
 	}
 	.quantity-increase{
+		position:absolute;
+		right: 0;
+		top: 0;
 		width: 0.6rem;
 		height: 100%;
 		display: block;
-		position:relative;
 		background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABLUlEQVRoQ+2Z/Y3CMAzF7QngJjhYyR7k2OBgAxjEmalMADeBT9H1UPlSI5wItXr923H8nn+N6oZp4g9PvH6CgHd3sFkHzGzDzN9ZoLvvVHXfQmxLAR0zf/ZFdyKynpSAlJIPCxaRJmY1SZoLh4BC3tCBZ0YBISBU6AAQChqFUwgIAaGgA0AoaOD8TqF+kvoiolXQnNrLO3c/3E52dx1IKZ2IaFl790r5ziLyMcx1J8DMzsy8qLRh1TTu/qOqV+Y+ErAhojyQ/8+zVYt4NZm7H4loP4rQqxvcrsM8UOjk/I7RQuGjYUBo1KK/ACCEj7lCVJ6FASEgBISCDgChoIE4hWaLkJldLvnyMKKqTWbsZgjlnwNEtO07tJ3cNWvw3Sxe3qwDxRUEAyEgaGB4+S+pWbkxtmtaIwAAAABJRU5ErkJggg==') center center no-repeat;
 		background-size:0.3rem;
 		&:before{
@@ -739,13 +821,15 @@ body{
 		}
 	}
 	.quantity{
-		@extend .ge-flex-1;
 		display: block;
+		position:absolute;
+		top: 0;
+		left: 0.6rem;
+		width: 0.7rem;
+		font-size: 0.3rem;
+		height: 0.62rem;
 		text-align: center;
-		position:relative;
-		font-size: 0.34rem;
-		height: 0.64rem;
-		line-height: 0.64rem;
+		line-height: 0.62rem;
 	}
 }
 
