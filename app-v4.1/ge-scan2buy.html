@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>扫码购</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	
+
+	<!-- build:css styles/ge-main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-scan2pay.css -->
+    <link rel="stylesheet" href="styles/page/ge-scan2pay.css">
+    <!-- endbuild -->
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+    <div class="ge-scan2pay">
+        <!-- 单个订单：start -->
+        <div class="ge-scan2pay-item">
+            <div class="ge-flex">
+                <p class="font-gray" fsize="26">0000000000001</p>
+                <p class="ge-flex-1" fsize="26"><span class="i-bg-red">已核验</span></p>
+                <!-- <p class="ge-flex-1" fsize="26"><span class="i-bg-green">待核验</span></p> -->
+                <p class="font-gray" fsize="26">2017.01.01</p>
+            </div>
+            <div class="ge-flex adashed ge-group">
+                <p fsize="26" class="ge-flex-1 ">新街口店</p>
+                <p fsize="26" class="ge-group">支付宝</p>
+            </div>
+            <!-- 详细订单：start -->
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超AD超薄羽绒服AD超薄羽绒服薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <div class="ge-group "><p class="ge-flex ge-flex-hc font-gray" fsize="26">收起</p></div>
+            <!-- 详细订单：end -->
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-flex ge-flex-cc" fweight="600">
+                    共3件，
+                    <!-- 优惠券<span class="font-main">￥20.00</span> -->
+                    实收<span class="font-main">￥2750.33</span>
+                </p>
+                <p class="btn-click">
+                    <i class="btn-click-ewm"></i>
+                </p>
+            </div>
+        </div>
+        <!-- 单个订单：end -->
+
+        <!-- 单个订单：start -->
+        <div class="ge-scan2pay-item">
+            <div class="ge-flex">
+                <p class="font-gray" fsize="26">0000000000001</p>
+                <!-- <p class="ge-flex-1" fsize="26"><span class="i-bg-red">已核验</span></p> -->
+                <p class="ge-flex-1" fsize="26"><span class="i-bg-green">待核验</span></p>
+                <p class="font-gray" fsize="26">2017.01.01</p>
+            </div>
+            <div class="ge-flex adashed ge-group">
+                <p fsize="26" class="ge-flex-1 ">新街口店</p>
+                <p fsize="26" class="ge-group">支付宝</p>
+            </div>
+            <!-- 详细订单：start -->
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超AD超薄羽绒服AD超薄羽绒服薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <!-- 详细订单：end -->
+            <div class="ge-flex">
+                <p class="ge-flex-1 ge-flex ge-flex-cc" fweight="600">
+                    共3件，
+                    <!-- 优惠券<span class="font-main">￥20.00</span> -->
+                    实收<span class="font-main">￥2750.33</span>
+                </p>
+            </div>
+            <div class="ge-flex ge-flex-hc">
+                <div class="ge-square-box big-ewm"><img src="" alt=""></div>
+            </div>
+            <div class="ge-flex ge-flex-hc">
+                <p class="font-gray" fsize="26">
+                    请凭此二维码进行订单核验
+                </p>
+            </div>
+        </div>
+        <!-- 单个订单：end -->        
+    </div>
+
+    <!-- 底部确认btn：start -->
+    <div class="ge-fixed-submit-wrap">
+        <div class="ge-fixed-submit">
+            <i class="icon-scan"></i>
+            <span class="icon-sacn">扫码购</span>
+        </div>
+    </div>
+    <!-- 底部确认btn：end -->
+</body>
+</html>

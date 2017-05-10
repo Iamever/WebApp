@@ -25,6 +25,9 @@
 			// 按钮组
 			buttons:null,
 
+			// 自定义层
+			zIndex:1,
+
 
 			// 延迟关闭之后的回调
 			// delayCallBack: null,
@@ -153,6 +156,10 @@
 					},config.delay);
 				}
 
+				// zIndex
+				if(config.zIndex){
+					cover.css('zIndex', config.zIndex);
+				}
 
 
 				box.appendTo(cover);

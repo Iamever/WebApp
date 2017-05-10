@@ -11,7 +11,7 @@
 	<!-- endbower -->
 	<!-- endbuild -->
 
-	<!-- build:css styles/main.css -->
+	<!-- build:css styles/ge-main.css -->
 	<link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -80,7 +80,7 @@
                     <a href="javascript:;" class="quantity-increase"></a>
                 </div>
             </div>
-            <div class="ge-flex ge-flex-vc ge-food-del">
+            <div class="ge-flex ge-flex-vc ge-food-del" onclick="openlayer()">
                 <svg class="icon" aria-hidden="true">
                   <use xlink:href="#icon-shanchu"></use>
                 </svg>
@@ -191,6 +191,34 @@
 
 
         });
+
+        function openlayer() {
+            var dia = new geDialog({
+                message:'确认删除？',
+                close_btn:true,
+                opacity:0.4,
+                coverClose:true,
+                zIndex:999,
+                buttons:[
+                    {
+                      text:'取消',
+                      type:'no',
+                      callback:function () {
+                        // ...
+                        dia.close();
+                      }
+                    },
+                    {
+                      text:'确认',
+                      type:'ok',
+                      callback:function () {
+                        // ...
+                        dia.close();
+                      }
+                    }
+                ],
+            });
+        }
 
         function showDetail() {
             var dia = new geDialog({
