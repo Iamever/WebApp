@@ -28,7 +28,7 @@
 			// 自定义层
 			zIndex:1,
 
-
+			
 			// 延迟关闭之后的回调
 			// delayCallBack: null,
 
@@ -108,6 +108,7 @@
 					body.html(config.message)
 				};
 
+				
 				// 是否需要关闭按钮
 				if(config.close_btn){
 					closeBtn.appendTo(header);

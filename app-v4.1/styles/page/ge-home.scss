@@ -82,8 +82,8 @@ $color-nav:#363636;
 
  /**
   * 轮播
-  * 1200*480
-  * padding-top:40%
+  * 7500*272
+  * padding-top:36.26667%
   */
  .ge-home-banner-wrap{
  	@extend .ge-boxs;
@@ -94,7 +94,7 @@ $color-nav:#363636;
 	 	&:before{
 	 		content: '';
 	 		display: block;
-	 		padding-top:40%;
+	 		padding-top:36.26667%;
 	 	}
 	 	.ge-comm-slick{
 			// padding:0.2rem 0.25rem;

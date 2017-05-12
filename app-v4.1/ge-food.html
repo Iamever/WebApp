@@ -220,13 +220,22 @@
             });
         }
 
+
+        function aa() {
+            console.log(123);
+            
+        }
+
+
         function showDetail() {
+            var dom = "$('.ge-layer-cover')";
             var dia = new geDialog({
-                message:'<div class="ge-food-dialog-wrap"><div class="pic"><img src="images/ad1.jpg" alt=""></div><p class="name">印度飞饼火腿鸡蛋葱油味</p><div class="ge-flex ge-flex-vc ge-food-add2cart"><p class="price ge-flex-1">￥20.00</p><div class=" ge-flex ge-flex-vc icon-add2cart-btn"><svg class="icon icon-add2cart " aria-hidden="true"><use xlink:href="#icon-gouwuchefill"></use></svg></div></div></div>',
+                message:'<div class="ge-food-dialog-wrap"><div class="pic"><img src="images/ad1.jpg" alt=""></div><p class="name">印度飞饼火腿鸡蛋葱油味</p><div class="ge-flex ge-flex-vc ge-food-add2cart"><p class="price ge-flex-1">￥20.00</p><div class=" ge-flex ge-flex-vc icon-add2cart-btn" onclick="aa();'+dom+'.remove();"><svg class="icon icon-add2cart " aria-hidden="true"><use xlink:href="#icon-gouwuchefill"></use></svg></div></div></div>',
                 close_btn:true,
                 opacity:0.4,
                 coverClose:true,
             });
+
             $('.icon-add2cart-btn').click(function() {
                 $(this).addClass('curr');
             });
