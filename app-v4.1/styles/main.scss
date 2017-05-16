@@ -341,14 +341,14 @@ body{
 		}
 		.goods-name{
 			@extend .ge-aline;
-			font-size: 0.26rem;
-			padding:0.2rem 0 0.1rem;
+			font-size: 0.24rem;
+			padding:0.2rem 0.05rem 0.1rem;
 		}
 		.goods-price{
-			font-size: 0.26rem;
+			font-size: 0.24rem;
 			padding:0.1rem 0;
 			overflow: hidden;
-			@extend .ge-flex;
+			@extend .ge-flex,.ge-flex-hc;
 			.price-new{}
 			.price-old{
 				color:#999;
