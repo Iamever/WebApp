@@ -330,9 +330,15 @@ body{
 .ge-comm-list-goods3{
 	background:white;
 	.goods-item{
-		margin:0.2rem 0.35rem;
+		@extend .ge-boxs;
+		padding:0.2rem 0.1rem;
+		// border:1px solid blue;
 		.goods-pic{
+			// border:1px solid red;
+			width: 100%;
 			border-radius:0.3rem;
+			padding:0 0.25rem;
+			@extend .ge-boxs;
 		}
 		.goods-name{
 			@extend .ge-aline;
@@ -342,6 +348,7 @@ body{
 		.goods-price{
 			font-size: 0.26rem;
 			padding:0.1rem 0;
+			overflow: hidden;
 			@extend .ge-flex;
 			.price-new{}
 			.price-old{
