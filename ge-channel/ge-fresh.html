@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>金鹰购</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	
+
+	<!-- build:css styles/ge-fresh.css -->
+    <link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/page/ge-fresh.css">
+    <!-- endbuild -->
+
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+
+    <!-- 顶部图：start -->
+    <div class="ge-max-box ge-lazy-pic ">
+        <img src="images/1.jpeg" alt="">
+    </div>
+    <!-- 顶部图：end -->
+
+    <!-- for -->
+    <!-- 内容图：start -->
+    <div class="ge-max-box ge-lazy-pic ">
+        <img src="images/1.jpeg" alt="">
+    </div>
+    <div class="ge-fresh-vertical-text">
+        <p class="title">二十四峰味</p>
+        <p>果糖含量50%以上果肉晶莹，肉质细腻</p>
+    </div>
+    <!-- 内容图：end -->
+
+    <!-- 内容图：start -->
+    <div class="ge-max-box ge-lazy-pic ">
+        <img src="images/1.jpeg" alt="">
+    </div>
+    <div class="ge-fresh-vertical-text">
+        <p class="title">二十四峰味</p>
+        <p>果糖含量50%以上果肉晶莹，肉质细腻</p>
+    </div>
+    <!-- 内容图：end -->
+    <!-- end-for -->
+
+    
+    
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script>
+        /**
+         * 延迟加载
+         */
+        $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
+    </script>
+</body>
+</html>

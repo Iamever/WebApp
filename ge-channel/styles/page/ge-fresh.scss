@@ -1,0 +1,15 @@
+
+
+.ge-fresh-vertical-text{
+	background:white;
+	overflow: hidden;
+	padding:0.2rem 0.3rem 0.5rem;
+	p{
+		line-height: 1.5;
+		font-size:0.25rem;
+		text-align: left;
+		&.title{
+			font-weight: 600;
+		}
+	}
+}
