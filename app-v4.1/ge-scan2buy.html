@@ -10,8 +10,8 @@
 	<link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:css styles/page/ge-scan2pay.css -->
-    <link rel="stylesheet" href="styles/page/ge-scan2pay.css">
+    <!-- build:css styles/page/ge-scan2buy.css -->
+    <link rel="stylesheet" href="styles/page/ge-scan2buy.css">
     <!-- endbuild -->
 </head>
 <script>
@@ -25,7 +25,23 @@
     }
 </script>
 <body>
-    <div class="ge-scan2pay">
+    <!-- 暂无订单：start -->
+    <div class="ge-scan2pay-no-order">
+        <div class="ge-cc">
+            <div class="icon-box">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-gouwuche"></use>
+                </svg>
+            </div>
+            <p class="info">暂无商品，去添加商品吧！</p>
+        </div>
+    </div>
+    <!-- 暂无订单：end -->
+
+
+
+    <div class="ge-scan2pay" style="display: none;">
+
         <!-- 单个订单：start -->
         <div class="ge-scan2pay-item">
             <div class="ge-flex">
@@ -39,19 +55,27 @@
                 <p fsize="26" class="ge-group">支付宝</p>
             </div>
             <!-- 详细订单：start -->
-            <div class="ge-flex">
+            <div class="ge-flex item-detail" >
                 <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
                 <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
             </div>
-            <div class="ge-flex">
+            <div class="ge-flex item-detail">
                 <p class="ge-flex-1 ge-aline" fsize="33">AD超AD超薄羽绒服AD超薄羽绒服薄羽绒服</p>
                 <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
             </div>
-            <div class="ge-flex">
+            <div class="ge-flex item-detail">
                 <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
                 <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
             </div>
-            <div class="ge-group "><p class="ge-flex ge-flex-hc font-gray" fsize="26">收起</p></div>
+            <div class="ge-flex item-detail">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <div class="ge-flex item-detail">
+                <p class="ge-flex-1 ge-aline" fsize="33">AD超薄羽绒服</p>
+                <p fsize="33">2件,<span class="font-main">￥520.22</span></p>
+            </div>
+            <div class="ge-group " id="toggleShow"><p class="ge-flex ge-flex-hc font-gray" fsize="26" >展开所有清单</p></div>
             <!-- 详细订单：end -->
             <div class="ge-flex">
                 <p class="ge-flex-1 ge-flex ge-flex-cc" fweight="600">
@@ -59,7 +83,7 @@
                     <!-- 优惠券<span class="font-main">￥20.00</span> -->
                     实收<span class="font-main">￥2750.33</span>
                 </p>
-                <p class="btn-click">
+                <p class="btn-click" onclick="showDetail()">
                     <i class="btn-click-ewm"></i>
                 </p>
             </div>
@@ -119,5 +143,57 @@
         </div>
     </div>
     <!-- 底部确认btn：end -->
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/page/iconfont.js -->
+    <script src="iconfont/iconfont.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/page/ge-dialog.js -->
+    <script src="scripts/ge-dialog.js"></script>
+    <!-- endbuild -->
+
+    <script>
+
+        $('.ge-scan2pay-item .item-detail:not(:lt(3))').hide();
+        $("#toggleShow").click(function() {
+            if($(this).hasClass('show')){
+                $('.ge-scan2pay-item .item-detail:not(:lt(3))').hide();
+                $(this).removeClass('show').children().html('展开所有清单');
+            }else{
+                $('.ge-scan2pay-item .item-detail').show();
+                $(this).addClass('show').children().html('收起');
+            }
+        });
+
+        
+
+
+        
+        function showDetail() {
+            var dom = "$('.ge-layer-cover')";
+            var dia = new geDialog({
+                message:'<div class="ge-scan2pay"><img src="images/ad1.jpg" alt="" style="width:80%;margin-bottom:0.3rem"><p class="font-gray " fsize="26">请凭此二维码进行订单核验</p></div>',
+                close_btn:true,
+                opacity:0.4,
+                coverClose:true,
+            });
+
+            $('.icon-add2cart-btn').click(function() {
+                $(this).addClass('curr');
+            });
+        }
+    </script>
 </body>
 </html>
