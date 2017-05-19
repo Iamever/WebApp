@@ -642,6 +642,31 @@ body{
 	@include ge-check($color-main);
 }
 
+
+
+/**
+ * 大按钮
+ */
+@mixin ge-comm-big-btn($bg,$color){
+	display:block;
+	margin:0 auto;
+	width:80%;
+	padding:0.3rem;
+	background:$bg;
+	color:$color;
+	text-align:center;
+	font-size:0.36rem;
+	border-radius:0.1rem;
+	letter-spacing:0.05rem;
+	&:hover{
+		text-decoration:none;
+	}
+}
+.ge-comm-big-btn-main{
+	@include ge-comm-big-btn($color-main,white);
+}
+
+
 /**
  * layer 外部插件
  * 公用
@@ -915,3 +940,27 @@ body{
 	}
 }
 
+
+
+/**
+ * 综合表单
+ * .ge-comm-form>.ge-form-aline
+ */
+
+.ge-comm-form{
+	background:white;
+	.ge-form-aline{
+		border-bottom:1px solid $color-bg;
+		line-height: 1rem;
+		padding:0 0.15rem;
+		.ge-form-label{
+			color:#333;
+		}
+		.ge-form-input{
+			padding:0 0.2rem;
+			input{
+				font-size: 0.3rem;
+			}
+		}
+	}
+}
