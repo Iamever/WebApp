@@ -15,6 +15,15 @@ $color-nav:#363636;
 .ge-mart-nav{
 	padding:0.4rem 0 0.3rem;
 	background:white;
+	&[aline-item="5"]{
+		overflow: hidden;
+		padding:0.2rem 0 0.1rem;
+		.nav-item{
+			float: left;
+			width: 20%;
+			margin:0.2rem 0 ;
+		}
+	}
 	.nav-item{
 		width: 1.2rem;
 		margin-right: 0.35rem;
@@ -178,5 +187,8 @@ $color-nav:#363636;
  	.miaosha-old-price{
  		font-size: 0.22rem;
  		color:#838383;
+ 	}
+ 	.miaosha-name{
+ 		padding-top:0.2rem ;
  	}
  }
