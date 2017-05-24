@@ -944,9 +944,8 @@ body{
 
 /**
  * 综合表单
- * .ge-comm-form>.ge-form-aline
+ * .ge-comm-form>.ge-form-aline 
  */
-
 .ge-comm-form{
 	background:white;
 	.ge-form-aline{
@@ -963,4 +962,15 @@ body{
 			}
 		}
 	}
+}
+
+/**
+ * sticky
+ */
+.ge-comm-sticky{
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: sticky;
+	top: 0px;
 }

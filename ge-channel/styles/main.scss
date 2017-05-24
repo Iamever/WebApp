@@ -390,3 +390,14 @@ body{
 }
 
 
+/**
+ * sticky
+ * top：0
+ */
+.ge-comm-sticky{
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: sticky;
+	top: 0px;
+}
