@@ -27,8 +27,7 @@
 
 <body>
     <!-- 用户收货信息：start -->
-    <div class="ge-group-min ge-order-item ">
-    <div class="order-item-info icon-more">
+    <div class="ge-group-min ge-order-item icon-more">
         <div class="ge-flex ge-flex-vc">
             <p class="order-user-name">金鹰</p>
             <p class="order-tel">152****5858</p>
@@ -37,14 +36,13 @@
         <div class="ge-flex">
             <p class="ge-flex-1 order-address">江苏省南京市秦淮区汉中路89号金鹰购物中心A座8层信息中心025-24324214</p>
         </div>
-        </div>
     </div>
     <!-- 用户收货信息：end -->
 
 
     <!-- 订单商品信息：start -->
-    <div class="ge-group-min ge-order-item">
-        <div class="order-item-info icon-more ge-flex ge-flex-vc apadding aborder">
+    <div class="ge-group-min">
+        <div class=" ge-order-item icon-more ge-flex ge-flex-vc apadding aborder">
             <ul class="ge-flex-1 order-goods-pic ge-flex">
                 <li class="ge-square-box">
                     <img src="images/goods.jpeg" alt="">
@@ -57,47 +55,63 @@
                 <p>共2件</p>
             </div>
         </div>
-        <div class="order-item-info icon-more ge-flex ge-flex-vc apadding aborder">
+        <div class="ge-order-item icon-more ge-flex ge-flex-vc apadding aborder">
             <p class="ge-flex-1">支付配送</p>
             <div class="font-gray font-right">
                 <p>在线支付</p>
                 <p>普通快递+门店自提</p>
             </div>
         </div>
-        <div class="order-item-info icon-more ge-flex ge-flex-vc apadding aborder">
+        <div class="ge-order-item icon-more ge-flex ge-flex-vc apadding aborder">
             <p class="ge-flex-1">发票</p>
             <p class="font-gray">无需发票</p>
         </div>
     </div>
     <!-- 订单商品信息：end -->
 
-    <!-- 留言：start -->
-    <div class="ge-group-min ge-order-item">
-        <div class="order-item-info apadding">
-            <input type="text" placeholder="选填：给金鹰购留言（45字以内）">
+    <!-- 使用优惠抵扣：start -->
+    <div class="ge-group-min">
+        <div class="ge-order-item  ge-flex ge-flex-vc  aborder">
+            <p class="ge-flex-1">员工内购<span class="size-min font-light-gray">(￥400元可用)</span></p>
+            <p class="ge-radio-green checked"></p>
         </div>
+        <div class="ge-order-item icon-more ge-flex ge-flex-vc apadding aborder">
+            <p class="ge-flex-1">优惠券</p>
+            <p class="font-main">-￥200.00</p>
+        </div>
+        <div class="ge-order-item icon-more ge-flex ge-flex-vc apadding aborder">
+            <p class="ge-flex-1">使用积分<span class="size-min font-light-gray">(8411白金卡)</span></p>
+            <p class="font-main">-1000积分</p>
+        </div>
+    </div>
+    <!-- 使用优惠抵扣：end -->
+
+    <!-- 留言：start -->
+    <div class="ge-group-min ge-order-item apadding">
+        <input type="text" placeholder="选填：给金鹰购留言（45字以内）">
     </div>
     <!-- 留言：end -->
 
 
     <!-- 总额：start -->
-    <div class="ge-group-min ge-order-item">
-        <div class="order-item-info ge-flex ge-flex-vc">
+    <div class="ge-group-min">
+        <div class="ge-order-item ge-flex ge-flex-vc">
             <p class="ge-flex-1">商品总额</p>
             <p class="font-main">￥1000.00+1000积分</p>
         </div>
-        <div class="order-item-info ge-flex ge-flex-vc">
+        <div class="ge-order-item ge-flex ge-flex-vc">
             <p class="ge-flex-1">运费</p>
             <p class="font-main">+￥0.00</p>
         </div>
-        <div class="order-item-info ge-flex ge-flex-vc">
+        <div class="ge-order-item ge-flex ge-flex-vc">
             <p class="ge-flex-1">优惠券</p>
             <p class="font-main">-￥200.00</p>
         </div>
-        <div class="order-item-info ge-flex ge-flex-vc">
+        <div class="ge-order-item ge-flex ge-flex-vc">
             <p class="ge-flex-1">积分</p>
             <p class="font-main">-1000积分</p>
         </div>
+    </div>
     </div>
     <!-- 总额：end -->
     
@@ -117,7 +131,10 @@
     
 
     <script>
-
+    $('.ge-radio-green').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('checked');
+    });
   
 
     </script>

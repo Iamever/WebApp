@@ -105,7 +105,7 @@ gulp.task('serve', () => {
       port: 9000,
       server: {
         baseDir: ['.tmp', app_path_name],
-        index: "ge-scan2buy.html",
+        index: "ge-order.html",
         routes: {
           '/bower_components': 'bower_components'
         }
