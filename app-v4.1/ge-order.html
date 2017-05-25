@@ -24,8 +24,9 @@
         _html.style.fontSize = _windowWidth / 7.5 + 'px';
     }
 </script>
-
 <body>
+    
+
     <!-- 用户收货信息：start -->
     <div class="ge-group-min ge-order-item icon-more">
         <div class="ge-flex ge-flex-vc">
@@ -112,8 +113,17 @@
             <p class="font-main">-1000积分</p>
         </div>
     </div>
-    </div>
     <!-- 总额：end -->
+
+
+    <!-- 底部：start -->
+    <div class="ge-order-bottom-box-wrap">
+        <div class="ge-flex ge-order-bottom-box">
+            <p class="font-main total-price ge-flex-1 apadding"><strong>￥800.00</strong><span class="font-gray size-min">（含运费￥0.00）</span></p>
+            <p class="apadding btn">提交</p>
+        </div>
+    </div>
+    <!-- 底部：end -->
     
 
 
@@ -135,7 +145,6 @@
         event.preventDefault();
         $(this).toggleClass('checked');
     });
-  
 
     </script>
 </body>
