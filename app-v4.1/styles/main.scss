@@ -646,6 +646,7 @@ body{
 
 /**
  * 大按钮
+ * 文档流位置
  */
 @mixin ge-comm-big-btn($bg,$color){
 	display:block;
@@ -664,6 +665,38 @@ body{
 }
 .ge-comm-big-btn-main{
 	@include ge-comm-big-btn($color-main,white);
+}
+
+/**
+ * 大按钮
+ * 底部固定
+ * .ge-comm-bottom-btn  >   btn-val
+ */
+.ge-comm-bottom-btn{
+	position: fixed;
+	height: 1.3rem;
+	bottom:0rem;
+	left: 0rem;
+	right:0rem;
+	background:white;
+	border-top:1px solid $color-bg;
+	.btn-val{
+		position:absolute;
+		bottom:0.2rem;
+		left: 0.2rem;
+		right: 0.2rem;
+		line-height: 0.9rem;
+		height: 0.9rem;
+		text-align: center;
+		font-size: 0.34rem;
+		font-weight: 600;
+		color: white;
+		background:$color-main;
+		border-radius: 0.1rem;
+		&:active{
+			opacity: 0.9;
+		}
+	}
 }
 
 

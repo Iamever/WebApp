@@ -32,22 +32,98 @@
     }
 </script>
 <body>
-	<div class="ge-pay">
+	<div class="cashier-desk">
 		<!-- 订单金额：start -->
-		<div class="ge-group-min top-box">
-			<p class="font-gray">订单金额</p>
-			<p class="font-main total-price" fs="50">￥299.00</p>
+		<div class=" top-box">
+			<p class="" fs="34">订单金额:<span class="font-main">￥299.00</span></p>
 		</div>
 		<!-- 订单金额：end -->
 
+		<!-- 卡券：start -->
+		<div class="ge-flex ge-flex-vc coupon-item ">
+			<div>
+				<p class="icon-logo-main"></p>
+			</div>
+			<div class="ge-flex-1">
+				<p class="font-dark">员工内购</p>
+				<p class="font-gray">￥400元可用</p>
+			</div>
+			<div>
+				<p class="ge-radio-green checked go2pay"></p>
+				
+			</div>
+		</div>
+		<div class="ge-flex ge-flex-vc coupon-item ">
+			<div>
+				<p class="icon-logo-blue"></p>
+			</div>
+			<div class="ge-flex-1">
+				<p class="font-dark">餐券</p>
+				<p class="font-gray">￥400元可用</p>
+			</div>
+			<div>
+				<p class="ge-radio-green checked go2pay"></p>
+				
+			</div>
+		</div>
+		<div class="ge-flex ge-flex-vc coupon-item icon-more">
+			<div><p class="icon-logo-red"></p></div>
+			<div class="ge-flex-1">
+				<p class="font-dark">电子礼品卡</p>
+				<p class="font-gray">2张可用</p>
+			</div>
+			<div>
+				<p class="font-main">-￥200.00</p>
+			</div>
+		</div>
+		<div class="ge-flex ge-flex-vc coupon-item icon-more">
+			<div><p class="icon-logo-green"></p></div>
+			<div class="ge-flex-1">
+				<p class="font-dark">超市提货券</p>
+				<p class="font-gray">￥400元可用</p>
+			</div>
+			<div>
+				<p class="font-main">-￥200.00</p>
+			</div>
+		</div>
+		<!-- 卡券：end -->
+
+		<!-- 第三方支付：start -->
+		<div class="ge-flex title-box">
+			<p class="ge-flex-1" fs="34">第三方支付：<span class="font-main">￥100.00</span></p>
+		</div>
+		<!-- 第三方支付：end -->
+
+		<!-- 卡券：start -->
+		<div class="ge-flex ge-flex-vc coupon-item third-party">
+			<div>
+				<p class="icon-logo-ali"></p>
+			</div>
+			<div class="ge-flex-1">
+				<p class="font-dark">支付宝支付</p>
+			</div>
+			<div>
+				<p class="ge-check-main checked"></p>
+			</div>
+		</div>
+		<div class="ge-flex ge-flex-vc coupon-item third-party">
+			<div><p class="icon-logo-wx"></p></div>
+			<div class="ge-flex-1">
+				<p class="font-dark">微信支付</p>
+			</div>
+			<div>
+				<p class="ge-check-main checked"></p>
+			</div>
+		</div>
+		
+		<!-- 卡券：end -->
 		
 		<!-- 底部确认btn：start -->
-		<div class="ge-pay-submit">
-			<input type="button" value="确认支付" class="go2pay">
+		<div class="ge-comm-bottom-btn">
+			<p class="btn-val">确认支付</p>
 		</div>
 		<!-- 底部确认btn：end -->
 	</div>
-	
 	
 
 	
@@ -55,7 +131,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/jquery.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
-    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/layer/src/mobile/layer.js"></script>
     <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
     <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
     <script src="/bower_components/swiper/dist/js/swiper.js"></script>

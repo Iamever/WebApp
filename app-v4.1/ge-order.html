@@ -72,10 +72,7 @@
 
     <!-- 使用优惠抵扣：start -->
     <div class="ge-group-min">
-        <div class="ge-order-item  ge-flex ge-flex-vc  aborder">
-            <p class="ge-flex-1">员工内购<span class="size-min font-light-gray">(￥400元可用)</span></p>
-            <p class="ge-radio-green checked"></p>
-        </div>
+        
         <div class="ge-order-item icon-more ge-flex ge-flex-vc apadding aborder">
             <p class="ge-flex-1">优惠券</p>
             <p class="font-main">-￥200.00</p>
@@ -138,12 +135,33 @@
     <script src="/bower_components/swiper/dist/js/swiper.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    
     
 
     <script>
     $('.ge-radio-green').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('checked');
+    });
+
+    $('.go2pay').click(function() {
+          //页面层
+          layer.open({
+            type: 1
+            ,content: '<input class="password" type="password" placeholder="请输入内购密码"/>'
+            ,anim: 'up'
+            ,style: 'width:80%;border-radius:0.1rem;'
+            ,btn: ['确定','取消']
+            ,className:'ge-layer-1'
+            ,yes: function(index){
+              layer.open({
+                content: '密码错误'
+                ,skin: 'msg'
+                ,time: 2 
+              });
+            }  
+          });
     });
 
     </script>

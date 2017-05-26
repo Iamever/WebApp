@@ -31,6 +31,17 @@ $color-main:#fe9600;
 	}
 }
 
+@mixin icon($bg){
+	background:$bg;
+	color:white;
+	font-size: 0.7em;
+	padding:0.03rem 0.1rem;
+	border-radius:0.1rem;
+	margin-left: 0.1rem;
+	display:inline-block;
+	vertical-align: top;
+}
+
 .ge-scan2pay{
 	color:#000;
 	.font-padding{
@@ -43,22 +54,14 @@ $color-main:#fe9600;
 		color:$color-main;
 	}
 	.i-bg-green{
-		background:#00cc33;
-		color:white;
-		font-size: 0.7em;
-		padding:0.02rem 0.1rem;
-		border-radius:0.1rem;
-		margin-left: 0.1rem;
-		vertical-align: top;
+		@include icon(#00cc33)
 	}
 	.i-bg-red{
-		background:#fe5858;
-		color:white;
-		font-size: 0.7em;
-		padding:0.02rem 0.1rem;
-		border-radius:0.1rem;
-		margin-left: 0.1rem;
-		vertical-align: top;
+		@include icon(#fe5858)
+		
+	}
+	.i-bg-main{
+		@include icon($color-main)
 	}
 	[fsize="26"]{
 		font-size:0.28rem;
