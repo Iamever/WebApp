@@ -24,22 +24,7 @@ $color-main:#fe9600;
 	}
 }
 
-/**
- * 超市特色购
- */
-.ge-mart-grid{
-	overflow: hidden;
-	background:white;
-	.grid-wrap{
-		overflow: hidden;
-		.grid-item{
-			float: left;
-			&.grid-item-2{
-				width: 50%;
-			}
-		}
-	}
-}
+
 
 
 /**

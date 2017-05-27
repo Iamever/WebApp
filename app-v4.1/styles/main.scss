@@ -464,6 +464,12 @@ body{
 			@extend .ge-boxs,.ge-flex-1;	
 			width: 50%;
 			position:relative;
+			&.no-border{
+				border-bottom:none;
+				&:nth-child(odd){
+					border-right:none;
+				}
+			}
 			border-bottom:0.02rem solid $color-bg;
 			&:nth-child(odd){
 				border-right:0.02rem solid $color-bg;
