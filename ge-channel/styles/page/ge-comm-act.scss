@@ -1,49 +1,40 @@
+$color-bg:#f1f1f1;
+$color-main:#fe9600;
 
-/**
- * 顶部一张固定广告图
- * 750*272
- */
-.ge-act-top-box{
+
+.ge-mart-slide-tab{
+	width:100%;
+	height:1rem;
+	line-height:0.95rem;
+	overflow: hidden;
 	position:relative;
-	&:before{
-		content: '';
-		display: block;
-		padding-top:36.26667%;
-	}
-	.ge-max-box{
-		position:absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-}
-
-.ge-act-nav{
 	background:white;
-	.nav-item{
-		text-align: center;
-		padding:0.3rem 0;
-		position: relative;
-		font-size: 0.3rem;
-		&:after{
-			content: '';
-			display: block;
-			position:absolute;
-			width: 1px;
-			height: 100%;
-			background:rgba(0,0,0,0.2);
-			top: 0;
-			right:0;
-		}
-		&:last-child{
-			&:after{
-				width: 0;
+	.slide-wrap{
+		position:absolute;
+		left: 0;
+		-webkit-transform: translateX(0);
+		-webkit-transition: all 0.4s;
+		ul{
+			position:relative;
+			white-space: nowrap;
+			li{
+				display: inline-block;
+				padding:0 15px;
+				a{
+					display: block;
+					width: 100%;
+					height: 100%;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+				&.curr{
+					border-bottom: 0.05rem solid $color-main;
+					a{
+						color:$color-main !important;
+					}
+				}
 			}
-		}
-		&.curr{
-			background:#333;
-			color: #fff;
 		}
 	}
 }
