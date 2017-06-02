@@ -27,6 +27,8 @@
         // slick实际宽度
         this.slick_width = $(this.config.wrap).width();
 
+        // console.log(this.view_width,this.slick_width)
+
         // 触摸开始时的参数
         this.start_touch = '';
         this.start_x = '';
