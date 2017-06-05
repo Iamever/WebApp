@@ -1,11 +1,23 @@
 $color-bg:#f1f1f1;
 $color-main:#fe9600;
 
-
-.ge-tslick-container{
-	position:relative;
+.top-slick-wrap{
+	position: relative;
+	z-index:99;
 	width:100%;
-	height:1.5rem;
+	height:1.6rem;
+
+}
+.ge-top-slick{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	margin:auto;
+	width:100%;
+	max-width:640px;
+	height:1.4rem;
+	padding:0.2rem 0 0rem;
 	overflow: hidden;
 	background: white;
 	.ge-tslick-wrap{
@@ -14,12 +26,13 @@ $color-main:#fe9600;
 		-webkit-transform: translateX(0);
 		-webkit-transition: all 0.4s;
 		.ge-tslick-item{
-			padding: 0.1rem 15px;
+			width:1.5rem;
 			text-align: center;
 			&.curr{
 				// border-bottom: 0.03rem solid $color-main;
 				.tslick-text{
 					color:$color-main;
+					font-weight: 600;
 				}
 				.tslick-pic{
 					box-shadow: 0rem 0rem 0.1rem $color-main;
@@ -27,12 +40,12 @@ $color-main:#fe9600;
 			}
 			.tslick-text{
 				font-size: 0.26rem;
-				margin-top: 0.1rem;
+				margin-top: 0.15rem;
 			}
 			.tslick-pic{
 				border-radius: 100%;
-				width: 20px;
-				height: 20px;
+				width: 0.8rem;
+				height: 0.8rem;
 				display: flex;
 				-webkit-display: flex;
 				justify-content:center;
