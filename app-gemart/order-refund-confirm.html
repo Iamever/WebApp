@@ -2,307 +2,114 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>金鹰购</title>
+	<title>确认订单</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
-	<!-- build:css styles/vendor.css -->
-	<!-- bower:css -->
-	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
-	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
-	<!-- endbower -->
-	<!-- endbuild -->
+	
 
-	<!-- build:css styles/main.css -->
-	<link rel="stylesheet" href="styles/main.css">
+	<!-- build:css styles/order-refund-confirm.css -->
+    <link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/page/order-refund-confirm.css">
     <!-- endbuild -->
 </head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
 <body>
 
-    <!-- s搜索：start -->
-    <div class="ge-comm-gray-search">
-        <div class="search-wrap">
-            <div class="search-input">
-                <input type="text" placeholder="订单号、收货人手机号">    
-            </div>
-        </div>
-    </div>
-    <!-- s搜索：end -->
-
-    <!-- tab选项卡：start -->
-    <div class="ge-comm-tab">
-        <ul class="tab-content ge-flex">
-            <li class="tab-item curr ge-flex-1">
-                <a href="javascript:;">全部</a>
-            </li>
-            <li class="tab-item ge-flex-1">
-                <a href="javascript:;">待配送</a>
-            </li>
-            <li class="tab-item ge-flex-1">
-                <a href="javascript:;">已配送</a>
-            </li>
-        </ul>
-    </div>
-    <!-- tab选项卡：end -->
     
-    <!-- tab选项卡内容：start -->
-    <div class="ge-comm-tabcon">
-        <div class="tabcon-item curr">
-            <!-- 列表：start -->
-            <div class="ge-group-min sto-list-item">
-                <!-- 配送信息:start -->
-                <div class="list-line-wrap">
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-dark">冷冻商品</p>
-                        <p class=" text-dark">待配送</p>
-                    </div>
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-gray">2017.01.16 15:30</p>
-                        <p class=" text-gray">000000000000001</p>
-                    </div>
-                </div>
-                <!-- 配送信息:end -->
-                <!-- 商品信息：start -->
-                <div class="list-line-wrap ">
-                    <div class="ge-flex ge-group-min">
-                        <div class="img-line">
-                            <div class="ge-square-box">
-                                <img src="images/1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="ge-flex-1">
-                            <p class="text-dark ge-aline text-line">SAC A DOS双肩背包 单肩背包 金鹰新街口店B座二楼 Mandarina Duck 专柜发货</p>
-                            <div class="ge-flex text-line">
-                                <p class="text-gray ge-flex-1">黑色、200x230
-                                </p>
-                                <p class="text-gray">￥3300</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ge-flex ge-flex-end">
-                        <p class="text-line text-dark">
-                            共<span>1</span>件商品 合计：￥32000+积分200
-                        </p>
-                    </div>
-                </div>
-                <!-- 商品信息：end -->
-                <!-- 按钮：start -->
-                <div class="ge-flex list-line-wrap">
-                    <div class="ge-flex-1 btn-line">
-                        <a href="tel:18651905521" class="icon-red">
-                            <svg class="icon icon-tel" aria-hidden="true">
-                              <use xlink:href="#icon-lianxi"></use>
-                            </svg>
-                            联系顾客
-                        </a>
-                    </div>
-                    <div class="ge-flex-1 btn-line">
-                        <a href="javascript:;"  class="icon-red" onclick="showLayer1()">
-                            <svg class="icon" aria-hidden="true">
-                              <use xlink:href="#icon-daisonghuo"></use>
-                            </svg>
-                            配送
-                        </a>
-                    </div>
-                </div>
-                <!-- 按钮：end -->
+    <div class="bg-white box-border">
+
+        <!-- 订单号：start -->
+        <div class="ge-flex box-border flex-padding ge-flex-vc">
+            <p class="ge-flex-1">
+                订单号：
+                <span>0000000000000001</span>
+            </p>
+            <div>
+                <input type="button" value="退订单" class="bg-main">
             </div>
-            <!-- 列表：end -->
-            <!-- 列表：start -->
-            <div class="ge-group-min sto-list-item">
-                <!-- 配送信息:start -->
-                <div class="list-line-wrap">
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-dark">冷冻商品</p>
-                        <p class=" text-dark">待配送</p>
-                    </div>
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-gray">2017.01.16 15:30</p>
-                        <p class=" text-gray">000000000000001</p>
-                    </div>
-                </div>
-                <!-- 配送信息:end -->
-                <!-- 商品信息：start -->
-                <div class="list-line-wrap ">
-                    <div class="ge-flex ge-group-min">
-                        <div class="img-line">
-                            <div class="ge-square-box">
-                                <img src="images/1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="ge-flex-1">
-                            <p class="text-dark ge-aline text-line">SAC A DOS双肩背包 单肩背包 金鹰新街口店B座二楼 Mandarina Duck 专柜发货</p>
-                            <div class="ge-flex text-line">
-                                <p class="text-gray ge-flex-1">黑色、200x230
-                                </p>
-                                <p class="text-gray">￥3300</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ge-flex ge-flex-end">
-                        <p class="text-line text-dark">
-                            共<span>1</span>件商品 合计：￥32000+积分200
-                        </p>
-                    </div>
-                </div>
-                <!-- 商品信息：end -->
-                <!-- 按钮：start -->
-                <div class="ge-flex list-line-wrap">
-                    <div class="ge-flex-1 btn-line">
-                        <a href="javascript:;" class="icon-red">
-                            <svg class="icon icon-tel" aria-hidden="true">
-                              <use xlink:href="#icon-lianxi"></use>
-                            </svg>
-                            联系顾客
-                        </a>
-                    </div>
-                    <div class="ge-flex-1 btn-line">
-                        <a href="javascript:;"  class="icon-red" onclick="showLayer2()">
-                            <svg class="icon" aria-hidden="true">
-                              <use xlink:href="#icon-qiangdantubiao"></use>
-                            </svg>
-                            抢单
-                        </a>
-                    </div>
-                </div>
-                <!-- 按钮：end -->
-            </div>
-            <!-- 列表：end -->
         </div>
+        <!-- 订单号：end -->
 
 
+        <!-- 单个商品列表：start -->
+        <div class="ge-flex flex-padding">
+            <div class="ge-flex-1">
+                <p class="font-dark">wonderful life 100% 牛皮商务绅士黑色公文包</p>
+                <p class="font-gray" lineH="1.4">编码：00000000000012</p>
+            </div>
+            <div class="ge-flex ge-flex-cc">
+                <span class="font-red">￥333</span>
+                <i class="icon-mul font-gray">x</i>
+                <span class="font-gray">3</span>
+            </div>
+        </div>
+        <div class="ge-flex box-border flex-padding ge-flex-vc">
+            <p class="ge-flex-1 font-dark">合计：￥3300.00</p>
+            <div>
+                <input type="button" value="退商品" class="bg-red">
+            </div>
+        </div>
+        <!-- 单个商品列表：end -->
         
 
-
-
-        <div class="tabcon-item">
-            <!-- 列表：start -->
-            <div class="ge-group-min sto-list-item">
-                <!-- 配送信息:start -->
-                <div class="list-line-wrap">
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-dark">冷冻商品</p>
-                        <p class=" text-dark">待配送</p>
-                    </div>
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-gray">2017.01.16 15:30</p>
-                        <p class=" text-gray">000000000000001</p>
-                    </div>
-                </div>
-                <!-- 配送信息:end -->
-                <!-- 商品信息：start -->
-                <div class="list-line-wrap ">
-                    <div class="ge-flex ge-group-min">
-                        <div class="img-line">
-                            <div class="ge-square-box">
-                                <img src="images/1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="ge-flex-1">
-                            <p class="text-dark ge-aline text-line">SAC A DOS双肩背包 单肩背包 金鹰新街口店B座二楼 Mandarina Duck 专柜发货</p>
-                            <div class="ge-flex text-line">
-                                <p class="text-gray ge-flex-1">黑色、200x230
-                                </p>
-                                <p class="text-gray">￥3300</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ge-flex ge-flex-end">
-                        <p class="text-line text-dark">
-                            共<span>1</span>件商品 合计：￥32000+积分200
-                        </p>
-                    </div>
-                </div>
-                <!-- 商品信息：end -->
-                <!-- 按钮：start -->
-                <div class="ge-flex list-line-wrap">
-                    <div class="ge-flex-1 btn-line">
-                        <a href="javascript:;" class="icon-red">
-                            <svg class="icon icon-tel" aria-hidden="true">
-                              <use xlink:href="#icon-lianxi"></use>
-                            </svg>
-                            联系顾客
-                        </a>
-                    </div>
-                    <div class="ge-flex-1 btn-line">
-                        <a href="javascript:;" class="icon-gray">
-                            <svg class="icon" aria-hidden="true">
-                              <use xlink:href="#icon-qiangdantubiao"></use>
-                            </svg>
-                            抢单
-                        </a>
-                    </div>
-                </div>
-                <!-- 按钮：end -->
+        <!-- 单个商品列表：start -->
+        <div class="ge-flex flex-padding">
+            <div class="ge-flex-1">
+                <p class="font-dark">wonderful life 100% 牛皮商务绅士黑色公文包</p>
+                <p class="font-gray " lineH="1.4"> 编码：00000000000012</p>
             </div>
-            <!-- 列表：end -->
+            <div class="ge-flex ge-flex-cc">
+                <span class="font-red">￥3330.00</span>
+                <i class="icon-mul font-gray">x</i>
+                <span class="font-gray">1</span>
+            </div>
         </div>
-        <div class="tabcon-item">
-            <!-- 列表：start -->
-            <div class="ge-group-min sto-list-item">
-                <!-- 配送信息:start -->
-                <div class="list-line-wrap">
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-dark">冷冻商品</p>
-                        <p class=" text-dark">待配送</p>
-                    </div>
-                    <div class="ge-flex text-line">
-                        <p class="ge-flex-1 text-gray">2017.01.16 15:30</p>
-                        <p class=" text-gray">000000000000001</p>
-                    </div>
-                </div>
-                <!-- 配送信息:end -->
-                <!-- 商品信息：start -->
-                <div class="list-line-wrap ">
-                    <div class="ge-flex ge-group-min">
-                        <div class="img-line">
-                            <div class="ge-square-box">
-                                <img src="images/1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="ge-flex-1">
-                            <p class="text-dark ge-aline text-line">SAC A DOS双肩背包 单肩背包 金鹰新街口店B座二楼 Mandarina Duck 专柜发货</p>
-                            <div class="ge-flex text-line">
-                                <p class="text-gray ge-flex-1">黑色、200x230
-                                </p>
-                                <p class="text-gray">￥3300</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ge-flex ge-flex-end">
-                        <p class="text-line text-dark">
-                            共<span>1</span>件商品 合计：￥32000+积分200
-                        </p>
-                    </div>
-                </div>
-                <!-- 商品信息：end -->
-                <!-- 按钮：start -->
-                <div class="ge-flex list-line-wrap">
-                    <div class="ge-flex-1 btn-line">
-                        <a href="javascript:;" class="icon-red">
-                            <svg class="icon icon-tel" aria-hidden="true">
-                              <use xlink:href="#icon-lianxi"></use>
-                            </svg>
-                            联系顾客
-                        </a>
-                    </div>
-                    <div class="ge-flex-1 btn-line">
-                        <a href="javascript:;" class="icon-gray">
-                            <svg class="icon" aria-hidden="true">
-                              <use xlink:href="#icon-daisonghuo" ></use>
-                            </svg>
-                            已配送
-                        </a>
-                    </div>
-                </div>
-                <!-- 按钮：end -->
+        <div class="ge-flex flex-padding ge-flex-vc">
+            <p class="ge-flex-1 font-dark">合计：￥3300.00</p>
+            <div>
+                <input type="button" value="退商品" class="bg-red">
             </div>
-            <!-- 列表：end -->
+        </div>
+        <!-- 单个商品列表：end -->
+    </div>
+
+
+
+
+    <!-- 订单总信息：start -->
+    <div class="ge-flex flex-padding">
+        <div class="font-gray" lineH="1.4">
+            <p>线上订单号：<span>000000004</span></p>
+            <p>ERP编号：<span>000000004</span></p>
+            <p>付款时间：<span>2017.01.17 08:58:06</span></p>
         </div>
     </div>
-    <!-- tab选项卡内容：end -->
-
-
-
+    <!-- 订单总信息：end -->
     
+
+    <!-- footer-fixed：start -->
+    <div class="footer-fixed-wrap">
+    <div class="ge-flex footer-fixed bg-white">
+        <div class="ge-flex-1 flex-padding" lineH="1.2">
+            <p>合计：
+                <span class="font-red">￥9900</span>
+            </p>
+            <p class="font-dark">共3件商品</p>
+        </div>
+        <div class="box-button ge-flex ge-flex-cc">
+            <span>确认出货</span>
+        </div>
+    </div>
+    </div>
+    <!-- footer-fixed：end -->
 
     
 
@@ -318,10 +125,6 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="iconfont/iconfont.js"></script>
-    <script src="scripts/css-base.js"></script>
-    <script src="scripts/ge-dialog.js"></script>
-    <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
 </html>

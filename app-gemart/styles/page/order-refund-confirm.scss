@@ -1,0 +1,79 @@
+$color-bg:#e5e5e5;
+
+
+
+[lineH="1.4"]{
+	line-height:1.4;
+}
+[lineH="1.2"]{
+	line-height:1.2;
+}
+
+.box-border{
+	border-bottom:1px solid $color-bg;
+}
+
+.bg-white{
+	background:white;
+}
+
+.font-red{
+	color:#ff5050;
+}
+
+.font-gray{
+	color:#a5a5a5;
+}
+
+.font-main{ 
+	color:#f4a11c;
+}
+
+
+.ge-flex{
+	
+	font-size:0.32rem;
+}
+
+.flex-padding{
+	padding: 0.3rem 0.4rem;
+}
+
+
+
+input[type="button"]{
+	// 去除input默认的行高
+	line-height:1; 
+	color:white;
+	font-size:0.3rem;
+	width:1.5rem;
+	height:0.6rem;
+	border-radius:0.1rem;
+	&.bg-main{
+		background:#f4a11c;
+	}
+	&.bg-red{
+		background:#ff5050;
+	}
+}
+
+.footer-fixed{
+	position: fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	.box-button{
+		width: 2.5rem;
+		// height: 1.2rem;
+		background:#ff5050;
+		color:white;
+		font-size: 0.4rem;
+
+	}
+}
+
+.footer-fixed-wrap{
+	width:100%;
+	height:1.5rem;
+	position: relative;
+}
