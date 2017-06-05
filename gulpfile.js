@@ -11,7 +11,7 @@ const reload = browserSync.reload;
 
 var dev = true;
 
-var app_path_name = 'ge-channel'; // 修改项目
+var app_path_name = 'app-v4.1'; // 修改项目
 
 
 gulp.task('styles', () => {
@@ -105,7 +105,7 @@ gulp.task('serve', () => {
       port: 9000,
       server: {
         baseDir: ['.tmp', app_path_name],
-        index: "ge-comm-act.html",
+        index: "ge-scan2buy.html",
         routes: {
           '/bower_components': 'bower_components'
         }
