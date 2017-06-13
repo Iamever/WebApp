@@ -11,7 +11,7 @@ const reload = browserSync.reload;
 
 var dev = true;
 
-var app_path_name = 'app-gemart'; // 修改项目
+var app_path_name = 'app-v4.1'; // 修改项目
 
 
 gulp.task('styles', () => {
@@ -105,7 +105,7 @@ gulp.task('serve', () => {
       port: 9000,
       server: {
         baseDir: ['.tmp', app_path_name],
-        index: "order-refund-confirm.html",
+        index: "ge-goods-list.html",
         routes: {
           '/bower_components': 'bower_components'
         }

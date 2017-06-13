@@ -1,6 +1,6 @@
 $color-bg:#e5e5e5;
 
-
+$color-main:#f4a11c;
 
 [lineH="1.4"]{
 	line-height:1.4;
@@ -26,7 +26,7 @@ $color-bg:#e5e5e5;
 }
 
 .font-main{ 
-	color:#f4a11c;
+	color:$color-main;
 }
 
 
@@ -68,6 +68,12 @@ input[type="button"]{
 		background:#ff5050;
 		color:white;
 		font-size: 0.4rem;
+		&.bg-gray{
+			background:#999;
+		}
+		&.bg-main{
+			background:$color-main;
+		}
 
 	}
 }

@@ -366,6 +366,19 @@ body{
 	padding:0.14rem;
 	background:white;
 	@extend .ge-flex;
+	.search-icon{
+		width: 0.9rem;
+		@extend .ge-flex,.ge-flex-cc;
+		[fs="40"]{
+			font-size: 0.5rem;
+			&.color-main{
+				color:$color-main;
+			}
+			&.color-gray{
+				color:#696969;
+			}
+		}
+	}
 	.search-wrap{
 		background:#EDEEF1;
 		height: 0.64rem;
@@ -678,6 +691,11 @@ body{
  * 底部固定
  * .ge-comm-bottom-btn  >   btn-val
  */
+.ge-comm-bottom-btn-wrap{
+	position:relative;
+	width:100%;
+	height:1.5rem;
+}
 .ge-comm-bottom-btn{
 	position: fixed;
 	height: 1.3rem;

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金鹰购</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/ge-main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-goods-list.css -->
+    <link rel="stylesheet" href="styles/page/ge-goods-list.css">
+    <!-- endbuild -->
+
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+    <!-- 搜索:start -->
+    <div class="ge-comm-gray-search">
+        <div class="search-icon">
+            <svg class="icon  color-main" aria-hidden="true" fs="40">
+              <use xlink:href="#icon-xiangzuo1"></use>
+            </svg>
+        </div>
+        <div class="search-wrap">
+            <div class="search-icon">
+                <svg class="icon iconfont" aria-hidden="true">
+                  <use xlink:href="#icon-sousuo"></use>
+                </svg>
+            </div>
+            <form action="" class="search-input">
+                <input type="text" placeholder="请输入您要搜索的商品名称" type="search">
+            </form>
+        </div>
+        <div class="search-icon">
+            <svg class="icon  color-gray" aria-hidden="true" fs="40">
+              <use xlink:href="#icon-leimu"></use>
+            </svg>
+        </div>
+    </div>
+    <!-- 搜索：end -->
+
+
+    <!-- 筛选条：start -->
+    <div class="ge-goods-list-filter ge-flex ge-group">
+        <div class="filter-item icon-whole">
+            <a href="javascript:;">综合</a>
+            <!-- 模拟下拉：start -->
+            <div class="filter-selection-box">
+                <div class="item">
+                    <p>综合排序</p>
+                </div>
+                <div class="item">
+                    <p>人气排序</p>
+                </div>
+            </div>
+            <!-- 模拟下拉：end -->
+        </div>
+        <div class="filter-item ">
+            <a href="javascript:;">销量</a>
+        </div>
+        <div class="filter-item icon-price">
+            <a href="javascript:;">价格</a>
+        </div>
+        <div class="filter-item icon-filter">
+            <a href="javascript:;">筛选</a>
+        </div>
+    </div>
+    <!-- 筛选条：end -->
+
+    
+
+    <!-- 商品推荐：start -->
+    
+    <div class="ge-comm-list">
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box  ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 商品推荐：end -->
+
+    <!-- 返回顶部:start -->
+    <div class="ge-comm-back2top"></div>
+    <!-- 返回顶部:end -->
+
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/page/iconfont.js -->
+    <script src="iconfont/iconfont.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/page/ge-back2top.js -->
+    <script src="scripts/ge-back2top.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+        // 延迟加载
+            $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
+        // 综合
+        var flag;
+        $('.ge-goods-list-filter .icon-whole').click(function() {
+            if($(this).hasClass('curr')){
+                
+                
+            }else{
+               $(this).addClass('curr');
+
+                
+            }
+        });
+
+
+
+        function toggleHover(flag){
+            if(flag){
+                $('body').append('<div class="ge-hover"></div>');
+            }else{
+                $('.ge-hover').remove();
+                
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

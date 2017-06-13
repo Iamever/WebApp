@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>没有数据</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	
+    <mate name="viewport" content="width=device-width,initial-scale=1,user-scalabel=no"
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<style>
+    .wrap  {
+        border:1px solid #333;
+    }
+    .box{
+        -webkit-transform:translate(20px,20px);
+        -webkit-transform:rotate(90deg);
+        -webkit-transform:scale(0.2);
+    }
+</style>
+<body>
+	<div class="wrap">
+    <div class="box">
+        transform
+    </div>
+    </div>
+</body>
+<script type="text/javascript">
+   
+
+    url = "http://go.jinying.com:8000/activity/activity_md/md1?category_id=35341&speci_category_id=35340"
+
+    console.log(f(url))
+    function f(url) {
+        var l = url.indexOf('?');
+        console.log(l)
+        // var 
+    }
+</script>
+</html>
