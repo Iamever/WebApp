@@ -17,52 +17,55 @@ $color-main:#fe9600;
 	.filter-item{
 		width: 25%;
 		text-align: center;
-
 		a{
 			font-size: 0.33rem;
 			color: #666;
+			text-decoration: none;
+		}
+		&.curr{
+			a{
+				color:$color-main;
+			}
+			&.icon-whole{
+				a{
+					&:after{
+						border-width:0 0.1rem 0.1rem;
+						border-style:solid;
+						border-color:transparent transparent $color-main;
+					}
+				}
+			}
+			&.icon-price{}
+			&.icon-filter{}
 		}
 		&.icon-whole{
 			a{
-				text-decoration:none;
 				&:after{
 					content: '';
 					display: inline-block;
 					width: 0rem;
 					height: 0rem;
-					border-width:0 0.12rem 0.12rem;
+					border-width:0 0.1rem 0.1rem;
 					border-style:solid;
 					border-color:transparent transparent #666 ;
 					margin-left: 0.1rem;
-					-webkit-transform: rotate(180deg) translateY(0.02rem);
-					transform: rotate(180deg) translateY(0.02rem);
+					-webkit-transform:rotate(180deg) translateY(0.04rem);
+					transform:rotate(180deg) translateY(0.04rem);
 					-webkit-transition:all 0.3s ;
 					-ms-transition:all 0.3s ;
 					-o-transition:all 0.3s ;
 					transition:all 0.3s ;
 				}
 			}
-			&.curr{
-				.filter-selection-box{
-					display: block;
-				}
-				a{
-					color: $color-main;
-					&:after{
-						border-color:transparent transparent $color-main ;
-					}
-				}
-			}
 			&.upper{
-				.filter-selection-box{
-					display: none;
-				}
 				a{
-					color: $color-main;
 					&:after{
 						-webkit-transform: rotate(360deg) translateY(-0.07rem);
 						transform: rotate(360deg) translateY(-0.07rem);
 					}
+				}
+				.filter-selection-box{
+					display: block;
 				}
 			}
 		}

@@ -59,7 +59,7 @@
 
     <!-- 筛选条：start -->
     <div class="ge-goods-list-filter ge-flex ge-group">
-        <div class="filter-item icon-whole">
+        <div class="filter-item icon-whole " data-order="1">
             <a href="javascript:;">综合</a>
             <!-- 模拟下拉：start -->
             <div class="filter-selection-box">
@@ -72,13 +72,13 @@
             </div>
             <!-- 模拟下拉：end -->
         </div>
-        <div class="filter-item ">
+        <div class="filter-item " data-order="2">
             <a href="javascript:;">销量</a>
         </div>
-        <div class="filter-item icon-price">
+        <div class="filter-item icon-price" data-order="3">
             <a href="javascript:;">价格</a>
         </div>
-        <div class="filter-item icon-filter">
+        <div class="filter-item icon-filter" data-order="4">
             <a href="javascript:;">筛选</a>
         </div>
     </div>
@@ -179,28 +179,41 @@
     
     <script>
         // 延迟加载
-            $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
-        // 综合
-        var flag;
-        $('.ge-goods-list-filter .icon-whole').click(function() {
-            if($(this).hasClass('curr')){
+        var lazyloadDom = $('.ge-lazy-pic img');
+        lazyloadDom.lazyload({effect : 'fadeIn'});
+        
+        // 筛选条
+        var filterBox = $('.ge-goods-list-filter'),
+            filterItem = $('.filter-item'),
+            domA = $('a');
+            
+        filterBox.find(filterItem).find(domA).click(function() {
+            filterBox.find(filterItem).removeClass('curr');
+            $(this).parents(filterItem).addClass('curr');
+            
+            var order =  $(this).parents(filterItem).attr('data-order');
+            if(order == 1){
+                $(this).parents(filterItem).toggleClass('upper');
                 
-                
-            }else{
-               $(this).addClass('curr');
-
-                
+            }else if(order == 2){
+                item1gray()
+            }else if(order == 3){
+                item1gray()
+            }else if(order == 4){
+                item1gray()
             }
+
         });
 
-
+        function item1gray(){
+            filterBox.find(filterItem).eq(0).removeClass('curr').removeClass('upper');
+        }
 
         function toggleHover(flag){
             if(flag){
                 $('body').append('<div class="ge-hover"></div>');
             }else{
                 $('.ge-hover').remove();
-                
             }
         }
 
