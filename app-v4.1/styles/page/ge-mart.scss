@@ -33,9 +33,11 @@ $color-main:#fe9600;
 .ge-mart-nav{
 	padding:0.4rem 0 0.3rem;
 	background:white;
+	overflow: hidden;
 	.nav-item{
-		width: 1.2rem;
-		margin-right: 0.35rem;
+		width: 20%;
+		float: left;
+		padding: 0.1rem 0;
 		cursor: pointer;
 		&:last-child{
 			margin-right: 0;

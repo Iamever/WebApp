@@ -87,7 +87,6 @@
     
 
     <!-- 商品推荐：start -->
-    
     <div class="ge-comm-list">
         <div class="comm-item">
             <div class="comm-wrap">
@@ -178,48 +177,121 @@
     <!-- endbuild -->
     
     <script>
+       
         // 延迟加载
         var lazyloadDom = $('.ge-lazy-pic img');
         lazyloadDom.lazyload({effect : 'fadeIn'});
         
         // 筛选条
         var filterBox = $('.ge-goods-list-filter'),
-            filterItem = $('.filter-item'),
-            domA = $('a');
-            
-        filterBox.find(filterItem).find(domA).click(function() {
+            filterItem = $('.filter-item');
+
+        // 进入页面默高亮综合
+            filterBox.find(filterItem).eq(0).addClass('curr');
+        
+        // 点击筛选条
+        filterBox.find(filterItem).find('a').click(function() {
             filterBox.find(filterItem).removeClass('curr');
             $(this).parents(filterItem).addClass('curr');
-            
             var order =  $(this).parents(filterItem).attr('data-order');
             if(order == 1){
-                $(this).parents(filterItem).toggleClass('upper');
-                
+                open_item_whole();
+                close_item_price();
             }else if(order == 2){
-                item1gray()
+                close_item_whole();
+                close_item_price();
             }else if(order == 3){
-                item1gray()
+                open_item_price();
+                close_item_whole();
             }else if(order == 4){
-                item1gray()
+                close_item_whole();
+                close_item_price();
             }
 
         });
 
-        function item1gray(){
-            filterBox.find(filterItem).eq(0).removeClass('curr').removeClass('upper');
+
+        // 关闭价格筛选条
+        function close_item_price(){
+            filterBox.find(filterItem).eq(2).removeClass('curr').removeClass('upper');
+        }
+        // 打开价格筛选条
+        function open_item_price(){
+            var _this = filterBox.find(filterItem).eq(2),
+            className = _this.attr('class');
+            _this.toggleClass('upper');
+            if(className.indexOf("upper") === -1){
+                console.log("价格升序")
+            }else{
+                console.log("价格降序")
+            }
+
         }
 
+
+        // 关闭综合筛选条
+        function close_item_whole(bool) {
+            toggleHover(false);
+            if(bool){
+                filterBox.find(filterItem).eq(0).removeClass('upper');
+            }else{
+                filterBox.find(filterItem).eq(0).removeClass('curr').removeClass('upper');
+            }
+        }
+
+        // 打开综合筛选条
+        // 判断子类的高亮
+        function open_item_whole(index){
+            var _this = filterBox.find(filterItem).eq(0),
+            _this_item = _this.find('.filter-selection-box').find('.item'),
+            className = _this.attr('class');
+
+            _this.addClass('curr').toggleClass('upper');
+            if(className.indexOf("upper") === -1){
+                toggleHover(true);
+            }else{
+                toggleHover(false);
+            }
+            
+            // 综合-子类高亮的index
+            if(sessionGetItem()){
+                _this_item.removeClass('curr');
+                _this_item.eq(sessionGetItem()).addClass('curr');
+            }else{
+                _this_item.removeClass('curr');
+                _this_item.eq(0).addClass('curr');
+            }
+            _this_item.click(function(event) {
+                close_item_whole(true);
+                var _index = $(this).index();
+                sessionSetItem(_index)
+            });
+            
+        }
+
+
+        // 设置缓存综合-子类高亮index
+        function sessionSetItem(index){
+            sessionStorage.setItem('filterWhole',index);
+            console.log("综合排序："+index)
+        }
+
+        // 获取缓存综合-子类高亮index
+        function sessionGetItem(){
+            return sessionStorage.getItem('filterWhole');
+        }
+
+        // 遮罩层
         function toggleHover(flag){
             if(flag){
                 $('body').append('<div class="ge-hover"></div>');
+                $('.ge-hover').click(function() {
+                    close_item_whole(true);
+                });
             }else{
                 $('.ge-hover').remove();
             }
         }
-
-
-
-
 
     </script>
 </body>

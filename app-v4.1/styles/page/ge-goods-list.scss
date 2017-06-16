@@ -35,7 +35,13 @@ $color-main:#fe9600;
 					}
 				}
 			}
-			&.icon-price{}
+			&.icon-price{
+				a{	
+					&:after{
+						border-color:transparent transparent $color-main ;
+					}
+				}
+			}
 			&.icon-filter{}
 		}
 		&.icon-whole{
@@ -69,7 +75,47 @@ $color-main:#fe9600;
 				}
 			}
 		}
-		&.icon-price{}
+		&.icon-price{
+			a{	
+				position:relative;
+				&:before{
+					content: '';
+					position:absolute;
+					top: 0.05rem;
+					right: -0.3rem;
+					display: inline-block;
+					width: 0rem;
+					height: 0rem;
+					border-width:0 0.1rem 0.1rem;
+					border-style:solid;
+					border-color:transparent transparent #666 ;
+				}
+				&:after{
+					content: '';
+					position:absolute;
+					top: 0.25rem ;
+					right: -0.3rem;
+					display: inline-block;
+					width: 0rem;
+					height: 0rem;
+					border-width:0 0.1rem 0.1rem;
+					border-style:solid;
+					border-color:transparent transparent #666 ;
+					-webkit-transform:rotate(180deg) translateY(0.04rem);
+					transform:rotate(180deg) translateY(0.04rem);
+				}
+			}
+			&.upper{
+				a{	
+					&:before{
+						border-color:transparent transparent $color-main ;
+					}
+					&:after{
+						border-color:transparent transparent #666 ;
+					}
+				}
+			}
+		}
 		&.icon-filter{}
 		.filter-selection-box{
 			position:absolute;
@@ -85,6 +131,9 @@ $color-main:#fe9600;
 				font-size: 0.3rem;
 				line-height: 1rem;
 				border-bottom:1px solid #eee;
+				&.curr{
+					color:$color-main;
+				}
 			}
 		}
 	}
