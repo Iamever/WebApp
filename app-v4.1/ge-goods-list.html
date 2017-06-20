@@ -80,6 +80,51 @@
         </div>
         <div class="filter-item icon-filter" data-order="4">
             <a href="javascript:;">筛选</a>
+            <!-- 筛选详细：start -->
+            <div class="filter-detail-box ">
+                <ul class="filter-name">
+                    <li data-id="price"><span>价格</span></li>
+                    <li data-id="integral"><span>积分</span></li>
+                    <li data-id="distribution"><span>配送方式</span></li>
+                </ul>
+                <div class="filter-item">
+                    <ul class="filter-price">
+                        <li><span>全部</span></li>
+                        <li><span>0-500</span></li>
+                        <li><span>500-1000</span></li>
+                        <li><span>1000-3000</span></li>
+                        <li><span>3000-5000</span></li>
+                        <li>
+                            <input class="inputBox" type="text">-
+                            <input class="inputBox" type="text">
+                        </li>
+                    </ul>
+                    <ul class="filter-integral">
+                        <li><span>全部</span></li>
+                        <li><span>0-500</span></li>
+                        <li><span>500-1000</span></li>
+                        <li><span>1000-3000</span></li>
+                        <li><span>3000-5000</span></li>
+                        <li>
+                            <input class="inputBox" type="text">-
+                            <input class="inputBox" type="text">
+                        </li>
+                    </ul>
+                    <ul class="filter-distribution">
+                        <li><span>快递</span></li>
+                        <li><span>鹰速达</span></li>
+                        <li><span>自提</span></li>
+                    </ul>
+                </div>
+                <div class="filter-detail-foot ge-flex">
+                    <div class="ge-flex-1 info-box">
+                        <p>有<span font-color="main">20</span>件商品</p>
+                    </div>
+                    <div class="btn-reset"><p>重置</p></div>
+                    <div class="btn-submit"><p>确定</p></div>
+                </div>
+            </div>
+            <!-- 筛选详细：end -->
         </div>
     </div>
     <!-- 筛选条：end -->
@@ -176,123 +221,13 @@
     <script src="scripts/ge-back2top.js"></script>
     <!-- endbuild -->
     
+    <!-- build:js scripts/page/filter-bar.js -->
+    <script src="scripts/filter-bar.js"></script>
+    <!-- endbuild -->
     <script>
-       
         // 延迟加载
         var lazyloadDom = $('.ge-lazy-pic img');
         lazyloadDom.lazyload({effect : 'fadeIn'});
-        
-        // 筛选条
-        var filterBox = $('.ge-goods-list-filter'),
-            filterItem = $('.filter-item');
-
-        // 进入页面默高亮综合
-            filterBox.find(filterItem).eq(0).addClass('curr');
-        
-        // 点击筛选条
-        filterBox.find(filterItem).find('a').click(function() {
-            filterBox.find(filterItem).removeClass('curr');
-            $(this).parents(filterItem).addClass('curr');
-            var order =  $(this).parents(filterItem).attr('data-order');
-            if(order == 1){
-                open_item_whole();
-                close_item_price();
-            }else if(order == 2){
-                close_item_whole();
-                close_item_price();
-            }else if(order == 3){
-                open_item_price();
-                close_item_whole();
-            }else if(order == 4){
-                close_item_whole();
-                close_item_price();
-            }
-
-        });
-
-
-        // 关闭价格筛选条
-        function close_item_price(){
-            filterBox.find(filterItem).eq(2).removeClass('curr').removeClass('upper');
-        }
-        // 打开价格筛选条
-        function open_item_price(){
-            var _this = filterBox.find(filterItem).eq(2),
-            className = _this.attr('class');
-            _this.toggleClass('upper');
-            if(className.indexOf("upper") === -1){
-                console.log("价格升序")
-            }else{
-                console.log("价格降序")
-            }
-
-        }
-
-
-        // 关闭综合筛选条
-        function close_item_whole(bool) {
-            toggleHover(false);
-            if(bool){
-                filterBox.find(filterItem).eq(0).removeClass('upper');
-            }else{
-                filterBox.find(filterItem).eq(0).removeClass('curr').removeClass('upper');
-            }
-        }
-
-        // 打开综合筛选条
-        // 判断子类的高亮
-        function open_item_whole(index){
-            var _this = filterBox.find(filterItem).eq(0),
-            _this_item = _this.find('.filter-selection-box').find('.item'),
-            className = _this.attr('class');
-
-            _this.addClass('curr').toggleClass('upper');
-            if(className.indexOf("upper") === -1){
-                toggleHover(true);
-            }else{
-                toggleHover(false);
-            }
-            
-            // 综合-子类高亮的index
-            if(sessionGetItem()){
-                _this_item.removeClass('curr');
-                _this_item.eq(sessionGetItem()).addClass('curr');
-            }else{
-                _this_item.removeClass('curr');
-                _this_item.eq(0).addClass('curr');
-            }
-            _this_item.click(function(event) {
-                close_item_whole(true);
-                var _index = $(this).index();
-                sessionSetItem(_index)
-            });
-            
-        }
-
-
-        // 设置缓存综合-子类高亮index
-        function sessionSetItem(index){
-            sessionStorage.setItem('filterWhole',index);
-            console.log("综合排序："+index)
-        }
-
-        // 获取缓存综合-子类高亮index
-        function sessionGetItem(){
-            return sessionStorage.getItem('filterWhole');
-        }
-
-        // 遮罩层
-        function toggleHover(flag){
-            if(flag){
-                $('body').append('<div class="ge-hover"></div>');
-                $('.ge-hover').click(function() {
-                    close_item_whole(true);
-                });
-            }else{
-                $('.ge-hover').remove();
-            }
-        }
-
     </script>
 </body>
 </html>

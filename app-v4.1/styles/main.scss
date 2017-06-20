@@ -633,7 +633,7 @@ body{
  * 多选按钮
  * 颜色可配
  */
-@mixin ge-check($color){
+@mixin ge-check($color,$conColor){
 	width:0.44rem;
 	height:0.44rem;
 	border-radius:100%;
@@ -649,8 +649,8 @@ body{
 			top: 0.11rem;
 			width: 0.22rem;
 			height: 0.12rem;
-			border-left:0.03rem solid white;
-			border-bottom:0.03rem solid white;
+			border-left:0.03rem solid $conColor;
+			border-bottom:0.03rem solid $conColor;
 			-webkit-transform:rotate(-45deg);
 			-ms-transform:rotate(-45deg);
 		}		
@@ -658,7 +658,10 @@ body{
 }
 
 .ge-check-main{
-	@include ge-check($color-main);
+	@include ge-check($color-main,white);
+}
+.ge-check-white{
+	@include ge-check(white,#c49f5d);
 }
 
 

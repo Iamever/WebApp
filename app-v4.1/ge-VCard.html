@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>电子礼品卡</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	
+
+	<!-- build:css styles/ge-main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-pay.css -->
+    <link rel="stylesheet" href="styles/page/ge-VCard.css">
+    <!-- endbuild -->
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+	
+
+	<div class="ge-v-card">
+		<!-- 电子礼品卡：start -->
+		<ul class="v-card-list">
+			<li class="list-item ge-flex">
+				<div class="ge-flex-1 info-box">
+					<p class="card-number">礼品卡（8880000467487960）</p>
+					<p class="card-balance">￥369.28 <span fs='50%'>￥160.72已用</span></p>
+				</div>
+				<div class="check-box ge-flex ge-flex-cc">
+					<div class="ge-check-white checked"></div>
+				</div>
+			</li>
+			<li class="list-item ge-flex">
+				<div class="ge-flex-1 info-box">
+					<p class="card-number">礼品卡（8880000467487960）</p>
+					<p class="card-balance">￥10000 </p>
+				</div>
+				<div class="check-box ge-flex ge-flex-cc">
+					<div class="ge-check-white"></div>
+				</div>
+			</li>
+		</ul>
+		<!-- 电子礼品卡：end -->
+
+
+		<!-- 确定：start -->
+		<div class="ge-comm-bottom-btn-wrap">
+			<div class="ge-comm-bottom-btn">
+				<p class="btn-val">确定</p>
+			</div>
+		</div>
+		<!-- 确定：end -->
+	</div>
+	
+
+	
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    
+   	<script>
+   		$(document).ready(function($){
+   			var check_btn = $('.ge-check-white');
+   			check_btn.on('click', function() {
+   				$(this).toggleClass('checked');
+   				
+   			})
+   		})
+   	</script>
+</body>
+</html>

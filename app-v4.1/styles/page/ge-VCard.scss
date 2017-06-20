@@ -1,0 +1,78 @@
+
+$color-main:#fe9600;
+$color-bg:#f1f1f1;
+.ge-v-card{
+	.order-text{
+		line-height: 0.9rem;
+		font-size: 0.27rem;
+	}
+	.v-card-list{
+		padding: 0.25rem;
+		.list-item{
+			height: 1.6rem;
+			margin-bottom: 0.2rem;
+			color: white;
+			background:url(../img/bg1.png) no-repeat center center;
+			background-size:100% 100%;
+			&.mart-card{
+				background:url(../img/bg2.png) no-repeat center center;
+				background-size:100% 100%;
+			}
+			.info-box{
+				padding:0rem 0.3rem;
+				.card-number{
+					font-size: 0.27rem;
+					padding:0.25rem 0;
+				}
+				.card-balance{
+					font-size: 0.45rem;
+					font-weight: 600;
+					padding:0.1rem 0 ;
+				}
+			}
+			.check-box{
+				width: 1.6rem;
+			}
+			[fs="50%"]{
+				font-size: 0.6em;
+				font-weight: 500;
+			}
+		}
+
+	}
+	.ge-scan-btn{
+		padding:0.2rem;
+		.btn-val{
+			line-height: 0.9rem;
+			height: 0.9rem;
+			text-align: center;
+			color:$color-main;
+			border-radius:0.1rem;
+			border:2px solid $color-main;
+			.icon-scan{
+				position:relative;
+				&:before{
+					content: '';
+					position: absolute;
+					display: inline-block;
+					width: 0.4rem;
+					top: 0;
+					left: -0.5rem;
+					height: 0.4rem;
+					background-image:url('data:image/png;base64,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');
+					background-position:center center;
+					background-repeat: no-repeat;
+					background-size:0.4rem 0.39rem;
+				}
+			}
+		}
+	}
+	.ge-comm-bottom-btn{
+		background:$color-bg;
+		.btn-val{
+			border:2px solid $color-main;
+			color: $color-main;
+			background:$color-bg;
+		}
+	}
+}
