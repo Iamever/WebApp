@@ -223,7 +223,9 @@ body{
     -webkit-line-clamp:$line;
 }
 
-
+.ge-two-line{
+	@include ge-line(2);
+}
 
 /**
  * 遮罩层

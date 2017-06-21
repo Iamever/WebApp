@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:css styles/ge-main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-cart.css -->
+    <link rel="stylesheet" href="styles/page/ge-cart.css">
+    <!-- endbuild -->
+
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+   
+    
+    <!-- 同一组商品：start -->
+    <div class="cart-group">
+        <div class="cart-group-header ge-flex">
+            <div class="ge-flex ge-flex-vc check-box">
+                <p class="ge-check-main" check-type="group-check"></p>
+            </div>
+            <p class="ge-flex-1">
+                金鹰海外购
+            </p>
+        </div>
+        <!-- 单个商品列表：start -->
+        <div class="cart-goods-item">
+            <!-- 加价购：start -->
+            <div class="goods-box-header ge-flex" fs='26'>
+                <p class="prefix-title"><span>加价购</span></p>
+                <p class="ge-flex-1 ge-aline" >满1000元加1元购可可小姐2ml；满2000元加1元购可可小姐20ml</p>
+                <a href="#" class="add-btn" color="main">去凑单</a>
+            </div>
+            <!-- 加价购：end -->
+            <!-- 商品：start -->
+            <div class="goods-box ge-boxs ">
+                <div class="ge-flex goods-box-info">
+                    <div class="check-box ge-flex ge-flex-vc">
+                        <p class="ge-check-main" check-type=""></p>
+                    </div>
+                    <div class="goods-pic">
+                        <div class="ge-square-box ">
+                            <img class="" src="images/goods.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                        <p fs="26" class="ge-two-line">
+                            <i class="prefix-purple">海外商品</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                        <div class="ge-flex-1 ge-flex ge-flex-vc">
+                            <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                        </div>
+                        <div class="ge-flex ge-flex-vc">
+                            <p color="main" fs="34" class="goods-price ge-flex-1">199</p>
+                            <div class="ge-comm-quantity-wrapper">
+                                <div class="quantity-decrease"></div>
+                                <input type="number" class="quantity" value="1">
+                                <div class="quantity-increase"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                    删除
+                </p>
+            </div>
+            <!-- 商品：end -->
+            <!-- 加价购商品：start -->
+            <div class="goods-box ge-boxs add-order">
+                <div class="ge-flex goods-box-info">
+                    <div class="check-box ge-flex ge-flex-cc">
+                    </div>
+                    <div class="goods-pic">
+                        <div class="ge-square-box ">
+                            <img class="" src="images/goods.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                        <p fs="26" class="ge-aline">
+                            <i class="prefix-main-solid">加价购</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                        <div class="ge-flex-1 ge-flex ge-flex-vc">
+                            <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                        </div>
+                        <div class="ge-flex ge-flex-vc">
+                            <p color="main" fs="34" class="goods-price ge-flex-1">2.00</p>
+                            <p class="goods-quantity">2</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                    删除
+                </p>
+            </div>
+            <!-- 加价购商品：end -->
+        </div>
+        <!-- 单个商品列表：end -->
+    </div>
+    <!-- 同一组商品：end -->
+    
+
+    <!-- 同一组商品：start -->
+    <div class="cart-group">
+        <div class="cart-group-header ge-flex">
+            <div class="ge-flex ge-flex-vc check-box">
+                <p class="ge-check-main" check-type="group-check"></p>
+            </div>
+            <p class="ge-flex-1">
+                金鹰购自营商品
+            </p>
+        </div>
+        <!-- 单个商品列表：start -->
+        <div class="cart-goods-item">
+            <!-- 加价购：start -->
+            <div class="goods-box-header ge-flex" fs='26'>
+                <p class="prefix-title"><span>满减</span></p>
+                <p class="ge-flex-1 ge-aline" >满1000元加1元购可可小姐2ml；满2000元加1元购可可小姐20ml</p>
+                <a href="#" class="add-btn" color="main">去凑单</a>
+            </div>
+            <!-- 加价购：end -->
+            <!-- 商品：start -->
+            <div class="goods-box ge-boxs ">
+                <div class="ge-flex goods-box-info">
+                    <div class="check-box ge-flex ge-flex-vc">
+                        <p class="ge-check-main" check-type=""></p>
+                    </div>
+                    <div class="goods-pic">
+                        <div class="ge-square-box ">
+                            <img class="" src="images/goods.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                        <p fs="26" class="ge-two-line">
+                            <i class="prefix-main">专柜商品</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                        <div class="ge-flex-1 ge-flex ge-flex-vc">
+                            <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                        </div>
+                        <div class="ge-flex ge-flex-vc">
+                            <p color="main" fs="34" class="goods-price ge-flex-1">199</p>
+                            <div class="ge-comm-quantity-wrapper">
+                                <div class="quantity-decrease"></div>
+                                <input type="number" class="quantity" value="1">
+                                <div class="quantity-increase"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                    删除
+                </p>
+            </div>
+            <!-- 商品：end -->
+        </div>
+        <!-- 单个商品列表：end -->
+    </div>
+    <!-- 同一组商品：end -->
+
+
+    <!-- 同一组商品：start -->
+    <div class="cart-group">
+        <div class="cart-group-header ge-flex">
+            <div class="ge-flex ge-flex-vc check-box">
+                <p class="ge-check-main" check-type="group-check"></p>
+            </div>
+            <p class="ge-flex-1">
+                金鹰线上超市
+            </p>
+        </div>
+        <!-- 单个商品列表：start -->
+        <div class="cart-goods-item">
+            <!-- 商品：start -->
+            <div class="goods-box ge-boxs ">
+                <div class="ge-flex goods-box-info">
+                    <div class="check-box ge-flex ge-flex-vc">
+                        <p class="ge-check-main" check-type=""></p>
+                    </div>
+                    <div class="goods-pic">
+                        <div class="ge-square-box ">
+                            <img class="" src="images/goods.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                        <p fs="26" class="ge-two-line">
+                            <i class="prefix-main">超市商品</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                        <div class="ge-flex-1 ge-flex ge-flex-vc">
+                            <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                        </div>
+                        <div class="ge-flex ge-flex-vc">
+                            <p color="main" fs="34" class="goods-price ge-flex-1">199</p>
+                            <div class="ge-comm-quantity-wrapper">
+                                <div class="quantity-decrease"></div>
+                                <input type="number" class="quantity" value="1">
+                                <div class="quantity-increase"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                    删除
+                </p>
+            </div>
+            <!-- 商品：end -->
+            <!-- 加价购：start -->
+            <div class="goods-box-header ge-flex" fs='26'>
+                <p class="prefix-title"><span>满减</span></p>
+                <p class="ge-flex-1 ge-aline" >满1000元加1元购可可小姐2ml；满2000元加1元购可可小姐20ml</p>
+                <a href="#" class="add-btn" color="main">去凑单</a>
+            </div>
+            <!-- 加价购：end -->
+            <!-- 商品：start -->
+            <div class="goods-box ge-boxs ">
+                <div class="ge-flex goods-box-info">
+                    <div class="check-box ge-flex ge-flex-vc">
+                        <p class="ge-check-main" check-type=""></p>
+                    </div>
+                    <div class="goods-pic">
+                        <div class="ge-square-box ">
+                            <img class="" src="images/goods.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                        <p fs="26" class="ge-two-line">
+                            <i class="prefix-main">超市商品</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                        <div class="ge-flex-1 ge-flex ge-flex-vc">
+                            <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                        </div>
+                        <div class="ge-flex ge-flex-vc">
+                            <p color="main" fs="34" class="goods-price ge-flex-1">199</p>
+                            <div class="ge-comm-quantity-wrapper">
+                                <div class="quantity-decrease"></div>
+                                <input type="number" class="quantity" value="1">
+                                <div class="quantity-increase"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                    删除
+                </p>
+            </div>
+            <!-- 商品：end -->
+        </div>
+        <!-- 单个商品列表：end -->
+    </div>
+    <!-- 同一组商品：end -->
+
+
+    
+
+
+    <!-- 加价购-弹窗：start -->
+    <div class="layer-box-cover">
+        <div class="layer-box">
+            <!-- 标题:start -->
+            <div class="title-box">
+                加价购商品
+                <a href="#" class="close-btn"></a>
+            </div>
+            <!-- 标题:end -->
+            <!-- 单个商品列表：start -->
+            <div class="cart-goods-item" checklist="true">
+                <!-- 商品：start -->
+                <div class="goods-box ge-boxs add-order">
+                    <div class="ge-flex goods-box-info">
+                        <div class="check-box ge-flex ge-flex-vc">
+                            <p class="ge-check-main" check-type="radio-check"></p>
+                        </div>
+                        <div class="goods-pic">
+                            <div class="ge-square-box ">
+                                <img class="" src="images/goods.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                            <p fs="26" class="ge-aline">
+                                <i class="prefix-main">超市商品</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                            <div class="ge-flex-1 ge-flex ge-flex-vc">
+                                <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                            </div>
+                            <div class="ge-flex ge-flex-vc">
+                                <p color="main" fs="34" class="goods-price ge-flex-1">199</p>
+                                <p class="goods-quantity">1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                        删除
+                    </p>
+                </div>
+                <!-- 商品：end -->
+                <!-- 商品：start -->
+                <div class="goods-box ge-boxs add-order">
+                    <div class="ge-flex goods-box-info">
+                        <div class="check-box ge-flex ge-flex-vc">
+                            <p class="ge-check-main" check-type="radio-check"></p>
+                        </div>
+                        <div class="goods-pic">
+                            <div class="ge-square-box ">
+                                <img class="" src="images/goods.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                            <p fs="26" class="ge-aline">
+                                <i class="prefix-main">超市商品</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                            <div class="ge-flex-1 ge-flex ge-flex-vc">
+                                <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                            </div>
+                            <div class="ge-flex ge-flex-vc">
+                                <p color="main" fs="34" class="goods-price ge-flex-1">199</p>
+                                <p class="goods-quantity">1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                        删除
+                    </p>
+                </div>
+                <!-- 商品：end -->
+            </div>
+            <!-- 单个商品列表：end -->
+            <!-- 确认按钮：start -->
+            <div class="btn-box">
+                <p class="submit-btn">确定</p>
+            </div>
+            <!-- 确认按钮：end -->
+        </div>
+    </div>
+    <!-- 加价购-弹窗：end -->
+
+
+
+    <!-- 编辑-全选:start -->
+    <!-- 编辑时显示 -->
+    <!-- <div class="edit-footer-wrap">
+        <div class="edit-footer-box ge-flex ge-boxs">
+            <div class="check-box ge-flex ge-flex-vc">
+                <div class="ge-check-main"></div>
+            </div>
+            <p class="check-text ge-flex-1">全选</p>
+            <a href="#" class="del-btn" >删除</a>
+        </div>
+    </div> -->
+    <!-- 编辑-全选:end -->
+
+
+
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <script src="scripts/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    <!-- <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+        
+
+    <script src="scripts/add-order.js"></script>
+
+    <script>
+
+        // 左滑删除
+        $(".goods-box").on("swipeleft",function(){
+            $(this).addClass('selected');
+        }).on("swiperight",function(){
+            $(this).removeClass('selected');
+        })
+
+
+        // 加价购--弹窗 --确定返回事件
+        function submit_fn(){
+            // console.log('回调')
+        }
+
+
+        // check分为三类
+        // group-check :分组check
+        // “”:普通check
+        // radio-check：单选check
+        var check_btn = $('.ge-check-main');
+
+        check_btn.click(function() {
+            var check_btn_type = $(this).attr('check-type');
+            switch(check_btn_type){
+                case 'group-check':
+                    if($(this).hasClass('checked')){
+                        $(this).removeClass('checked');
+                        $(this).parents('.cart-group').find(check_btn).removeClass('checked');
+                    }else{
+                        $(this).addClass('checked');
+                        $(this).parents('.cart-group').find(check_btn).addClass('checked');
+                    }
+                break;
+                case 'radio-check':
+                    $(this).parents('.cart-goods-item').find(check_btn).removeClass('checked');
+                    $(this).addClass('checked');
+                break;
+                default:
+                    $(this).toggleClass('checked');
+            }
+        });
+
+
+        
+
+
+        
+        
+    </script>
+</body>
+</html>

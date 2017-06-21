@@ -81,10 +81,10 @@ $(document).ready(function(){
         var _this = filterBox.find(filterItem).eq(2),
         className = _this.attr('class');
         _this.toggleClass('upper');
-        if(className.indexOf("upper") === -1){
-            console.log("价格升序")
+        if(className.indexOf('upper') === -1){
+            console.log('价格升序')
         }else{
-            console.log("价格降序")
+            console.log('价格降序')
         }
 
     }
@@ -108,7 +108,7 @@ $(document).ready(function(){
         className = _this.attr('class');
 
         _this.addClass('curr').toggleClass('upper');
-        if(className.indexOf("upper") === -1){
+        if(className.indexOf('upper') === -1){
             toggleHover(true);
         }else{
             toggleHover(false);
@@ -134,7 +134,7 @@ $(document).ready(function(){
     // 设置缓存综合-子类高亮index
     function sessionSetItem(index){
         sessionStorage.setItem('filterWhole',index);
-        console.log("综合排序："+index)
+        console.log('综合排序：'+index)
     }
 
     // 获取缓存综合-子类高亮index

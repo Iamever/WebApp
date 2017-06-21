@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:css styles/ge-main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-cart.css -->
+    <link rel="stylesheet" href="styles/page/ge-cart.css">
+    <!-- endbuild -->
+
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+    
+    <!-- 购物车为空：start -->
+    <div class="cart-empty">
+        <i class="icon-cart-empty"></i>
+        <p class="info">购物车没有商品哦！</p>
+    </div>
+    <!-- 购物车为空：end -->
+   
+
+
+    <!-- 为您推荐：start -->
+    <p class="title-box">
+        为您推荐
+    </p>
+    <!-- 为您推荐：end -->
+    <ul class="ge-comm-list">
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods0.jpeg" alt="">
+                    <img src="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img src="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+ 
+</body>
+</html>
