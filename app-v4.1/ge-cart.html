@@ -37,7 +37,7 @@
     <div class="cart-group">
         <div class="cart-group-header ge-flex">
             <div class="ge-flex ge-flex-vc check-box">
-                <p class="ge-check-main" check-type="group-check"></p>
+                <p class="ge-check-main" check-type="check-all"></p>
             </div>
             <p class="ge-flex-1">
                 金鹰海外购
@@ -53,10 +53,10 @@
             </div>
             <!-- 加价购：end -->
             <!-- 商品：start -->
-            <div class="goods-box ge-boxs ">
+            <div class="goods-box ge-boxs " swipe="true">
                 <div class="ge-flex goods-box-info">
                     <div class="check-box ge-flex ge-flex-vc">
-                        <p class="ge-check-main" check-type=""></p>
+                        <p class="ge-check-main" check-type="check-single"></p>
                     </div>
                     <div class="goods-pic">
                         <div class="ge-square-box ">
@@ -85,7 +85,7 @@
             </div>
             <!-- 商品：end -->
             <!-- 加价购商品：start -->
-            <div class="goods-box ge-boxs add-order">
+            <div class="goods-box ge-boxs add-order" swipe="true">
                 <div class="ge-flex goods-box-info">
                     <div class="check-box ge-flex ge-flex-cc">
                     </div>
@@ -121,7 +121,7 @@
     <div class="cart-group">
         <div class="cart-group-header ge-flex">
             <div class="ge-flex ge-flex-vc check-box">
-                <p class="ge-check-main" check-type="group-check"></p>
+                <p class="ge-check-main" check-type="check-all"></p>
             </div>
             <p class="ge-flex-1">
                 金鹰购自营商品
@@ -137,10 +137,10 @@
             </div>
             <!-- 加价购：end -->
             <!-- 商品：start -->
-            <div class="goods-box ge-boxs ">
+            <div class="goods-box ge-boxs " swipe="true">
                 <div class="ge-flex goods-box-info">
                     <div class="check-box ge-flex ge-flex-vc">
-                        <p class="ge-check-main" check-type=""></p>
+                        <p class="ge-check-main" check-type="check-single"></p>
                     </div>
                     <div class="goods-pic">
                         <div class="ge-square-box ">
@@ -178,7 +178,7 @@
     <div class="cart-group">
         <div class="cart-group-header ge-flex">
             <div class="ge-flex ge-flex-vc check-box">
-                <p class="ge-check-main" check-type="group-check"></p>
+                <p class="ge-check-main" check-type="check-all"></p>
             </div>
             <p class="ge-flex-1">
                 金鹰线上超市
@@ -187,10 +187,10 @@
         <!-- 单个商品列表：start -->
         <div class="cart-goods-item">
             <!-- 商品：start -->
-            <div class="goods-box ge-boxs ">
+            <div class="goods-box ge-boxs " swipe="true">
                 <div class="ge-flex goods-box-info">
                     <div class="check-box ge-flex ge-flex-vc">
-                        <p class="ge-check-main" check-type=""></p>
+                        <p class="ge-check-main" check-type="check-single"></p>
                     </div>
                     <div class="goods-pic">
                         <div class="ge-square-box ">
@@ -226,10 +226,42 @@
             </div>
             <!-- 加价购：end -->
             <!-- 商品：start -->
-            <div class="goods-box ge-boxs ">
+            <div class="goods-box ge-boxs " swipe="true">
                 <div class="ge-flex goods-box-info">
                     <div class="check-box ge-flex ge-flex-vc">
-                        <p class="ge-check-main" check-type=""></p>
+                        <p class="ge-check-main" check-type="check-single"></p>
+                    </div>
+                    <div class="goods-pic">
+                        <div class="ge-square-box ">
+                            <img class="" src="images/goods.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="ge-flex-1 goods-info ge-flex ge-flex-ver">
+                        <p fs="26" class="ge-two-line">
+                            <i class="prefix-main">超市商品</i>韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片韩国A.H.C维生素C面膜5片</p>
+                        <div class="ge-flex-1 ge-flex ge-flex-vc">
+                            <p fs="22" color="gray" class="ge-aline"> 选购：套盒5片</p>
+                        </div>
+                        <div class="ge-flex ge-flex-vc">
+                            <p color="main" fs="34" class="goods-price ge-flex-1">199</p>
+                            <div class="ge-comm-quantity-wrapper">
+                                <div class="quantity-decrease"></div>
+                                <input type="number" class="quantity" value="1">
+                                <div class="quantity-increase"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="goods-box-del-btn ge-flex ge-flex-cc">
+                    删除
+                </p>
+            </div>
+            <!-- 商品：end -->
+            <!-- 商品：start -->
+            <div class="goods-box ge-boxs " swipe="true">
+                <div class="ge-flex goods-box-info">
+                    <div class="check-box ge-flex ge-flex-vc">
+                        <p class="ge-check-main" check-type="check-single"></p>
                     </div>
                     <div class="goods-pic">
                         <div class="ge-square-box ">
@@ -348,7 +380,7 @@
 
     <!-- 编辑-全选:start -->
     <!-- 编辑时显示 -->
-    <!-- <div class="edit-footer-wrap">
+    <div class="edit-footer-wrap">
         <div class="edit-footer-box ge-flex ge-boxs">
             <div class="check-box ge-flex ge-flex-vc">
                 <div class="ge-check-main"></div>
@@ -356,7 +388,7 @@
             <p class="check-text ge-flex-1">全选</p>
             <a href="#" class="del-btn" >删除</a>
         </div>
-    </div> -->
+    </div>
     <!-- 编辑-全选:end -->
 
 
@@ -375,21 +407,20 @@
     <!-- endbower -->
     <!-- endbuild -->
     
-
+    
+    <!-- ge-cart弹窗js -->
     <script src="scripts/add-order.js"></script>
 
     <script>
 
         // 左滑删除
-        var swipeBox = $(".goods-box");
+        var swipeBox = $(".goods-box[swipe='true']");
          swipeBox.swipe({
-            swipe:function(event, direction, distance, duration, fingerCount){
-                console.log(event)
-             if(direction == 'left') {
-                $(this).addClass('selected');
-             }else if(direction == 'right'){
-                $(this).removeClass('selected');
-             }
+            swipeLeft:function(event, direction, distance, duration, fingerCount){
+                    $(this).addClass('selected');
+            },
+             swipeRight:function(event, direction, distance, duration, fingerCount){
+                    $(this).removeClass('selected');
             },
       });
 
@@ -403,32 +434,59 @@
 
 
         // check分为三类
-        // group-check :分组check
+        // check-all :分组check
         // “”:普通check
         // radio-check：单选check
         var check_btn = $('.ge-check-main');
 
         check_btn.click(function() {
-            var check_btn_type = $(this).attr('check-type');
+            var check_btn_type = $(this).attr('check-type'),
+            check_group = $(this).parents('.cart-group'),
+            check_all = check_group.find('.ge-check-main[check-type="check-all"]'),
+            check = check_group.find('.ge-check-main[check-type="check-single"]');
+
+
             switch(check_btn_type){
-                case 'group-check':
+                // 全选框
+                case 'check-all':
                     if($(this).hasClass('checked')){
                         $(this).removeClass('checked');
-                        $(this).parents('.cart-group').find(check_btn).removeClass('checked');
+                        check_group.find(check_btn).removeClass('checked');
                     }else{
                         $(this).addClass('checked');
-                        $(this).parents('.cart-group').find(check_btn).addClass('checked');
+                        check_group.find(check_btn).addClass('checked');
                     }
                 break;
+                // 单选
                 case 'radio-check':
                     $(this).parents('.cart-goods-item').find(check_btn).removeClass('checked');
                     $(this).addClass('checked');
                 break;
-                default:
+                case 'check-single':
+                    if($(this).hasClass('checked')){
+                        // 分组中取消全选
+                        $(this).removeClass('checked');
+
+                        check_all.removeClass('checked');
+                    }else{
+                        $(this).addClass('checked');
+
+                        var arr=[];
+                        for(var i = 0; i<check.length;i++){
+                            arr.push(check[i].className)
+                        }
+                        var bool = arr.every(function(item,index){
+                            return item.indexOf('checked') > 0;
+                        })
+                        if(bool){
+                            check_all.addClass('checked');
+                        }
+                    }
+                    break;
+                default :
                     $(this).toggleClass('checked');
             }
         });
-
 
         
 
