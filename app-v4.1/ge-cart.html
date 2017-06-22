@@ -371,26 +371,32 @@
     <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
     <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
     <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
-    <script src="scripts/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
-    <!-- <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-        
 
     <script src="scripts/add-order.js"></script>
 
     <script>
 
         // 左滑删除
-        $(".goods-box").on("swipeleft",function(){
-            $(this).addClass('selected');
-        }).on("swiperight",function(){
-            $(this).removeClass('selected');
-        })
+        var swipeBox = $(".goods-box");
+         swipeBox.swipe({
+            swipe:function(event, direction, distance, duration, fingerCount){
+                console.log(event)
+             if(direction == 'left') {
+                $(this).addClass('selected');
+             }else if(direction == 'right'){
+                $(this).removeClass('selected');
+             }
+            },
+      });
 
 
-        // 加价购--弹窗 --确定返回事件
+        
+
+        // 加价购--弹窗 --确定按钮返回事件
         function submit_fn(){
             // console.log('回调')
         }

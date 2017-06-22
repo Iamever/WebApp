@@ -7,6 +7,7 @@
     "layer": "^3.0.3",
     "jieyou_lazyload": "^1.4.2",
     "jquery-sticky": "sticky#^1.0.4",
-    "swiper": "^3.4.2"
+    "swiper": "^3.4.2",
+    "jquery-touchswipe": "^1.6.18"
   }
 }
