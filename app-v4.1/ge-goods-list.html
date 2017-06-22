@@ -31,111 +31,192 @@
     }
 </script>
 <body>
-    <!-- 搜索:start -->
-    <div class="ge-comm-gray-search">
-        <div class="search-icon">
-            <svg class="icon  color-main" aria-hidden="true" fs="40">
-              <use xlink:href="#icon-xiangzuo1"></use>
-            </svg>
-        </div>
-        <div class="search-wrap">
-            <div class="search-icon">
-                <svg class="icon iconfont" aria-hidden="true">
-                  <use xlink:href="#icon-sousuo"></use>
-                </svg>
-            </div>
-            <form action="" class="search-input">
-                <input type="text" placeholder="请输入您要搜索的商品名称" type="search">
-            </form>
-        </div>
-        <div class="search-icon">
-            <svg class="icon  color-gray" aria-hidden="true" fs="40">
-              <use xlink:href="#icon-leimu"></use>
-            </svg>
-        </div>
-    </div>
-    <!-- 搜索：end -->
-
-
-    <!-- 筛选条：start -->
-    <div class="ge-goods-list-filter ge-flex ge-group">
-        <div class="filter-item icon-whole " data-order="1">
-            <a href="javascript:;">综合</a>
-            <!-- 模拟下拉：start -->
-            <div class="filter-selection-box">
-                <div class="item">
-                    <p>综合排序</p>
+    
+    <div class="top-head-wrap">
+        <div class="top-header">
+            <!-- 搜索:start -->
+            <div class="ge-comm-gray-search">
+                <div class="search-icon">
+                    <svg class="icon  color-main" aria-hidden="true" fs="40">
+                      <use xlink:href="#icon-xiangzuo1"></use>
+                    </svg>
                 </div>
-                <div class="item">
-                    <p>人气排序</p>
-                </div>
-            </div>
-            <!-- 模拟下拉：end -->
-        </div>
-        <div class="filter-item " data-order="2">
-            <a href="javascript:;">销量</a>
-        </div>
-        <div class="filter-item icon-price" data-order="3">
-            <a href="javascript:;">价格</a>
-        </div>
-        <div class="filter-item icon-filter" data-order="4">
-            <a href="javascript:;">筛选</a>
-            <!-- 筛选详细：start -->
-            <div class="filter-detail-box ">
-                <ul class="filter-name">
-                    <li data-id="price"><span>价格</span></li>
-                    <li data-id="integral"><span>积分</span></li>
-                    <li data-id="distribution"><span>配送方式</span></li>
-                </ul>
-                <div class="filter-item">
-                    <ul class="filter-price">
-                        <li><span>全部</span></li>
-                        <li><span>0-500</span></li>
-                        <li><span>500-1000</span></li>
-                        <li><span>1000-3000</span></li>
-                        <li><span>3000-5000</span></li>
-                        <li>
-                            <input class="inputBox" type="text">-
-                            <input class="inputBox" type="text">
-                        </li>
-                    </ul>
-                    <ul class="filter-integral">
-                        <li><span>全部</span></li>
-                        <li><span>0-500</span></li>
-                        <li><span>500-1000</span></li>
-                        <li><span>1000-3000</span></li>
-                        <li><span>3000-5000</span></li>
-                        <li>
-                            <input class="inputBox" type="text">-
-                            <input class="inputBox" type="text">
-                        </li>
-                    </ul>
-                    <ul class="filter-distribution">
-                        <li><span>快递</span></li>
-                        <li><span>鹰速达</span></li>
-                        <li><span>自提</span></li>
-                    </ul>
-                </div>
-                <div class="filter-detail-foot ge-flex">
-                    <div class="ge-flex-1 info-box">
-                        <p>有<span font-color="main">20</span>件商品</p>
+                <div class="search-wrap">
+                    <div class="search-icon">
+                        <svg class="icon iconfont" aria-hidden="true">
+                          <use xlink:href="#icon-sousuo"></use>
+                        </svg>
                     </div>
-                    <div class="btn-reset"><p>重置</p></div>
-                    <div class="btn-submit"><p>确定</p></div>
+                    <form action="" class="search-input">
+                        <input type="text" placeholder="请输入您要搜索的商品名称" type="search">
+                    </form>
+                </div>
+                <div class="search-icon" id="changeList">
+                    <svg class="icon  color-gray" aria-hidden="true" fs="40">
+                      <use xlink:href="#icon-leimu"></use>
+                    </svg>
                 </div>
             </div>
-            <!-- 筛选详细：end -->
+            <!-- 搜索：end -->
+
+
+            <!-- 筛选条：start -->
+            <div class="ge-goods-list-filter ge-flex ge-group">
+                <div class="filter-item icon-whole " data-order="1">
+                    <a href="javascript:;">综合</a>
+                    <!-- 模拟下拉：start -->
+                    <div class="filter-selection-box">
+                        <div class="item">
+                            <p>综合排序</p>
+                        </div>
+                        <div class="item">
+                            <p>人气排序</p>
+                        </div>
+                    </div>
+                    <!-- 模拟下拉：end -->
+                </div>
+                <div class="filter-item " data-order="2">
+                    <a href="javascript:;">销量</a>
+                </div>
+                <div class="filter-item icon-price" data-order="3">
+                    <a href="javascript:;">价格</a>
+                </div>
+                <div class="filter-item icon-filter" data-order="4">
+                    <a href="javascript:;">筛选</a>
+                    <!-- 筛选详细：start -->
+                    <div class="filter-detail-box ">
+                        <ul class="filter-name">
+                            <li data-id="price"><span>价格</span></li>
+                            <li data-id="integral"><span>积分</span></li>
+                            <li data-id="distribution"><span>配送方式</span></li>
+                        </ul>
+                        <div class="filter-item">
+                            <ul class="filter-price">
+                                <li><span>全部</span></li>
+                                <li><span>0-500</span></li>
+                                <li><span>500-1000</span></li>
+                                <li><span>1000-3000</span></li>
+                                <li><span>3000-5000</span></li>
+                                <li>
+                                    <input class="inputBox" type="text">-
+                                    <input class="inputBox" type="text">
+                                </li>
+                            </ul>
+                            <ul class="filter-integral">
+                                <li><span>全部</span></li>
+                                <li><span>0-500</span></li>
+                                <li><span>500-1000</span></li>
+                                <li><span>1000-3000</span></li>
+                                <li><span>3000-5000</span></li>
+                                <li>
+                                    <input class="inputBox" type="text">-
+                                    <input class="inputBox" type="text">
+                                </li>
+                            </ul>
+                            <ul class="filter-distribution">
+                                <li><span>快递</span></li>
+                                <li><span>鹰速达</span></li>
+                                <li><span>自提</span></li>
+                            </ul>
+                        </div>
+                        <div class="filter-detail-foot ge-flex">
+                            <div class="ge-flex-1 info-box">
+                                <p>有<span font-color="main">20</span>件商品</p>
+                            </div>
+                            <div class="btn-reset"><p>重置</p></div>
+                            <div class="btn-submit"><p>确定</p></div>
+                        </div>
+                    </div>
+                    <!-- 筛选详细：end -->
+                </div>
+            </div>
+            <!-- 筛选条：end -->
         </div>
     </div>
-    <!-- 筛选条：end -->
-
     
 
     <!-- 商品推荐：start -->
-    <div class="ge-comm-list">
+    <!-- unfold  -->
+    <div class="ge-comm-list ">
         <div class="comm-item">
             <div class="comm-wrap">
                 <div class="ge-square-box  ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                        <p>2315人评价</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥208.00</p>
+                        <p class="data-old-price"><s>¥300.00</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comm-item">
+            <div class="comm-wrap">
+                <div class="ge-square-box ge-lazy-pic">
                     <img data-original="images/goods.jpeg" alt="">
                     <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
                 </div>
@@ -229,6 +310,25 @@
         // 延迟加载
         var lazyloadDom = $('.ge-lazy-pic img');
         lazyloadDom.lazyload({effect : 'fadeIn'});
+
+
+        // changelist
+        $('#changeList').click(function() {
+            var goods_list = $('.ge-comm-list');
+            if($(this).hasClass('unfold')){
+                $(this).removeClass('unfold')
+                goods_list.removeClass('unfold');
+                $(this).find('use').attr('xlink:href','#icon-leimu');
+            }else{
+                $(this).addClass('unfold');
+                $(this).find('use').attr('xlink:href','#icon-danpin');
+                goods_list.addClass('unfold');
+            }
+        });
+
+    
+
+
     </script>
 </body>
 </html>

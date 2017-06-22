@@ -28,6 +28,7 @@ $(document).ready(function(){
             close_item_whole();
             close_item_price();
             open_item_detail();
+
         }
 
     });
@@ -39,37 +40,37 @@ $(document).ready(function(){
 
     // 打开筛选详情
     function open_item_detail(){
-        filter_detail_fn();
 
-    }
+        tabFn('.filter-detail-box','.filter-name>li','.filter-item>ul');
 
-    // 筛选详情nav
-    function filter_detail_fn(){
-        var detail_box = $('.filter-detail-box'),
-        filte_name = detail_box.find('.filter-name li'),
-        filte_item = detail_box.find('.filter-item ul');
+        check_radio('.filter-detail-box>.filter-item ul>li');
 
-        // 初始化
-        filte_name.eq(0).addClass('curr');
-        filte_item.eq(0).addClass('curr');
-
-        filte_name.on('click', function() {
-          $(this).addClass('curr').siblings().removeClass('curr');
-          var _index = $(this).index();
-          filte_item.removeClass('curr').eq(_index).addClass('curr');
-            filter_detail_second_list();
+        $('.filter-detail-box .btn-submit').click(function() {
+            close_item_detail()
         });
     }
 
-
-    // 筛选详情-二级列表
-    function filter_detail_second_list(){
-        var list = $('.filter-detail-box .filter-item ul li');
-        list.click(function() {
+    function check_radio(ele) {
+        $(ele).click(function() {
             $(this).addClass('curr').siblings().removeClass('curr');
         });
     }
 
+    function tabFn(wrapClassName,titleClassName,contentClassName){
+        var wrap = $(wrapClassName),
+            titleItem = wrap.find($(titleClassName)),
+            contentItem = wrap.find($(contentClassName));
+
+            $(titleItem[0]).addClass('curr');
+            $(contentItem[0]).addClass('curr');
+        for(var i = 0;i<titleItem.length;i++){
+            titleItem[i].onclick = function(){
+                $(this).addClass('curr').siblings().removeClass('curr');
+                $(contentItem[$(this).index()]).addClass('curr').siblings().removeClass('curr');
+
+            }
+        }
+    }
 
 
     // 关闭价格筛选条
