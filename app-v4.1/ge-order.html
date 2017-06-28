@@ -112,6 +112,14 @@
     </div>
     <!-- 总额：end -->
 
+    <!-- 积分选项卡：start -->
+    <div class="ge-group-min" onclick="openSelectCard()">
+        <div class="ge-order-item icon-more ge-flex ge-flex-vc apadding aborder">
+            <p class="ge-flex-1">支付成功可获88积分(8411白金卡)</p>
+        </div>
+    </div>
+    <!-- 积分选项卡：end -->
+
 
     <!-- 底部：start -->
     <div class="ge-order-bottom-box-wrap">
@@ -121,6 +129,34 @@
         </div>
     </div>
     <!-- 底部：end -->
+
+
+
+    <!-- 会员卡选择：start -->
+    <div class="ge-bottom-layer-cover">
+        <div class="ge-bottom-layer">
+            <div class="box-header">
+                <p class="title">会员卡</p>
+                <a href="#" class="close-btn"></a>
+            </div>
+            <div class="box-body">
+                <ul class="card-list">
+                    <li class="ge-flex ge-flex-vc">
+                        <div class="ge-check-main checked"></div>
+                        <p>白金卡（8774）</p>
+                    </li>
+                    <li class="ge-flex ge-flex-vc">
+                        <div class="ge-check-main"></div>
+                        <p>超人卡（8774）</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-footer">
+                <div class="ge-comm-big-btn-main">确定</div>
+            </div>
+        </div>
+    </div>
+    <!-- 会员卡选择：end -->
     
 
 
@@ -146,6 +182,9 @@
         $(this).toggleClass('checked');
     });
 
+
+
+
     $('.go2pay').click(function() {
           //页面层
           layer.open({
@@ -164,6 +203,30 @@
             }  
           });
     });
+
+
+    /**
+     * 打开底部弹窗
+     */
+    function openSelectCard(){
+        var dom_layer = $('.ge-bottom-layer-cover');
+        var btn_close = dom_layer.find('.close-btn');
+
+        dom_layer.addClass('curr');
+        btn_close.click(function() {
+            closeSelectCard()
+        });
+    }
+
+
+    /**
+     * 关闭底部弹窗
+     */
+    function closeSelectCard(){
+        var dom_layer = $('.ge-bottom-layer-cover');
+        dom_layer.removeClass('curr');
+    }
+
 
     </script>
 </body>

@@ -76,3 +76,26 @@ $color-bg:#f1f1f1;
 		}
 	}
 }
+
+.showAlter-body{
+	line-height:1.3;
+	.type-icon{
+		width: 1rem;
+		height: 1rem;
+		background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEzUlEQVR4Xu1bS24bORAtwgLUvZrMCeI5wcgnyGhjgNwkPkGcEyQ5QZITRDlBpBMk2ZCAN1ZOEPkE8Zxg4pVtwEYFr8EWuuWm1O3mpwc2AQFeuEnWqw+LxVeCAo/T09Mn19fXz5h5gp8Q4gkR7dtfdfVzIjpn5l9CiBV+4/H4+3Q6/RVyiyLE5CcnJ5Obm5uXRPSPEGLSZw1mXhHRcjQaLQ4PD/G31+ENAKvpl8z8pkG7vjZ9LoSYjcfjhS/L6A0ABL+6unoNwa15+xLWOY91k1mWZZ/6AtELAGMMND6LJfgmIhaIN1LKxX1RvxcAxhgEsc/w8fsu7Pm7JRG9klIikHYanQHQWr+A8Km07pIO1gAQlFJfuyDQCQCt9UchBILcYAdcUin1tu0GWwNgjIHJH7edOPH/zaWUr9rsoRUAWusvQgiYvq9xwczHpbnCrYQQcyL6w9cCRNQKhJ0ABNI8AhYEXg+tNY7Rjx4BwFQ7QdgKgNYaR9xrz5uiLMv+3Dy/bT7xn++1mPmTUsoZt5wAWLP84ntDmE9K2biuMYZDrMfMR67TwbWRfWb+EeqoSwAALlgHTXmCC4DTkElObACsVS2llNNNC7sDgDEGRx2OvGAjEQCQ507wrQGAQHR5efkzlOmXiKYCANlinud/VQNwDQBjzHsiehdM9XbiVADY5T9IKSFnMdYAxNJ+ilOgqtBNK1gDECgRaTSmxBZAzPxWKTWrWYAx5mfASk4NiAEAsFJKHawBQA3v9vb2R2jfTx0Eq/Lt7e0doMZYuEColNcFaGoLwL7KFLkEAFlfr+ptF+sZCACFG4hQl5BtgAwBAOwPlzIR8tIzZBewbnAkYiU/VTCGYgFE9AEAoIj4vIsP9/3fAQGwgAsshRDP+grV5fuhAMDM32EB0RKgIeUBNgasAECQKsz/4RQoMsFHAB4t4IG7gNYab+5Pu0Txvv87lFOAiM4ej8EHnwg9+FQ4xWWoLEZUY0nsosz6MpTiOgzWV5ZlR2V52u4Bz3BRGSfFdRhIGGNAP/u7b3Tv+D04gQWbwz69g3YTc5xJKSdJSmIxpXStVSuJpfC/1CDUiqK2MBo9IUoIQmH+hfuVm4j5MJJQ8GLpxocRG4nBs/PJ09km6zciKrm/0EasqtRFlmX75QkU/XGUmf8djUYvNonPlmD9NcK9pPlxFKqKYAUXRDRxMTptMAbrM5QV1rRfiwGlrYYkSOwiLNlgHISYZeXbTpCoBMRQhdKplBIadg5jDLJBUHS8DhRAlVJ3Mk0nScoGKN+mmAoAp+tFpclto6uFdMHONLmKK/j2x0amVtXWjTFeGWq74k4bqiworej/8TXuBKKA2l9IKbcSvHcCgM0FqBoBVJzHRYODbcAAOcsnG32n8I3HoEvNxhjfluDLoprmaSV8JwAinNFeANnl85uLtHKB6keBuP0+hK/1ILSdsDMApc8y8zz2q7JLqOKVV4jjKE1TG0cWghb4dr4TprYKRIKDtrla80XbjzvHgKaJ7QUKDQn4xQICgqNxcpa0cbIKiKXawiLQ+hLkqQ1XaQie5/m8r+Dl3u8VA3aZmL3bHwshcPnoW20+Y2Y0T88H3TztAsVaRtlFjhb6on1+00qsdlGXRAPkCl3jeZ4vfWnatb/fg5HH68CqVwEAAAAASUVORK5CYII=') no-repeat center center;
+		background-size:100%;
+		margin:0.1rem auto;
+	}
+	p{
+		margin-top: 0.3rem;
+	}
+	[color="gray"]{
+		color:#666;
+	}
+	[fs="30"]{
+		font-size: 0.34rem;
+	}
+	[fs="26"]{
+		font-size: 0.26rem;
+	}
+}

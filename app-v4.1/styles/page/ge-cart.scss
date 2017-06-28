@@ -148,6 +148,14 @@ $color-main:#fe9600;
 					font-size: 0.6em;
 				}
 			}
+			.goods-integral{
+				margin-left: 0.1rem;
+				// font-size: 0.6em;
+				&:before{
+					content: '积分';
+					font-size: 0.6em;
+				}
+			}
 			.prefix-purple{
 				color:#661e8f;
 				font-style: normal;
@@ -182,7 +190,7 @@ $color-main:#fe9600;
 .layer-box-cover{
 	position:fixed;
 	background:rgba(0,0,0,0.4);
-	z-index:2;
+	z-index:10;
 	top:0;
 	left:0;
 	right:0;
@@ -277,7 +285,7 @@ $color-main:#fe9600;
 	background:white;
 	border-top:1px solid #e2e2e2;
 	line-height:1rem;
-	padding:0 0.2rem;
+	padding:0 0 0 0.2rem;
 	max-width:640px;
 	right:0;
 	margin:auto;
@@ -294,6 +302,33 @@ $color-main:#fe9600;
 		padding:0.1rem 0.3rem;
 		border-radius:0.1rem;
 		text-decoration: none;
+		margin-right: 0.2rem;
+	}
+	.text-right{
+		line-height: 0.4rem;
+		text-align: right;
+		margin-right:0.2rem;
+	}
+	.right-btn{
+		background:$color-main;
+		color:white;
+		padding:0 0.4rem;
+	}
+	[fs="50%"]{
+		font-size: 0.5em;
+	}
+	[color="main"]{
+		color:$color-main;
+	}
+	[color="dark"]{
+		color:#333;
+	}
+	[fs="33"]{
+		font-size: 0.33rem;
+		font-weight:600;
+	}
+	[fs="22"]{
+		font-size: 0.22rem;
 	}
 }
 

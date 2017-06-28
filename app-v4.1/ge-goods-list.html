@@ -48,11 +48,11 @@
                         </svg>
                     </div>
                     <form action="" class="search-input">
-                        <input type="text" placeholder="请输入您要搜索的商品名称" type="search">
+                        <input id="search-input" type="text" placeholder="请输入您要搜索的商品名称" type="search">
                     </form>
                 </div>
                 <div class="search-icon" id="changeList">
-                    <svg class="icon  color-gray" aria-hidden="true" fs="40">
+                    <svg class="icon color-gray" aria-hidden="true" fs="40">
                       <use xlink:href="#icon-leimu"></use>
                     </svg>
                 </div>
@@ -145,7 +145,7 @@
                     <img data-original="images/tips/hot.png" alt="" class="ge-tips-1">
                 </div>
                 <div class="comm-text">
-                    <p class="text-name"><i>超市专供</i>兰芝 三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
+                    <p class="text-name"><i>超市专供</i>兰芝三八节多效优惠套装 金鹰A座1楼兰芝专柜</p>
                     <div class="text-data">
                         <p class="data-new-price">¥208.00</p>
                         <p class="data-old-price"><s>¥300.00</s></p>
@@ -312,7 +312,7 @@
         lazyloadDom.lazyload({effect : 'fadeIn'});
 
 
-        // changelist
+        
         $('#changeList').click(function() {
             var goods_list = $('.ge-comm-list');
             if($(this).hasClass('unfold')){
@@ -325,8 +325,12 @@
                 goods_list.addClass('unfold');
             }
         });
+        
+        
+        
 
-    
+
+
 
 
     </script>

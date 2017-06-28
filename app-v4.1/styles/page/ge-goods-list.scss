@@ -3,6 +3,9 @@ $color-main:#fe9600;
 .top-head-wrap{
 	width:100%;
 	height:1.9rem;
+	[color='main']{
+		color:$color-main;
+	}
 }
 .top-header{
 	position:fixed;
@@ -17,7 +20,6 @@ $color-main:#fe9600;
 
 .ge-comm-gray-search{
 	position:relative;
-	z-index:2;
 }
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>电子礼品卡</title>
+	<title>超市提货券</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
 
 	<!-- build:css styles/vendor.css -->
@@ -62,7 +62,7 @@
 		<!-- 电子礼品卡：end -->
 
 		<!-- 扫码添加:start -->
-		<div class="ge-scan-btn"><p class="btn-val "><span class="icon-scan">扫码添加</span></p></div>
+		<div class="ge-scan-btn"><p class="btn-val " onclick="showAlter()"><span class="icon-scan">扫码添加</span></p></div>
 		<!-- 扫码添加:end -->
 
 
@@ -75,7 +75,7 @@
 		<!-- 确定：end -->
 	</div>
 	
-
+	
 	
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -89,15 +89,38 @@
     <!-- endbower -->
     <!-- endbuild -->
     
+
+    <!-- build:js scripts/page/ge-dialog.js -->
+    <script src="scripts/ge-dialog.js"></script>
+    <!-- endbuild -->
     
    	<script>
    		$(document).ready(function($){
    			var check_btn = $('.ge-check-white');
    			check_btn.on('click', function() {
    				$(this).toggleClass('checked');
-   				
    			})
    		})
+
+
+   		function showAlter(){
+   			var dia = new geDialog({
+                message:'<div class="showAlter-body"><div class="type-icon"></div><p fs="30">连续3次扫码失败<br>超市提货券暂停使用</p><p color="gray" fs="26">如有疑问请联系金鹰超市客服<br>025-84708899-7152</p></div>',
+                close_btn:false,
+                opacity:0.4,
+                coverClose:true,
+                buttons:[
+                    {
+                      text:'我知道了',
+                      type:'ok1',
+                      callback:function () {
+                        // ...
+                        dia.close();
+                      }
+                    }
+                ],
+            });
+   		}
    	</script>
 </body>
 </html>
