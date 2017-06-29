@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "mock": "json-server db.json --port 3003"
+    "mock": "json-server db.json --port 3003",
+    "mock-creat": "json-server db.js -p 3003"
   },
   "dependencies": {
     "mockjs": "^1.0.1-beta3"

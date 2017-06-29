@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>没有数据</title>
+	<title>商品详情页</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
 	
-    <mate name="viewport" content="width=device-width,initial-scale=1,user-scalabel=no"
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/ge-main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-goods-detail.css -->
+    <link rel="stylesheet" href="styles/page/ge-goods-detail.css">
+    <!-- endbuild -->
 </head>
 <script>
     // 设置html基础fontSize，保证css中使用rem的单位生效
@@ -17,33 +31,286 @@
         _html.style.fontSize = _windowWidth / 7.5 + 'px';
     }
 </script>
-<style>
-    .wrap  {
-        border:1px solid #333;
-    }
-    .box{
-        -webkit-transform:translate(20px,20px);
-        -webkit-transform:rotate(90deg);
-        -webkit-transform:scale(0.2);
-    }
-</style>
+
 <body>
-	<div class="wrap">
-    <div class="box">
-        transform
+    
+    <!-- 商品详情大图：start -->
+    <div class="goods-pic-wrap ge-square-box">
+        <div class="ge-flex ">
+            <div class="ge-comm-slick ge-flex-1 " >
+                <div class="slick-item ge-square-box">
+                    <img data-lazy="images/goods.jpeg" alt="">
+                </div>
+                <div class="slick-item ge-square-box">
+                    <img data-lazy="images/goods.jpeg" alt="">
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- 商品详情大图：end -->
+
+
+    <!-- 限时购标志：start -->
+    <div class="limited-wrap">
+        <i>限时购</i>
+        <span>正在参与抢购（不可与券及活动同享）</span>
     </div>
+    <!-- 限时购标志：end -->
+
+    <!-- 商品名称部分：start -->
+    <div class="goods-name-wrap">
+        <p class="main-name ge-two-line">
+            可瑞康爱他美 4段高级 Aptamil 金tamil 金装母婴装母婴tamil 金装母婴tamil 金装母婴用品 香港发货
+        </p>
+        <p class="sub-name">
+            可瑞康爱他美 4段高级 Apt母婴用品 香港发货可瑞康爱他美 4段高级 Aptamil 金装母婴用品 香港发货可瑞康爱他美 4段高级 Aptamil 金装母婴用品 香港发货
+        </p>
+    </div>
+    <!-- 商品名称部分：end -->
+
+    <!-- 商品价格部分：start -->
+    <div class="goods-price-wrap">
+        <div class="ge-flex ge-flex-vc">
+            <p class="now-price icon-price">499.99</p>
+            <p class="old-price"><s>￥599.99</s></p>
+            <div class="ge-flex-1">
+                <i class="right-tip">购买积10分</i>
+            </div>
+        </div>
+    </div>
+    <!-- 商品价格部分：end -->
+
+
+    <!-- 参数列表：start -->
+    <div class="goods-list-wrap">
+        <ul class="group">
+            <li class="ge-flex  " >
+                <p class="li-title">领券</p>
+                <div class="ge-flex-1 li-content">
+                    <div class="ge-flex ge-flex-vc li-aline ">
+                        <span class="li-icon">领券</span>
+                        <p class="ge-flex-1 ge-aline">满1000减100；满2000减200</p>
+                    </div>
+                    <div class="ge-flex ge-flex-vc li-aline">
+                        <span class="li-icon">限制</span>
+                        <p class="ge-flex-1 ge-aline">满1000减100；满2000减200</p>
+                    </div>
+                </div>
+                <div class="icon-more"></div>
+            </li>
+            <li class="ge-flex  " >
+                <p class="li-title">领券</p>
+                <div class="ge-flex-1 li-content">
+                    <div class="ge-flex ge-flex-vc li-aline">
+                        <span class="li-icon">领券</span>
+                        <p class="ge-flex-1 ge-aline">满1000减100；满2000减200</p>
+                    </div>
+                </div>
+                <div class="icon-more"></div>
+            </li>
+        </ul>
+        <ul class="group">
+            <li class="ge-flex  " >
+                <p class="li-title">已选</p>
+                <div class="ge-flex-1 li-content">
+                    <div class="ge-flex li-aline">
+                        <p class="ge-flex-1 ge-aline">400ml,白金装，3个</p>
+                    </div>
+                </div>
+                <div class="icon-more"></div>
+            </li>
+            <li class="ge-flex  " >
+                <p class="li-title">支付</p>
+                <div class="ge-flex-1 li-content ">
+                    <div class="ge-flex li-aline clear-padding" id="select-payway">
+                        <span class="li-icon btn-icon curr" >￥499.99</span>
+                        <span class="li-icon btn-icon " >积分45000</span> 
+                        <span class="li-icon btn-icon " >积分45000+￥499.99</span>
+                        <span class="li-icon btn-icon " >积分45000+￥499.99</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 参数列表：end -->
+
+
+    <!-- 商品支持：start -->
+    <div class="goods-support-wrap">
+        <span class="icon-support">支持门店售后</span>
+        <span class="icon-support">支持快递</span>
+        <span class="icon-support">鹰速达</span>
+    </div>
+    <!-- 商品支持：end -->
+
+
+    <!-- 品牌/店铺：start -->
+    <div class="goods-store-wrap">
+        <div class="ge-flex store-info-box">
+            <div class="store-logo">
+                <div class="ge-square-box">
+                    <img src="images/goods.jpeg" alt="">
+                </div>
+            </div>
+            <div class="store-info ge-flex-1 ge-flex ge-flex-hc ge-flex-ver">
+                <p fs="30">aitamei</p>
+                <p fs="24" color="gray">在售商品<span color="main">50</span>件</p>
+            </div>
+        </div>
+        <div class="ge-flex">
+            <div class="ge-flex-1 ge-flex ge-flex-cc">
+                <a href="#" class="link-service" color='gray'>联系客服</a>
+            </div>
+            <div class="ge-flex-1 ge-flex ge-flex-cc">
+                <a href="#" class="into-store" color='gray'>进入店铺</a>
+            </div>
+        </div>
+    </div>
+    <!-- 品牌/店铺：end -->
+	
+
+
+    <!-- 为您推荐：start -->
+
+    <div class="tab-wrap">
+        <ul class="ge-flex tab " id="tabWrap">
+            <li class="ge-flex-1 item " data-id="0">
+                <a href="javascript:;">为您推荐</a>
+            </li>
+            <li class="ge-flex-1 item" data-id="1">
+                <a href="javascript:;">排行榜</a>
+            </li>
+        </ul>
+        <ul class="con">
+            <li class="item curr">
+                <div class="goods-slick-wrap" id="tabCon">
+                    <div class="goods-wrap">
+                        <div class="ge-square-box">
+                            <img src="" alt="">
+                        </div>
+                        <p class="ge-aline"></p>
+                        <p class=""></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 为您推荐：end -->
+
+    <!-- 更多：start -->
+    <!-- 更多：end -->
+
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <script>
+        
+        // 商品详情
+        $('.ge-comm-slick').slick({
+            arrows:false,
+            lazyLoad:'ondemand',
+            dots:true,
+        })
+
+
+        /**
+         * 为你推荐slick部分
+         */
+        var _i = 0;
+        function slickTab() {
+            console.log(_i++);
+            var _slick = $('.goods-slick-wrap').slick({
+              infinite: true,
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              arrows:false,
+              dots:true,
+            });
+            return _slick;
+        }
+        // slickTab();
+
+
+        // 支付方式选择
+        getCurr('#select-payway span','curr');
+
+
+
+        // 为你推荐 tab切换
+        ;(function($){
+            getCurr('#tabWrap .item','curr');
+
+            $('#tabWrap .item').click(function() {
+                var _id = $(this).attr('data-id');
+                $('#tabCon').empty();
+                alert('ok')
+                loadTab0(_id)
+            });
+
+            // 加载tab-为您推荐
+            function loadTab0(req) {
+                var url;
+                if(req){
+                    url = 'http://localhost:3003/goodsList1'
+                }else{
+                    url = 'http://localhost:3003/goodsList2'
+                }
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    cache:false,
+                    data: {dataId: req},
+                })
+                .done(function(data) {
+                    for(var i = 0;i <data.length;i++){
+                        var goodsDom = '<div class="goods-wrap"><div class="ge-square-box"><img src="'+data[i].images+'" alt=""></div><p class="ge-aline">'+data[i].name+'</p><p class="">'+data[i].price+'</p></div>';
+                        $('#tabCon').append(goodsDom);
+                    }
+                    // slickTab()._slick.destory();
+                    slickTab();
+
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+            }
+           
+            
+        })(jQuery);
+
+        
+
+        
+
+
+
+
+        /**
+         * 兄弟节点单选添加高亮
+         */
+        function getCurr(sub,className){
+            var sub = $(sub);
+            sub.click(function(e) {
+                $(this).addClass(className).siblings().removeClass(className);
+            });
+        }
+    </script>
+
 </body>
-<script type="text/javascript">
-   
-
-    url = "http://go.jinying.com:8000/activity/activity_md/md1?category_id=35341&speci_category_id=35340"
-
-    console.log(f(url))
-    function f(url) {
-        var l = url.indexOf('?');
-        console.log(l)
-        // var 
-    }
-</script>
 </html>

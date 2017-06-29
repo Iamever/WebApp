@@ -116,13 +116,15 @@ $(document).ready(function(){
         }
         
         // 综合-子类高亮的index
-        if(sessionGetItem()){
-            _this_item.removeClass('curr');
-            _this_item.eq(sessionGetItem()).addClass('curr');
-        }else{
-            _this_item.removeClass('curr');
-            _this_item.eq(0).addClass('curr');
-        }
+        // if(sessionGetItem()){
+        //     _this_item.removeClass('curr');
+        //     _this_item.eq(sessionGetItem()).addClass('curr');
+        // }else{
+        //     _this_item.removeClass('curr');
+        //     _this_item.eq(0).addClass('curr');
+        // }
+       
+
         _this_item.click(function(event) {
             close_item_whole(true);
             var _index = $(this).index();
