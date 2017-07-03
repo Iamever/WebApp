@@ -3,8 +3,8 @@ let Random = Mock.Random;
 
 module.exports = function() {
   var data = { 
-      goodsList1: [],
-      goodsList2: []
+      goodsList0: [],
+      goodsList1: []
 
   };
   
@@ -15,7 +15,7 @@ module.exports = function() {
       
     var content = Random.cparagraph(0,10);
 
-    data.goodsList1.push({
+    data.goodsList0.push({
          // id: i, 
          name: Random.cword(8,20),
          // desc: content.substr(0,40),
@@ -24,7 +24,11 @@ module.exports = function() {
          images: images
     })
 
-    data.goodsList2.push({
+    
+  }
+  var images = Random.image('100x100', Random.color(), Random.word(2,6));
+  for(var j = 0;j<6;j++){
+    data.goodsList1.push({
          // id: i, 
          name: Random.cword(8,20),
          // desc: content.substr(0,40),

@@ -41,7 +41,6 @@ $color-main:#fe9600;
 	}
 	[fs='34']{
 		font-size: 0.35rem;
-		font-weight: 600;
 	}
 	[color="gray"]{
 		color:#666;
@@ -137,23 +136,27 @@ $color-main:#fe9600;
 			}
 			.goods-pic{
 				width: 1.8rem;
+				height: 1.8rem;
 				border: 1px solid #cbcbcb;
 				border-radius:0.15rem;
 				overflow: hidden;
 				margin-right: 0.3rem;
 			}
 			.goods-price{
+				font-weight:600;
+				// line-height: 1;
 				&:before{
 					content: '￥';
 					font-size: 0.6em;
 				}
 			}
-			.goods-integral{
-				margin-left: 0.1rem;
-				// font-size: 0.6em;
+			.goods-intergral{
+				font-weight:600;
+				line-height: 1;
 				&:before{
 					content: '积分';
 					font-size: 0.6em;
+					font-weight: normal;
 				}
 			}
 			.prefix-purple{

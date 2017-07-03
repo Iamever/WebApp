@@ -43,7 +43,7 @@ $(document).ready(function(){
 
         tabFn('.filter-detail-box','.filter-name>li','.filter-item>ul');
 
-        check_radio('.filter-detail-box>.filter-item ul>li');
+        check_radio('.filter-detail-box>.filter-item>ul>li');
 
         $('.filter-detail-box .btn-submit').click(function() {
             close_item_detail()
@@ -61,8 +61,9 @@ $(document).ready(function(){
             titleItem = wrap.find($(titleClassName)),
             contentItem = wrap.find($(contentClassName));
 
-            $(titleItem[0]).addClass('curr');
-            $(contentItem[0]).addClass('curr');
+            
+            // $(titleItem[0]).addClass('curr');
+            // $(contentItem[0]).addClass('curr');
         for(var i = 0;i<titleItem.length;i++){
             titleItem[i].onclick = function(){
                 $(this).addClass('curr').siblings().removeClass('curr');

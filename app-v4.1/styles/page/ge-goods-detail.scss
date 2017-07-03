@@ -1,10 +1,40 @@
 
 $color-bg:#f1f1f1;
 $color-main:#fe9600;
-.goods-pic-wrap{
 
+
+
+// 最外层tab
+.Tab{
+	.tab-header-wrap{
+		text-align:center;
+		background:white;
+		border-bottom:1px solid #eee;
+		.tab-header{
+			font-size: 0.33rem;
+			display: inline-block;
+			.tab-header-item{
+				float: left;
+				padding:0.3rem 0.2rem;
+				&.curr{
+					color:$color-main;
+				}
+			}
+		}
+	}
+	.tab-body-wrap{
+		.tab-body{
+			.tab-body-item{
+				display: none;
+				&.curr{
+					display: block;
+				}
+			}
+		}
+	}
 }
 
+// tab-商品-限时抢
 .limited-wrap{
 	height:0.9rem;
 	line-height:0.9rem;
@@ -21,7 +51,7 @@ $color-main:#fe9600;
 	}
 }
 
-
+// tab-商品-商品名称部分
 .goods-name-wrap{
 	padding:0.14rem 0.24rem;
 	line-height: 1.1;
@@ -37,6 +67,7 @@ $color-main:#fe9600;
 	}
 }
 
+// tab-商品-商品价格部分
 .goods-price-wrap{
 	padding:0.2rem 0.24rem;	
 	background:white;
@@ -69,7 +100,7 @@ $color-main:#fe9600;
 	}
 }
 
-
+// tab-商品-参数列表
 .goods-list-wrap{
 	.group{
 		margin-bottom: 0.1rem;
@@ -133,14 +164,13 @@ $color-main:#fe9600;
 				}
 			}
 		}
-
 	}
 }
 
+// tab-商品-商品支持
 .goods-support-wrap{
 	padding:0.34rem 0.24rem;
 	background:#f7f7f7;
-	margin-bottom:0.1rem;
 	.icon-support{
 		color:#666;
 		margin-right: 0.25rem;
@@ -157,10 +187,10 @@ $color-main:#fe9600;
 	}
 }
 
+// tab-商品-品牌/店铺
 .goods-store-wrap{
 	padding:0.24rem;
 	background:white;
-	margin-bottom:0.1rem;
 	.store-logo{
 		width: 0.9rem;
 		height: 0.9rem;
@@ -216,7 +246,7 @@ $color-main:#fe9600;
 	}
 }
 
-
+// tab-商品-为您推荐
 .tab-wrap{
 	background:white;
 	.tab{
@@ -240,6 +270,9 @@ $color-main:#fe9600;
 	.con{
 		.item{
 			display: none;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
 			&.curr{
 				display: block;
 			}
@@ -247,13 +280,19 @@ $color-main:#fe9600;
 	}
 }
 
+// tab-商品-为您推荐-tab-滑动商品列表
 .goods-slick-wrap{
+	position:relative;
+	// left:0px;
 	padding-bottom:0.3rem;
+	-webkit-transition: all 0.5s cubic-bezier(0.42, 0, 0.09, 1.24);
+	transition: all 0.5s cubic-bezier(0.42, 0, 0.09, 1.24);
 	.goods-wrap{
 		padding:0.3rem;
 		font-size: 0.3rem;
 		text-align: center;
 		line-height: 1.2;
+		width: 33%;
 		.ge-square-box{
 			margin-bottom: 0.1rem;
 		}
@@ -278,5 +317,164 @@ $color-main:#fe9600;
 				background:$color-main;
 			}
 		}
+	}
+}
+
+// tab-商品-更多推荐
+.btn-more{
+	[color="gray"]{
+		color:#666;
+	}
+	[fs="26"]{
+		font-size: 0.26rem;
+	}
+	line-height:0.9rem;
+	height:0.9rem;
+	text-align:center;
+	background:white;
+	a{
+		&.icon-up-arrow{
+			position:relative;
+			&:before{
+				position: absolute;
+				top: 0.07rem;
+				left: -0.35rem;
+				content:'';
+				width: 0.25rem;
+				height: 100%;
+				display: inline-block;
+				background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABLUlEQVRYR+3UsVHDMBQG4PcKu2YENoBMQDwBK6ixWsgm1FKjFZggjBAmYARI+1w8TndWTjG2JMvi0sitdfo//08ywo0fvHE+VEBtoDawqYG+7x/tNdZan3KvczZgDD+OwV0uIgvghR8Q8Z6ZXwAgC7Ea4MIR8V0pJWwDUkrDzM85iFWAuXA3+1xEMiAUvgWRBEgJz0VEAUKIu6ZpvvyZx66cHQcAPBHRzhjzE1ofBIzhR0T8dAcuFj5p4mEYhi6EWARsCV+DmAWUCE9F/AG4cAA4a633qZWH1kkpT8zMc+O4AnhfjkS0jx2gVJzdt23bjznEBfBf4Q65hLgAbE12cckvnzbkIb611p197wNeiciUqn1pPCNCKKXergCp8yy9LvonLB043a8CagO1gV+e9Nghr+UdUwAAAABJRU5ErkJggg==') no-repeat center center;
+			}
+			
+		}
+	}
+}
+
+// tab-商品详情
+.goods-detail-pic{
+	display:none;
+	&.curr{
+		display: block;
+	}
+	.pic-box{
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+
+}
+
+
+// tab-商品评价
+.goods-evaluate-wrap{
+	// tab
+	.tab-evaluate{
+		overflow: hidden;
+		height: 0.8rem;
+		padding:0.1rem 0;
+		background:#fff;
+		li{
+			float: left;
+			width: 20%;
+			line-height: 0.4rem;
+			text-align: center;
+			font-size: 0.3rem;
+			&.curr{
+				color:$color-main;
+			}
+			p{}
+		}
+	}
+	// 评价部分
+	.evaluate{
+		.evaluate-ls{
+			padding:0 0.28rem;
+			background:#fff;
+			.evaluate-user{
+				padding:0.2rem 0;
+				border-bottom:1px solid #eee;
+				.flex-info{}
+				.user-id{}
+				.user-avator{
+					width: 0.55rem;
+					height: 0.55rem;
+					border:1px solid #eee;
+					border-radius:100%;
+					margin-right: 0.2rem;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				@mixin star($num){
+					overflow: hidden;
+					&:before{
+						content:'';
+						display: inline-block;
+						width:0.2rem * $num;
+						height: 0.2rem;
+						background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACZ0lEQVRYR8WXMWgUQRRA388qB1aCYiEWioUWaoyoIJoYKy2DIAQEMYKye1pYaCNqIIKNgYgQN4eIYCHaWEdBjJoqhRpJcXbXKCgRLcQENHy5vb1lcze77s7dxatn/nsz//+df8J//kkrfPU5iaJS5JFtHGsBHecSXQyH4OviMWYjYSWgD1jLIs8R9oXQCgV6ZIgfeSXsBHxGEK41wMbF5cJKCczETl9jKrPisbvjAlriHErJCFrispxnNI9E7hSozzTCQSPE4hZyCQSV73Ar9YQ5byGzgKHykzzKFDiQtSOMAgHsN90ofcAGlB3AGmB/xvzOAL8Q5oCvCK9ZzaxJKhDQe/SyxBVgEYJKVmBLRljWZfPAT6AcbHC4KWd5UxPweY/QnTVSW9YpH8Vje12gua/bQkkJEnZMPAUPgc2d5kafbodTUQpidbASEhVCeJW7rAvCYuykxBccTlRPXr/ppjbsoMQ8Dsfj8KYbqFuFEk+B9W2qCSM8USCqiT88RtjYkoTymVUMNp48MQVxmE5wFbjRkgCkzgmpb4H6TCEcbklAeSUe/Ukx/iWQ/PRmt5oTl522AmWEbdlZxpWfxGVTbgH16Ud42SK8tl05Ih5TpliJKVDz4GnrMywuI/kEStxHOZNIrLaXRF+0vcDWFLsn4jKYTyCpA5TvCJMUKNYHjGCAWWAUYQBhXRMopRPSUvAWoScKpnwDpoGL4lExnUb94DW9DRxaJqK8E489eW9gEuEoygJQHbFOJ4EbA4ciEwi9wSinPBOPY/kEan+/hlBeSJEPNtWnd9lFFwMUuJM0pGaeim0Esuz5C41lxCHZVlCBAAAAAElFTkSuQmCC');
+						background-size:0.2rem 0.2rem;
+						background-repeat:repeat-x;
+						background-position:0 0 ;
+					}
+				}
+				.user-star{
+					&[star="5"]{
+						@include star(5);
+					}
+					&[star="4"]{
+						@include star(4);
+					}
+					&[star="3"]{
+						@include star(3);
+					}
+					&[star="2"]{
+						@include star(2);
+					}
+					&[star="1"]{
+						@include star(1);
+					}
+				}
+				.flex-date{}
+			}
+			.evaluate-goods{
+				padding:0.2rem 0;
+				.pic{
+					img{
+						width: 30%;
+						margin-right: 0.1%;
+					}
+				}
+			}
+		}
+	}
+	[color="gray"]{
+		color:#adadad;
+	}
+	[color="dark"]{
+		color:#333;
+	}
+	[fs="26"]{
+		font-size: 0.26rem;
+	}
+	[fs="3"]{
+		font-size: 0.3rem;
+	}
+	[line="1.2"]{
+		line-height: 1.2;
+	}
+	[line="1.4"]{
+		line-height: 1.4;
+	}
+	[line="1.6"]{
+		line-height: 1.6;
+	}
+	[line="1.8"]{
+		line-height: 1.8;
+	}
+	[line="2"]{
+		line-height: 2;
 	}
 }
