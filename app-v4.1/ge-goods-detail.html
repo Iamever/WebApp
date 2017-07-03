@@ -460,7 +460,7 @@
                 .done(function(data) {
 
                     for(var i = 0;i <data.length;i++){
-                        var goodsDom = '<div class="goods-wrap ge-boxs swiper-slide"><div class="ge-square-box"><img src="'+data[i].images+'" alt=""></div><p class="ge-aline">'+i+'</p><p class="">￥'+data[i].price+'</p></div>';
+                        var goodsDom = '<div class="goods-wrap ge-boxs swiper-slide"><div class="ge-square-box"><img src="'+data[i].images+'" alt=""></div><p class="ge-aline">'+data[i].name+'</p><p class="">￥'+data[i].price+'</p></div>';
                         $('.goods-slick-wrap').append(goodsDom)
                     }
                     // 插件-swiper
