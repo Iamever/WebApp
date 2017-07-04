@@ -181,20 +181,47 @@
                 <!-- 品牌/店铺：end -->
                 
                 <!-- 为您推荐：start -->
-                    <div class="tab-wrap">
+                    <div class="tab-wrap ge-group-min">
                         <ul class="ge-flex tab " id="tabWrap">
                             <li class="ge-flex-1 item " data-id="0">
                                 <a href="javascript:;">为您推荐</a>
                             </li>
-                            <li class="ge-flex-1 item" data-id="1">
+                            <!-- <li class="ge-flex-1 item" data-id="1">
                                 <a href="javascript:;">排行榜</a>
-                            </li>
+                            </li> -->
                         </ul>
                         <ul class="con">
                             <li class="item curr">
                                 <div class=" swiper-container">
                                     <div class="ge-flex swiper-wrapper goods-slick-wrap">
-                                    <!-- 数据插入 -->
+                                        <div class="goods-wrap ge-boxs swiper-slide">
+                                            <div class="ge-square-box">
+                                                <img src="images/goods.jpeg" alt="">
+                                            </div>
+                                            <p class="ge-aline">商品名称</p>
+                                            <p class="">￥999</p>
+                                        </div>
+                                        <div class="goods-wrap ge-boxs swiper-slide">
+                                            <div class="ge-square-box">
+                                                <img src="images/goods.jpeg" alt="">
+                                            </div>
+                                            <p class="ge-aline">商品名称</p>
+                                            <p class="">￥999</p>
+                                        </div>
+                                        <div class="goods-wrap ge-boxs swiper-slide">
+                                            <div class="ge-square-box">
+                                                <img src="images/goods.jpeg" alt="">
+                                            </div>
+                                            <p class="ge-aline">商品名称</p>
+                                            <p class="">￥999</p>
+                                        </div>
+                                        <div class="goods-wrap ge-boxs swiper-slide">
+                                            <div class="ge-square-box">
+                                                <img src="images/goods.jpeg" alt="">
+                                            </div>
+                                            <p class="ge-aline">商品名称</p>
+                                            <p class="">￥999</p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -203,14 +230,14 @@
                 <!-- 为您推荐：end -->
 
                 <!-- 更多推荐：start -->
-                    <div class="ge-group-min btn-more">
+                    <!-- <div class="ge-group-min btn-more">
                         <a href="#" class="" color="gray" fs='26'>查看更多为您推荐</a>
-                    </div>
+                    </div> -->
                 <!-- 更多推荐：end -->
 
                 <!-- 上拉显示图文详情：start -->
                     <div class="ge-group-min btn-more" id="swipeUp"> 
-                        <a href="#" class=" icon-up-arrow" color="gray" fs="26">上拉显示图文详情</a>
+                        <a href="#" class=" " color="gray" fs="26">点击显示图文详情</a>
                     </div>
                 <!-- 上拉显示图文详情：end -->
 
@@ -347,6 +374,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="ge-group-min btn-more" id="swipeUp"> 
+                    <a href="#" class=" " color="gray" fs="26">点击显示更多</a>
+                </div>
                 <!-- 商品评价：end -->
             </li>
         </ul>
@@ -387,6 +417,14 @@
         }
         lazyLoad();
 
+
+        // 为您推荐swiper
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView : 3.3,
+            onInit: function(swiper){
+            }
+        })
+
         // 商品部分交互
         ;(function($){
             // 商品轮播
@@ -398,26 +436,29 @@
             // 支付方式选择
             getCurr('#select-payway span','curr');
 
-            // 上拉显示图文详情
+            // 点击显示图文详情
             var swipeBox = $('#swipeUp');
             var goodsPicBox = $('.goods-detail-pic');
-            swipeBox.swipe( {
-            swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
-              goodsPicBox.addClass('curr');
-            }
-          });
+                swipeBox.click(function() {
+                    goodsPicBox.addClass('curr');
+                });
 
-
+                // 上拉显示
+              //   swipeBox.swipe( {
+              //   swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
+              //     goodsPicBox.addClass('curr');
+              //   }
+              // });
         })(jQuery);
+
 
         // 评价 切换
         ;(function ($) {
-            var tabTitle = $('.tab-evaluate li');
-            tabTitle.click(function() {
+            
+            getCurr('.tab-evaluate li','curr');
 
-                getCurr('.tab-evaluate li','curr');
-            });
-        })(jQuery)
+        })(jQuery);
+
 
         // 顶部tab 实现切换效果
         ;(function($){
@@ -425,9 +466,10 @@
             var tabTitle = tabBox.find('.tab-header-item');
             var tabCon = tabBox.find('.tab-body-item');
 
+            getCurr('.Tab .tab-header-item','curr');
+
             tabTitle.click(function(event) {
                 
-                getCurr('.Tab .tab-header-item','curr');
                 var _index = $(this).index();
                 tabCon.eq(_index).addClass('curr').siblings('').removeClass('curr');
                 lazyLoad();
@@ -437,15 +479,15 @@
 
         // 为你推荐 ajax加载
         ;(function($){
-            var tab = $('#tabWrap .item');
-            loadTab(0);
-            tab.eq(0).addClass('curr');
-            tab.click(function() {
-                getCurr('#tabWrap .item','curr');
-                $('.goods-slick-wrap').empty();
-                var _id = $(this).attr('data-id');
-                loadTab(_id)
-            });
+            // var tab = $('#tabWrap .item');
+            // loadTab(0);
+            // tab.eq(0).addClass('curr');
+            // tab.click(function() {
+            //     getCurr('#tabWrap .item','curr');
+            //     $('.goods-slick-wrap').empty();
+            //     var _id = $(this).attr('data-id');
+            //     loadTab(_id)
+            // });
 
             // 加载tab-为您推荐
             function loadTab(req) {
