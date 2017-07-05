@@ -56,6 +56,7 @@
                             <div class="ge-comm-slick ge-flex-1 " >
                                 <div class="slick-item ge-square-box">
                                     <img data-lazy="images/goods.jpeg" alt="">
+                                    <img class="ge-tips-1" data-lazy="images/goods.jpeg" alt="">
                                 </div>
                                 <div class="slick-item ge-square-box">
                                     <img data-lazy="images/goods.jpeg" alt="">
@@ -237,27 +238,9 @@
 
                 <!-- 上拉显示图文详情：start -->
                     <div class="ge-group-min btn-more" id="swipeUp"> 
-                        <a href="#" class=" " color="gray" fs="26">点击显示图文详情</a>
+                        <a href="javascript:;" class=" " color="gray" fs="26">点击显示图文详情</a>
                     </div>
                 <!-- 上拉显示图文详情：end -->
-
-                <!-- 图文详情：start -->
-                <div class="goods-detail-pic">
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
-                    </div>
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
-                    </div>
-
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
-                    </div>
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
-                    </div>
-                </div>
-                <!-- 图文详情：end -->
 
                 <!-- tab-商品：end -->
             </li>
@@ -374,7 +357,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="ge-group-min btn-more" id="swipeUp"> 
+                <div class="ge-group-min btn-more" > 
                     <a href="#" class=" " color="gray" fs="26">点击显示更多</a>
                 </div>
                 <!-- 商品评价：end -->
@@ -384,7 +367,15 @@
     <!-- tab-body:end -->
 </div>
     
+
     
+<!-- 底部弹窗:start -->
+<div class="ge-popup curr">
+    <div class="popup-shade"></div>
+    <div class="popup-box"></div>
+</div>
+<!-- 底部弹窗:end -->
+
 
 
 
@@ -401,7 +392,30 @@
     <!-- endbuild -->
 
 
+
     <script>
+        // 底部弹窗
+        (function ($) {
+            
+
+            var popup = $('.ge-popup'),
+                popup_shade = popup.find('.popup-shade');
+
+            popup_shade.click(function(e) {
+                close_popup();
+            });
+
+            function close_popup (){
+                popup.removeClass('curr');
+            }
+
+            function open_popup() {
+                popup.addClass('curr');
+            }
+            
+        })(jQuery);
+
+
         // 获取高亮方法
         function getCurr(sub,className){
             var sub = $(sub);
@@ -438,26 +452,27 @@
 
             // 点击显示图文详情
             var swipeBox = $('#swipeUp');
-            var goodsPicBox = $('.goods-detail-pic');
                 swipeBox.click(function() {
-                    goodsPicBox.addClass('curr');
+                    document.body.scrollTop = 0;
+                    $('.Tab .tab-header-item').eq(1).addClass('curr').siblings('').removeClass('curr');
+                    $('.Tab .tab-body-item').eq(1).addClass('curr').siblings('').removeClass('curr');
+                    lazyLoad();
                 });
 
-                // 上拉显示
-              //   swipeBox.swipe( {
-              //   swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
-              //     goodsPicBox.addClass('curr');
-              //   }
-              // });
-        })(jQuery);
+            // 上拉显示
+            // swipeBox.swipe( {
+            //     swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
+            //       goodsPicBox.addClass('curr');
+            //     }
+            // });
+              
 
-
-        // 评价 切换
-        ;(function ($) {
-            
+            // 评价 切换
             getCurr('.tab-evaluate li','curr');
 
         })(jQuery);
+
+
 
 
         // 顶部tab 实现切换效果
@@ -518,6 +533,8 @@
                 });
             }
         })(jQuery);
+
+
         
     </script>
 </body>

@@ -906,6 +906,12 @@ body{
 		img{
 			width: 100%;
 			display: block;
+			&.ge-tips-1{
+				position:absolute;
+				left:73%;
+				top:0.05rem;
+				width: 25%;
+			}
 		}
 	}
 	.slick-dots{

@@ -2,6 +2,41 @@
 $color-bg:#f1f1f1;
 $color-main:#fe9600;
 
+// 底部弹窗
+.ge-popup{
+	&.curr{
+		.popup-box{
+			-webkit-transform:translate(0,-100%);
+			transform:translate(0,-100%);
+		}
+		.popup-shade{
+			display: block;
+		}
+	}
+	.popup-shade{
+		display:none;
+		position:fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom:0;
+		background:rgba(0,0,0,0.4);
+		z-index: 98;
+	}
+	.popup-box{
+		position:fixed;
+		left: 0;
+		right:0;
+		background:white;
+		bottom:-50%;
+		height: 50%;
+		z-index: 99;
+		max-width: 640px;
+		margin:auto;
+		-webkit-transition:all 0.2s cubic-bezier(0.21, 1.13, 1, 1);
+		transition:all 0.2s cubic-bezier(0.21, 1.13, 1, 1);
+	}
+}
 
 
 // 最外层tab
