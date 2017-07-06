@@ -54,13 +54,13 @@
 				ele = this.ele;
 
 			$(ele).css({
-				"position":"fixed",
-				"bottom":0,
-				"left":0,
-				"width":"100%",
-				"background-color":config.background,
-				"height":config.height,
-				"z-index":config.zIndex,
+				'position':'fixed',
+				'bottom':0,
+				'left':0,
+				'width':'100%',
+				'background-color':config.background,
+				'height':config.height,
+				'z-index':config.zIndex,
 			});
 
 		}

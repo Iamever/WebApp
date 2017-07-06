@@ -36,7 +36,7 @@
 
 <div class="Tab">
     <!-- tab-header:start -->
-    <div class="tab-header-wrap ">
+    <div class="tab-header-wrap " id="sticker">
         <ul class="tab-header">
             <li class="tab-header-item curr">商品</li>
             <li class="tab-header-item">详情</li>
@@ -111,7 +111,7 @@
                                         <p class="ge-flex-1 ge-aline">满1000减100；满2000减200</p>
                                     </div>
                                 </div>
-                                <div class="icon-more"></div>
+                                <div class="icon-more" onclick="open_popup()"></div>
                             </li>
                             <li class="ge-flex  " >
                                 <p class="li-title">领券</p>
@@ -166,7 +166,7 @@
                                 </div>
                             </div>
                             <div class="store-info ge-flex-1 ge-flex ge-flex-hc ge-flex-ver">
-                                <p fs="30">aitamei</p>
+                                <p fs="32">aitamei</p>
                                 <p fs="24" color="gray">在售商品<span color="main">50</span>件</p>
                             </div>
                         </div>
@@ -370,11 +370,149 @@
 
     
 <!-- 底部弹窗:start -->
-<div class="ge-popup curr">
+<div class="ge-popup">
     <div class="popup-shade"></div>
-    <div class="popup-box"></div>
+    <div class="popup-box" >
+        <div class="popup-close close-btn" ></div>
+        <!-- content:start -->
+            <!-- 优惠券：start -->
+                <div class="coupon-box" >
+                    <p class="popup-title" fs="32" >优惠券</p>
+                    <!-- 暂无可领优惠券：start -->
+                    <div class="no-coupon" hidden>
+                        <div class="icon-no-coupon"></div>
+                        <p color="light-gray" fs="28">暂无可领优惠券</p>
+                    </div>
+                    <!-- 暂无可领优惠券：end -->
+                    <!-- 优惠券列表：start -->
+                    <div class="coupon-ls" >
+                        <p fs="28" color="dark">可领优惠券</p>
+                        <ul class="ls">
+                            <li class="ge-flex acoupon">
+                                <div class="ge-flex ge-flex-ver ge-flex-cc amount" color="white">
+                                    <p class="rmb" fs="60">1001</p>
+                                    <p fs="24" class="aline">满499可用</p>
+                                </div>
+                                <div class="ge-flex ge-flex-ver ge-flex-1">
+                                    <div class="ge-flex-1 ge-flex ge-flex-vc"><p fs="26" class=" aline">100元商品通用券</p></div>
+                                    <div class="ge-flex-1 ge-flex ge-flex-vc"><p color="light-gray" fs="24">2017.01.01-2017.01.03</p></div>
+                                </div>
+                                <div class="isown">
+                                    <a href="javascript:;" class="btn" fs="24" onclick="getCoupon()">点击领取</a>
+                                </div>
+                            </li>
+                            <li class="ge-flex acoupon">
+                                <div class="ge-flex ge-flex-ver ge-flex-cc amount" color="white">
+                                    <p class="rmb" fs="60">100</p>
+                                    <p fs="24" class="aline">满499可用</p>
+                                </div>
+                                <div class="ge-flex ge-flex-ver ge-flex-1">
+                                    <div class="ge-flex-1 ge-flex ge-flex-vc"><p fs="26" class=" aline">100元商品通用券</p></div>
+                                    <div class="ge-flex-1 ge-flex ge-flex-vc"><p color="light-gray" fs="24">2017.01.01-2017.01.03</p></div>
+                                </div>
+                                <div class="isown" owned>
+                                    <a href="javascript:;" class="btn" fs="24">点击领取</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 优惠券列表：end -->
+                </div>
+            <!-- 优惠券：end -->
+            <!-- 促销：start -->
+                <div class="promotion-box" hidden>
+                    <p class="popup-title" fs="32" >促销</p>
+                    <div class="goods-list-wrap">
+                        <ul class="group">
+                            <li class="ge-flex  " >
+                                <div class="ge-flex-1 li-content">
+                                    <div class="ge-flex ge-flex-vc li-aline ">
+                                        <span class="li-icon">领券</span>
+                                        <p class="ge-flex-1 ge-aline">满1000减100；满2000减200</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ge-flex  " >
+                                <div class="ge-flex-1 li-content">
+                                    <div class="ge-flex ge-flex-vc li-aline ">
+                                        <span class="li-icon">领券</span>
+                                        <p class="ge-flex-1 ge-aline">满1000减100；满2000减200</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- 促销：end -->
+            <!-- 规格：start -->
+                <div class="goods-model-box" fs="26" color="gray"  hidden>
+                    <div class="ge-flex goods-info">
+                        <div class=" ge-square-box goods-pic "> <img src="images/goods.jpeg" alt=""></div>
+                        <div class="ge-flex-1 ge-flex ge-flex-ver">
+                            <div class="ge-flex-1 ge-flex ge-flex-vc">
+                                <p class=" rmb " color="red" fs="32">499.99</p>
+                            </div>
+                            <div class="ge-flex-1 ge-flex ge-flex-vc">
+                                <ul fs="26" class="ge-flex">
+                                    <li>400ml </li>
+                                    <li>白金装 </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods-model">
+                        <ul>
+                            <li>
+                                <p>规格</p>
+                                <ul class="ge-flex radio-btn">
+                                    <li class="curr"><a href="javascript:;">400ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>规格</p>
+                                <ul class="ge-flex radio-btn">
+                                    <li><a href="javascript:;">400ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ge-flex ge-flex-vc goods-count">
+                        <p class="ge-flex-1">数量</p>
+                        <div class="ge-comm-quantity-wrapper">
+                            <div class="quantity-decrease"></div>
+                            <input type="text" class="quantity" value="1">
+                            <div class="quantity-increase"></div>
+                        </div>
+                    </div>
+                </div>
+            <!-- 规格：end -->
+        <!-- content:end -->
+    </div>
 </div>
 <!-- 底部弹窗:end -->
+
+
+<!-- footer:start -->
+<div class="ge-comm-footer-wrap" >
+    <div class="ge-comm-footer" position="bottom">
+        <ul class="ge-flex" color="gray" fs="32">
+            <li class="ge-flex ge-flex-ver ge-flex-cc flex curr" fs="26" ><i class="icon icon-star"></i><p>关注</p></li>
+            <li class="ge-flex ge-flex-ver ge-flex-cc flex "  fs="26">
+                <div class="icon">
+                    <i class=" icon-cart"></i>
+                    <i class="count">2</i>
+                </div>
+                <p>购物车</p>
+            </li>
+            <!-- <li class="ge-flex-1  ge-flex  ge-flex-cc" color="white" bg="light-yellow">加入购物车</li>
+            <li class="ge-flex-1 ge-flex ge-flex-cc" color="white" bg="yellow">立即购买</li> -->
+            <li class="ge-flex-1 ge-flex ge-flex-cc" color="white" bg="gray">此商品已下架</li>
+        </ul>
+    </div>
+</div>
+<!-- footer:end -->
 
 
 
@@ -394,26 +532,38 @@
 
 
     <script>
+       
+
         // 底部弹窗
-        (function ($) {
-            
+       var popup = $('.ge-popup'),
+            popup_shade = popup.find('.popup-shade'),
+            popup_close = popup.find('.popup-close');
 
-            var popup = $('.ge-popup'),
-                popup_shade = popup.find('.popup-shade');
-
-            popup_shade.click(function(e) {
+        // 关闭事件绑定
+        $([popup_close,popup_shade]).each(function(index, el) {
+            $(this).click(function() {
                 close_popup();
             });
+        });
+        function close_popup (){
+            popup.removeClass('curr');
+        }
+        function open_popup() {
+            popup.addClass('curr');
+        }
 
-            function close_popup (){
-                popup.removeClass('curr');
-            }
+        // 领券成功提示信息
+        var getCoupon = function () {
+              layer.open({
+                content: '领券成功'
+                ,skin: 'msg'
+                ,time: 2 
+              });
+        }
 
-            function open_popup() {
-                popup.addClass('curr');
-            }
-            
-        })(jQuery);
+
+        // 商品规格点击高亮
+        getCurr('.goods-model .radio-btn li','curr')
 
 
         // 获取高亮方法
@@ -489,6 +639,8 @@
                 tabCon.eq(_index).addClass('curr').siblings('').removeClass('curr');
                 lazyLoad();
             });
+
+            $("#sticker").sticky({topSpacing:0,zIndex:9});
 
         })(jQuery);
 
