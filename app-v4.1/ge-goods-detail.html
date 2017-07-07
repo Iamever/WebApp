@@ -45,7 +45,7 @@
     </div>
     <!-- tab-header:end -->
     <!-- tab-body:start -->
-    <div class="tab-body-wrap">
+    <div class="tab-body-wrap" id="content">
         <ul class="tab-body">
             
             <li class="tab-body-item curr">
@@ -289,6 +289,9 @@
                         </li>
                     </ul>
                     <div class="evaluate">
+                        <div class="ge-flex ge-flex-cc ge-group" style="line-height: 1rem;">
+                            <p fs="26" color="gray">暂无评论</p>
+                        </div>
                         <div class="evaluate-ls ge-group-min">
                             <div class="ge-flex ge-flex-vc evaluate-user">
                                 <div class="ge-flex-1 ge-flex flex-info">
@@ -376,7 +379,7 @@
         <div class="popup-close close-btn" ></div>
         <!-- content:start -->
             <!-- 优惠券：start -->
-                <div class="coupon-box" >
+                <div class="coupon-box" hidden>
                     <p class="popup-title" fs="32" >优惠券</p>
                     <!-- 暂无可领优惠券：start -->
                     <div class="no-coupon" hidden>
@@ -385,7 +388,7 @@
                     </div>
                     <!-- 暂无可领优惠券：end -->
                     <!-- 优惠券列表：start -->
-                    <div class="coupon-ls" >
+                    <div class="coupon-ls"  >
                         <p fs="28" color="dark">可领优惠券</p>
                         <ul class="ls">
                             <li class="ge-flex acoupon">
@@ -399,6 +402,19 @@
                                 </div>
                                 <div class="isown">
                                     <a href="javascript:;" class="btn" fs="24" onclick="getCoupon()">点击领取</a>
+                                </div>
+                            </li>
+                            <li class="ge-flex acoupon">
+                                <div class="ge-flex ge-flex-ver ge-flex-cc amount" color="white">
+                                    <p class="rmb" fs="60">100</p>
+                                    <p fs="24" class="aline">满499可用</p>
+                                </div>
+                                <div class="ge-flex ge-flex-ver ge-flex-1">
+                                    <div class="ge-flex-1 ge-flex ge-flex-vc"><p fs="26" class=" aline">100元商品通用券</p></div>
+                                    <div class="ge-flex-1 ge-flex ge-flex-vc"><p color="light-gray" fs="24">2017.01.01-2017.01.03</p></div>
+                                </div>
+                                <div class="isown owned" >
+                                    <a href="javascript:;" class="btn" fs="24">点击领取</a>
                                 </div>
                             </li>
                             <li class="ge-flex acoupon">
@@ -445,7 +461,7 @@
                 </div>
             <!-- 促销：end -->
             <!-- 规格：start -->
-                <div class="goods-model-box" fs="26" color="gray"  hidden>
+                <div class="goods-model-box" fs="26" color="gray"  >
                     <div class="ge-flex goods-info">
                         <div class=" ge-square-box goods-pic "> <img src="images/goods.jpeg" alt=""></div>
                         <div class="ge-flex-1 ge-flex ge-flex-ver">
@@ -464,15 +480,23 @@
                         <ul>
                             <li>
                                 <p>规格</p>
-                                <ul class="ge-flex radio-btn">
+                                <ul class=" radio-btn">
                                     <li class="curr"><a href="javascript:;">400ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
                                     <li><a href="javascript:;">800ml</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <p>规格</p>
-                                <ul class="ge-flex radio-btn">
+                                <ul class=" radio-btn">
                                     <li><a href="javascript:;">400ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
+                                    <li><a href="javascript:;">800ml</a></li>
                                     <li><a href="javascript:;">800ml</a></li>
                                 </ul>
                             </li>
@@ -547,9 +571,30 @@
         });
         function close_popup (){
             popup.removeClass('curr');
+            moveScroll()
         }
         function open_popup() {
             popup.addClass('curr');
+            var top =$(window).scrollTop()
+            stopScroll(top);
+        }
+
+        // 禁止滑动
+        function stopScroll(){
+            var top =$('body').scrollTop()
+            console.log(top)
+            $('.tab-body-wrap').css({
+                position: 'fixed',
+                top: -top
+            });
+        }
+
+        // 取消滑动限制
+        function moveScroll(top){
+            $('.tab-body-wrap').css({
+                position: 'static',
+            });
+            $('body').scrollTop(top)
         }
 
         // 领券成功提示信息
