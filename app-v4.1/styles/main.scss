@@ -280,6 +280,9 @@ body{
 			&:nth-child(odd){
 				padding-right: 0;
 			}
+			&:nth-child(even){
+				padding-left: 0;
+			}
 			.comm-wrap{
 				@extend .ge-flex;
 				.ge-lazy-pic{
@@ -299,7 +302,8 @@ body{
 					}
 					.text-data{
 						@extend .ge-flex-1;
-						.data-new-price{}
+						.data-new-price{
+						}
 						.data-old-price{}
 					}
 				}
@@ -342,10 +346,18 @@ body{
 				font-size: 0.22rem;
 				color:#999;
 				padding:0.34rem 0 0.14rem;
+				height: 0.4rem;
+				overflow: auto;
 				@extend .ge-flex,.ge-flex-vc;
 				.data-new-price{
 					font-size: 0.3rem;
 					color:$color-main;
+						&.icon-point{
+							&:before{
+								content: '积分';
+								font-size:0.2rem;
+							}
+						}
 				}
 				.data-old-price{
 					@extend .ge-flex-1;
@@ -1125,6 +1137,9 @@ body{
 					}
 				}
 			}
+			&.hidden{
+				display: none;
+			}
 			.icon{
 				width: 0.36rem;
 				height: 0.36rem;
@@ -1152,6 +1167,7 @@ body{
 					width: 0.22rem;
 					height: 0.22rem;
 					font-size: 0.2rem;
+					font-style: normal;
 				}
 				&.icon-star{
 					background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZhJREFUeNrsl91tgzAQx4nFAHQDOkGzQdINyARJn3hsmIBkgjaPPKUjZAQ2CJ2gjJAReicdFSLgzzNWq550MrIw/vE/+3yOon+bwaqqSsBTjm8JDhhovtDheR0cCGwPntBz6fqxBZM6Sa/7Oc/zOpRCuwGMs0quQK8jfWuXBS4cwoXqTE1chlBINunOViXhQR0nlWwV2mq8k9Eu9LftKQyY/M6aQ97BT5AGWmsg+qslhQT9idql445swBHsk9p2LF8teiBvE3nFt93Aa4DbDNfQPgBMRHNm3TkoBvEOZU0Xvh8g6Cig+QgBg+efbFGfaS3NBgNi3KTbfiaoOxhpHvIMNQqjTIyeoCZhtDI1M5QURvvoAKgrQ6ZGe5DBmByuLAlTBWMCxHLF0bmVCI6PGFjKoVD6l4FWHECrORWKmRQ69q5FSciQYXXwCNv5gI7PqjJGtUliy8FYuxyHJSjlmQLGnaDFCjQzzWmx4RrAWvhFdXenon5DP1TSxaAzzPgXW6CWal60AiYyKuAIvKZ7XEnhb6LfZN8CDADXL45NrxFF5wAAAABJRU5ErkJggg==') no-repeat 0 0;

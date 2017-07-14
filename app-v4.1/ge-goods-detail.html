@@ -21,6 +21,48 @@
     <link rel="stylesheet" href="styles/page/ge-goods-detail.css">
     <!-- endbuild -->
 </head>
+<style>
+    .prompt-cover{position: fixed;background: rgba(0,0,0,0.4);top: 0;left: 0;z-index: 999;bottom:0;right:0;}
+    .prompt-cover .prompt{
+        position: fixed;;
+        z-index: 1000;
+        width: 80%;
+        background-color: #fff;
+        /*height: 20%;*/
+        top: 30%;
+        /*bottom:0;*/
+        left: 0;
+        right: 0;
+        margin:auto;
+        padding: 30px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    .prompt-cover .prompt .info{
+        margin:10px 0;
+        color:#666;
+        line-height: 1.2;
+    }
+    .prompt-cover .prompt .btn{
+        text-align: center;
+        padding-top: 20px;
+    }
+    .prompt-cover .prompt .btn a{
+        border:1px solid #999;
+        padding:5px 10px;
+        border-radius: 5px;
+        color:#666;
+        text-decoration: none;
+    }
+    .prompt-cover .prompt .btn .ok{
+        margin-right: 25px;
+        color: #ff8900;
+        border:1px solid #ff8900;
+    }
+    .prompt-cover .prompt .btn .cancel{}
+
+
+</style>
 <script>
     // 设置html基础fontSize，保证css中使用rem的单位生效
     var _html = document.documentElement;
@@ -33,7 +75,15 @@
 </script>
 
 <body>
-
+<div class="prompt-cover" hidden>
+    <div class="prompt">
+        <p class="info">为了给您提供更好的物流服务 ，请您完善配送地址坐标信息！</p>
+        <div class="btn">
+            <a href="" class="ok">确定</a>
+            <a href="" class="cancel">取消</a>
+        </div>
+    </div>
+</div>
 <div class="Tab">
     <!-- tab-header:start -->
     <div class="tab-header-wrap " id="sticker">
@@ -154,6 +204,9 @@
                         <span class="icon-support">支持门店售后</span>
                         <span class="icon-support">支持快递</span>
                         <span class="icon-support">鹰速达</span>
+                        <span class="icon-support">鹰速达</span>
+                        <span class="icon-support">鹰速达</span>
+                        <span class="icon-support">鹰速达</span>
                     </div>
                 <!-- 商品支持：end -->
 
@@ -247,18 +300,18 @@
             <li class="tab-body-item ">
                 <!-- 商品详情：start -->
                 <div class="goods-detail-pic curr">
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
+                    <div class="pic-box ge-square-box ge-lazy-pic">
+                        <img data-original="http://imgsrc.baidu.com/image/c0%3Dshijue%2C0%2C0%2C245%2C40/sign=9f058521ab8b87d6444fa35c6f61424d/54fbb2fb43166d22635322844c2309f79052d2fd.jpg"  alt="">
                     </div>
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
+                    <div class="pic-box ge-square-box ge-lazy-pic">
+                        <img data-original="http://img.club.pchome.net/kdsarticle/2014/05small/13/a7afab3aca7bb2cba1f3acd23204f71d_1000x750.jpg"  alt="">
                     </div>
 
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
+                    <div class="pic-box ge-square-box ge-lazy-pic">
+                        <img data-original="http://pic1.win4000.com/wallpaper/a/54b36240bb2ce.jpg"  alt="">
                     </div>
-                    <div class="pic-box ge-lazy-pic">
-                        <img data-original="images/goods.jpeg" alt="">
+                    <div class="pic-box ge-square-box ge-lazy-pic">
+                        <img data-original="http://imglf1.ph.126.net/b3BDzvhOtiXaoCwNR2xieg==/6599322665981747818.jpg"   alt="">
                     </div>
                 </div>
                 <!-- 商品详情：end -->
@@ -486,7 +539,7 @@
                                     <li><a href="javascript:;">800ml</a></li>
                                     <li><a href="javascript:;">800ml</a></li>
                                     <li><a href="javascript:;">800ml</a></li>
-                                    <li><a href="javascript:;">800ml</a></li>
+                                    <li disabled><a href="javascript:;">800ml</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -530,8 +583,8 @@
                 </div>
                 <p>购物车</p>
             </li>
-            <!-- <li class="ge-flex-1  ge-flex  ge-flex-cc" color="white" bg="light-yellow">加入购物车</li>
-            <li class="ge-flex-1 ge-flex ge-flex-cc" color="white" bg="yellow">立即购买</li> -->
+            <li class="ge-flex-1  ge-flex  ge-flex-cc hidden" color="white" bg="light-yellow">加入购物车</li>
+            <li class="ge-flex-1 ge-flex ge-flex-cc hidden" color="white" bg="yellow">立即购买</li>
             <li class="ge-flex-1 ge-flex ge-flex-cc" color="white" bg="gray">此商品已下架</li>
         </ul>
     </div>
@@ -556,7 +609,8 @@
 
 
     <script>
-       
+      
+
 
         // 底部弹窗
        var popup = $('.ge-popup'),
@@ -585,7 +639,9 @@
             console.log(top)
             $('.tab-body-wrap').css({
                 position: 'fixed',
-                top: -top
+                top: -top,
+                left:0,
+                width:100+'%',
             });
         }
 
@@ -608,7 +664,7 @@
 
 
         // 商品规格点击高亮
-        getCurr('.goods-model .radio-btn li','curr')
+        getCurr('.goods-model .radio-btn li:not([disabled])','curr')
 
 
         // 获取高亮方法
@@ -651,7 +707,13 @@
                     document.body.scrollTop = 0;
                     $('.Tab .tab-header-item').eq(1).addClass('curr').siblings('').removeClass('curr');
                     $('.Tab .tab-body-item').eq(1).addClass('curr').siblings('').removeClass('curr');
-                    lazyLoad();
+                    var lazyBox = $('.goods-detail-pic .pic-box');
+                    lazyBox.find('img').lazyload({
+                        effect : 'fadeIn',
+                        load:function(){
+                            $(this.parentNode).removeClass('ge-square-box')
+                        }
+                    });
                 });
 
             // 上拉显示
@@ -683,7 +745,30 @@
                 var _index = $(this).index();
                 tabCon.eq(_index).addClass('curr').siblings('').removeClass('curr');
                 lazyLoad();
+                // console.log(_index)
+                if(_index == 1){
+                    var lazyBox = $('.goods-detail-pic .pic-box');
+                    lazyBox.find('img').lazyload({
+                        effect : 'fadeIn',
+                        load:function(){
+                            $(this.parentNode).removeClass('ge-square-box')
+                        }
+                    });
+                }
             });
+
+
+            var removeClass=function(name){
+              return this.each(function(idx){
+                if (!('className' in this)) return
+                if (name === undefined) return className(this, '')
+                classList = className(this)
+                funcArg(this, name, idx, classList).split(/\s+/g).forEach(function(klass){
+                  classList = classList.replace(classRE(klass), " ")
+                })
+                className(this, classList.trim())
+              })
+            }
 
             $("#sticker").sticky({topSpacing:0,zIndex:9});
 

@@ -36,6 +36,12 @@ $color-main:#fe9600;
 				margin-right: 0.25rem;
 				margin-bottom: 0.15rem;
 				float: left;
+				&[disabled]{
+					a{
+						color:#999;
+						border:1px solid #999;
+					}
+				}
 			}
 			a{
 				display: inline-block;
@@ -590,6 +596,7 @@ $color-main:#fe9600;
 		display: block;
 	}
 	.pic-box{
+		width: 100%;
 		img{
 			width: 100%;
 			display: block;
@@ -675,6 +682,7 @@ $color-main:#fe9600;
 			.evaluate-goods{
 				padding:0.2rem 0;
 				.pic{
+					padding-top:0.15rem;
 					img{
 						width: 30%;
 						margin-right: 0.1%;

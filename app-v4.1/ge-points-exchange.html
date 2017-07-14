@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>积分兑换</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/ge-main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-points-exchange.css -->
+    <link rel="stylesheet" href="styles/page/ge-points-exchange.css">
+    <!-- endbuild -->
+</head>
+
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+
+<body>
+    <!-- 轮播：start -->
+    <div class="ge-group-min">
+    <div class="ge-flex ge-mart-banner">
+        <div class="ge-comm-slick ge-flex-1 " >
+            <div class="slick-item">
+                <img data-lazy="images/banner.jpeg" alt="">
+            </div>
+            <div class="slick-item">
+                <img data-lazy="images/banner.jpeg" alt="">
+            </div>
+            <div class="slick-item">
+                <img data-lazy="images/banner0.jpeg" alt="">
+            </div>
+            <div class="slick-item">
+                <img data-lazy="images/banner.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 轮播：end -->
+
+    <!-- 积分展示区：start -->
+    <div class="user-points ge-group-min" color="dark" id="sticker">
+        <p class="ge-flex ge-flex-cc">金鹰会员<span color="main">20000</span>积分</p>
+        <p class="ge-flex ge-flex-cc"><a href="#" color="main">请登录</a>，查询会员积分</p>
+        <ul>
+            <li class="curr"><a href="#">0-5000</a></li>
+            <li><a href="#">5000-1万</a></li>
+            <li><a href="#">1万-3万</a></li>
+            <li><a href="#">3万-5万</a></li>
+            <li><a href="#">5万以上</a></li>
+        </ul>
+    </div>
+    <!-- 积分展示区：end -->
+
+    
+
+
+    <!-- 导航：start -->
+    <div class="ge-mart-nav  ge-group-min">
+        <div class="nav-item ge-flex-1 " >
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/1.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                专柜扫货
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <!-- <img data-original="images/url/2.png" alt=""> -->
+            </div>
+            <p class="nav-name ge-line-one">
+                积分兑换
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/3.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                外购
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/4.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                尾货集市
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/5.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                海外购1
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/5.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                海外购1
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/5.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                海外购1
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/5.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                海外购1
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/5.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                海外购1
+            </p>
+        </div>
+        <div class="nav-item ge-flex-1 ">
+            <div class="nav-icon ge-square-box ge-lazy-pic">
+                <img data-original="images/url/5.png" alt="">
+            </div>
+            <p class="nav-name ge-line-one">
+                海外购1
+            </p>
+        </div>
+    </div>
+    <!-- 导航：end -->
+
+    <!-- 标题：start -->
+    <div class="ge-comm-title ">
+        <p class="title-name">
+            积分热兑榜
+        </p>
+        <p class="title-more">
+            <a href="javascript:;">更多</a>
+        </p>
+    </div>
+    <!-- 标题：end -->
+
+
+    <!-- 积分热兑榜：start -->
+    <div class="swiper-container ge-group-min" fs="26" bg="white">
+        <div class="swiper-wrapper  ge-padding-bottom">
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img class="swiper-lazy" data-src="images/goods.jpeg" alt=""></div>
+              <p class=" ge-aline" color="dark">【2罐装】德国Aptamil爱他美婴幼儿奶粉3段纸罐装800g 10-12个月 欧洲直邮</p>
+              <p color="main">积分10000</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img class="swiper-lazy" data-src="images/goods.jpeg" alt=""></div>
+              <p class=" ge-aline" color="dark">【2罐装】德国Aptamil爱他美婴幼儿奶粉3段纸罐装800g 10-12个月 欧洲直邮</p>
+              <p color="main">积分10000</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img class="swiper-lazy" data-src="images/goods.jpeg" alt=""></div>
+              <p class=" ge-aline" color="dark">【2罐装】德国Aptamil爱他美婴幼儿奶粉3段纸罐装800g 10-12个月 欧洲直邮</p>
+              <p color="main">积分10000</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img class="swiper-lazy" data-src="images/goods.jpeg" alt=""></div>
+              <p class=" ge-aline" color="dark">【2罐装】德国Aptamil爱他美婴幼儿奶粉3段纸罐装800g 10-12个月 欧洲直邮</p>
+              <p color="main">积分10000</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img class="swiper-lazy" data-src="images/goods.jpeg" alt=""></div>
+              <p class=" ge-aline" color="dark">【2罐装】德国Aptamil爱他美婴幼儿奶粉3段纸罐装800g 10-12个月 欧洲直邮</p>
+              <p color="main">积分10000</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="ge-square-box"><img class="swiper-lazy" data-src="images/goods.jpeg" alt=""></div>
+              <p class=" ge-aline" color="dark">【2罐装】德国Aptamil爱他美婴幼儿奶粉3段纸罐装800g 10-12个月 欧洲直邮</p>
+              <p color="main">积分10000</p>
+            </div>
+        </div>
+    </div>
+    <!-- 积分热兑榜：end -->
+
+
+    <!-- 商品列表：start -->
+    <ul class="ge-comm-list">
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods0.jpeg" alt="">
+                    <img src="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                    <img src="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price icon-point">20000</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">销量xxx</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!-- 商品列表：end -->
+
+     <!-- 返回顶部:start -->
+    <div class="ge-comm-back2top"></div>
+    <!-- 返回顶部:end -->
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/page/ge-back2top.js -->
+    <script src="scripts/ge-back2top.js"></script>
+    <!-- endbuild -->
+    
+
+
+    <script>
+    $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
+    $('.ge-comm-slick').slick({
+            arrows:false,
+            lazyLoad:'ondemand',
+            autoplay:5000,
+            dots:true,
+        })
+
+    var miaosha = new Swiper('.swiper-container', {
+            slidesPerView : 3.2,
+            spaceBetween : 20,
+            slidesOffsetBefore:10,
+            slidesOffsetAfter:10,
+            lazyLoading : true,
+        })
+
+    $("#sticker").sticky({topSpacing:0,zIndex:9});
+    </script>
+</body>
+</html>

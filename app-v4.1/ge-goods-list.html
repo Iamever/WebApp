@@ -31,6 +31,7 @@
     }
 </script>
 <body>
+
     
     <div class="top-head-wrap">
         <div class="top-header">
@@ -48,10 +49,10 @@
                         </svg>
                     </div>
                     <form action="" class="search-input">
-                        <input id="search-input" type="text" placeholder="请输入您要搜索的商品名称" type="search">
+                        <input id="search-input" type="text" placeholder="请输入您要搜索的商品名称" type="search" onkeypress="return onKeyPress(event)">
                     </form>
                 </div>
-                <div class="search-icon" id="changeList">
+                <div class="search-icon" id="changeList" >
                     <svg class="icon color-gray" aria-hidden="true" fs="40">
                       <use xlink:href="#icon-leimu"></use>
                     </svg>
@@ -98,8 +99,8 @@
                                 <li><span>1000-3000</span></li>
                                 <li><span>3000-5000</span></li>
                                 <li>
-                                    <input class="inputBox" type="text">-
-                                    <input class="inputBox" type="text">
+                                    <input class="inputBox" type="number">-
+                                    <input class="inputBox" type="number">
                                 </li>
                             </ul>
                             <ul class="filter-integral">
@@ -109,8 +110,8 @@
                                 <li><span>1000-3000</span></li>
                                 <li><span>3000-5000</span></li>
                                 <li>
-                                    <input class="inputBox" type="text">-
-                                    <input class="inputBox" type="text">
+                                    <input class="inputBox" type="number">-
+                                    <input class="inputBox" type="number">
                                 </li>
                             </ul>
                             <ul class="filter-distribution">
@@ -134,7 +135,7 @@
         </div>
     </div>
     
-
+    <!-- <p class="error-text">抱歉没有找到相关商品</p> -->
     <!-- 商品推荐：start -->
     <!-- unfold  -->
     <div class="ge-comm-list ">
@@ -327,8 +328,15 @@
         });
         
         
-        
-
+      function onKeyPress(e)
+        {
+            if(e.keyCode == 13) 
+            {
+                console.log(12)
+                return false;
+            }
+            return true;
+        }
 
 
 

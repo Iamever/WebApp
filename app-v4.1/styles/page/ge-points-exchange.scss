@@ -1,0 +1,112 @@
+/**
+ * 轮播尺寸
+ * 尺寸：750*272 
+ */
+.ge-mart-banner{
+	width:100%;
+	position:relative;
+	&:before{
+		content:'';
+		display: block;
+		padding-top:36.26667%;
+	}
+}
+
+
+/**
+ * 超市导航-5个按钮
+ */
+.ge-mart-nav{
+	padding:0.4rem 0 0.3rem;
+	background:white;
+	overflow: hidden;
+	.nav-item{
+		width: 20%;
+		float: left;
+		padding: 0.1rem 0;
+		cursor: pointer;
+		&:last-child{
+			margin-right: 0;
+		}
+		.nav-icon{
+			width: 0.8rem;
+			height: 0.8rem;
+			margin: 0 auto;
+		}
+		.nav-name{
+			font-size: 0.25rem;
+			text-align: center;
+			padding-top:0.25rem;
+			color:#333;
+		}
+	}
+}
+
+
+/**
+ * 用户积分展示
+ */
+.user-points{
+	background-color:#fff;
+	padding-bottom:0.2rem;
+	border-bottom:1px solid #eee;
+	p{
+		padding: 0.3rem 0;
+	}
+	ul{
+		overflow: auto;
+		li{
+			cursor: pointer;
+			float: left;
+			width: 20%;
+			height: 0.8rem;
+			line-height: 0.8rem;
+			text-align: center;
+			&.curr{
+				a{
+					background-color:#ff8900;
+					color: #fff;
+				}
+			}
+			a{
+				font-size:0.24rem;
+				background-color:#ddd;
+				padding:0.1rem;
+				border-radius: 0.1rem;
+				text-decoration: none;
+				&:active{
+					background-color:#eee;
+				}
+			}
+		}
+	}
+}
+
+.ge-aline{
+	line-height:1.5;
+}
+.ge-padding-bottom{
+	padding-bottom:0.3rem;
+}
+
+[fs="26"]{
+	font-size:0.26rem;
+}
+
+[fs="30"]{
+	font-size:0.3rem;
+}
+
+[color="dark"]{
+	color:#666;
+}
+[color="gray"]{
+	color:#999;
+}
+
+[color="main"]{
+	color:#ff8900;
+}
+[bg="white"]{
+	background-color:#fff;
+}
