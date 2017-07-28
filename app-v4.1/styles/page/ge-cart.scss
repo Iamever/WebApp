@@ -7,7 +7,7 @@ $color-main:#fe9600;
 	&.activity{
 		.icon-more{
 			color:$color-main;
-			font-size: 0.33rem;
+			// font-size: 0.33rem;
 			&:after{
 				content: '';
 				border-bottom:1px solid $color-main;
@@ -28,7 +28,7 @@ $color-main:#fe9600;
 		line-height: 0.5rem;
 		height: 0.5rem;
 		padding:0.2rem;
-		font-size: 0.34rem;
+		// font-size: 0.34rem;
 		.check-box{
 			width: 0.7rem;
 		}
@@ -59,8 +59,9 @@ $color-main:#fe9600;
 			color:$color-main;
 			margin-right: 0.1rem;
 			span{
-				padding:0.05rem 0.1rem;
-				border-radius:0.1rem;
+				font-size: 0.2rem;
+				padding:0rem 0.08rem;
+				border-radius:0.05rem;
 				border:1px solid $color-main;
 			}
 		}
@@ -360,4 +361,82 @@ $color-main:#fe9600;
 	line-height:0.9rem;
 	height:0.9rem;
 	text-align:center;
+}
+
+
+// 分开支付的弹窗
+.separatePay{
+	display:none;
+	position:fixed;
+	left:0;
+	right:0;
+	margin:auto;
+	top:30%;
+	background:white;
+	width:80%;
+	max-width:640px;
+	
+	z-index:99;
+	border-radius:0.1rem;
+	&.curr{
+		display: block;
+	}
+	.header{
+		text-align:center;
+		padding:0.4rem 0 0rem;
+	}
+	.body{
+		padding:0.3rem 0.1rem;
+		.select{
+			.ge-check-main{
+				margin-right: 0.4rem;
+			}
+			li{
+				padding:0.2rem;
+			}
+		}
+	}
+	.footer{
+		border-top:1px solid #e6e6e6;
+		.btn-box{
+			padding:0.25rem 0;
+			a{
+				display: inline-block;
+				height: 0.7rem;
+				width: 2.2rem;
+				text-align: center;
+				line-height: 0.7rem;
+				border:1px solid #666;
+				border-radius:0.1rem;
+				margin:0 0.2rem;
+				text-decoration: none;
+				&[color="main"]{
+					border:1px solid $color-main;
+
+				}
+				&[color="darkgray"]{
+					border:1px solid #666;
+
+				}
+			}
+		}
+	}
+	[color="gray"]{
+		color:#999;
+	}
+	[color="darkgray"]{
+		color:#666;
+	}
+	[color="main"]{
+		color:$color-main;
+	}
+	[fs="36"]{
+		font-size:0.36rem;
+	}
+	[fs="32"]{
+		font-size:0.32rem;
+	}
+	[fs="24"]{
+		font-size:0.24rem;
+	}
 }

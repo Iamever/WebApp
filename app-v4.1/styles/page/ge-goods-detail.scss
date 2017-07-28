@@ -246,26 +246,93 @@ $color-main:#fe9600;
 	.tab-header-wrap{
 		text-align:center;
 		background:white;
-		border-bottom:1px solid #eee;
+		border-bottom:0.01rem solid #eee;
+		height: 1rem;
+		line-height: 1rem;
+		position:fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin:auto;
+		max-width: 640px;
+		z-index: 9;
+		.side-box{
+			padding:0 0.2rem;
+			width: 0.6rem;
+			height: 100%;
+			display: inline-block;
+		}
 		.tab-header{
 			font-size: 0.33rem;
 			display: inline-block;
 			.tab-header-item{
+				height: 0.97rem;
 				float: left;
 				cursor: pointer;
-				padding:0.3rem 0.2rem;
+				padding:0rem 0.2rem;
 				&.curr{
 					color:$color-main;
+					border-bottom:0.03rem solid $color-main;
 				}
 			}
 		}
 	}
 	.tab-body-wrap{
+		position:relative;
+		top:1rem;
+		margin-bottom:1rem;
 		.tab-body{
 			.tab-body-item{
 				display: none;
 				&.curr{
 					display: block;
+				}
+			}
+		}
+	}
+	.detail-tab{
+		font-size:0.28rem;
+		color: #666;
+		position:relative;
+		.detail-tab-header{
+			background:white;
+			height: 0.8rem;
+			position:fixed;			
+			top:1rem;
+			left:0;
+			right:0;
+			z-index: 8;
+			margin:auto;
+			width: 100%;
+			max-width: 640px;
+			.item{
+				text-align: center;
+				cursor: pointer;
+				&.curr{
+					color: $color-main;
+				}
+			}
+		}
+		.detail-tab-content{
+			position:relative;
+			top: 0.8rem;
+			margin-bottom:1rem;
+			.item{
+				padding-bottom:0.2rem;
+				display: none;
+				&.curr{
+					display: block;
+				}
+				&.abox{
+					padding:0.2rem;
+					line-height: 1.2;
+					text-indent: 0.2rem;
+					table{
+						border:1px solid #999;
+					}
+				}
+				.line{
+					padding:0.08rem 0.2rem;
 				}
 			}
 		}
@@ -344,6 +411,10 @@ $color-main:#fe9600;
 		margin-bottom: 0.1rem;
 		padding-left:0.24rem;
 		background:white;
+		&.no-mg{
+			margin-bottom: 0rem;
+			border-bottom:1px solid #eee;
+		}
 		li{
 			border-bottom:1px solid #eee;
 			padding: 0.37rem 0.12rem 0.1rem 0;
@@ -614,12 +685,20 @@ $color-main:#fe9600;
 		height: 0.8rem;
 		padding:0.1rem 0;
 		background:#fff;
+		position:fixed;
+		top: 1rem;
+		left: 0;
+		right: 0;
+		margin:auto;
+		max-width: 640px;
+		z-index: 2;
 		li{
 			float: left;
 			width: 20%;
 			line-height: 0.4rem;
 			text-align: center;
 			font-size: 0.3rem;
+			cursor: pointer;
 			&.curr{
 				color:$color-main;
 			}
@@ -628,6 +707,9 @@ $color-main:#fe9600;
 	}
 	// 评价部分
 	.evaluate{
+		position:relative;
+		top: 1rem;
+		margin-bottom:1rem;
 		.evaluate-ls{
 			padding:0 0.28rem;
 			background:#fff;

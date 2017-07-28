@@ -38,7 +38,7 @@
             <div class="ge-flex ge-flex-vc check-box">
                 <p class="ge-check-main" check-type="check-all"></p>
             </div>
-            <p class="ge-flex-1 icon-more">
+            <p class="ge-flex-1 icon-more" fs="26">
                 金鹰购全场满399减30
             </p>
         </div>
@@ -47,7 +47,7 @@
             <!-- 加价购：start -->
             <div class="goods-box-header ge-flex" fs='26'>
                 <p class="prefix-title"><span>加价购</span></p>
-                <p class="ge-flex-1 ge-aline" >满1000元加1元购可可小姐2ml；满2000元加1元购可可小姐20ml</p>
+                <p class="ge-flex-1 ge-aline" color="gray">满1000元加1元购可可小姐2ml；满2000元加1元购可可小姐20ml</p>
                 <a href="#" class="add-btn" color="main">去凑单</a>
             </div>
             <!-- 加价购：end -->
@@ -492,11 +492,49 @@
                 <p color="dark" fs="22">+1000积分</p>
             </div>
             <div class="right-btn">
-                去结算<span fs='50%'>(2)</span>
+                去结算<span >(2)</span>
             </div>
         </div>
     </div>
     <!-- 结算：end -->
+
+
+    <!-- 分开结算弹窗：start -->
+    <div class="separatePay ">
+        <div class="header">
+            <p fs="36">请分开结算以下商品</p>
+        </div>
+        <div class="body">
+            <ul class="select">
+                <li class="ge-flex">
+                    <div class="ge-check-main"></div>
+                    <div class="ge-flex-1">
+                        <p fs="32">海外支付商品</p>
+                        <p fs="24" color="gray">1件</p>
+                    </div>
+                </li>
+
+                <li class="ge-flex">
+                    <div class="ge-check-main"></div>
+                    <div class="ge-flex-1">
+                        <p fs="32">海外支付商品</p>
+                        <p fs="24" color="gray"> 1件</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <ul class="ge-flex btn-box">
+                <li class="ge-flex-1 ge-flex ge-flex-cc">
+                    <a color="darkgray" fs="32" href="#">返回购物车</a>
+                </li>
+                <li class="ge-flex-1 ge-flex ge-flex-cc">
+                    <a fs="32" color="main" href="#">去结算</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 分开结算弹窗：end -->
 
 
 
@@ -518,6 +556,35 @@
     <!-- endbuild -->
 
     <script>
+    jQuery(document).ready(function($) {
+        openLayer()
+        
+    });
+
+
+    // 分开结算弹窗
+    var openLayer = function(){
+
+        var box = $('.separatePay');
+        if($('body').hasClass('.ge-comm-cover')){
+            
+        }else{
+            box.addClass('curr');
+            $('body').append('<div class="ge-comm-cover">')
+
+            $('.ge-comm-cover').click(function() {
+                closeLayer();            
+            });
+        }
+        
+    }
+    var closeLayer = function(){
+        var box = $('.separatePay');
+        box.removeClass('curr');
+        var cover = $('.ge-comm-cover');
+        cover.remove();
+    }
+
 
         // 左滑删除
         var swipeBox = $(".goods-box[swipe='true']");

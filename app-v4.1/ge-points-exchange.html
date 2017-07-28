@@ -34,6 +34,20 @@
 </script>
 
 <body>
+    <!-- 搜索:start -->
+    <div class="ge-comm-gray-search">
+        <div class="search-wrap">
+            <div class="search-icon">
+                <svg class="icon iconfont" aria-hidden="true">
+                  <use xlink:href="#icon-sousuo"></use>
+                </svg>
+            </div>
+            <form action="" class="search-input">
+                <input type="text" placeholder="请输入您要搜索的商品名称" type="search">
+            </form>
+        </div>
+    </div>
+    <!-- 搜索:end -->
     <!-- 轮播：start -->
     <div class="ge-group-min">
     <div class="ge-flex ge-mart-banner">
@@ -57,7 +71,7 @@
 
     <!-- 积分展示区：start -->
     <div class="user-points ge-group-min" color="dark" id="sticker">
-        <p class="ge-flex ge-flex-cc">金鹰会员<span color="main">20000</span>积分</p>
+        <p class="ge-flex ge-flex-cc hidden">金鹰会员<span color="main">20000</span>积分</p>
         <p class="ge-flex ge-flex-cc"><a href="#" color="main">请登录</a>，查询会员积分</p>
         <ul>
             <li class="curr"><a href="#">0-5000</a></li>
@@ -386,6 +400,9 @@
     
     <!-- build:js scripts/page/ge-back2top.js -->
     <script src="scripts/ge-back2top.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/page/iconfont.js -->
+    <script src="iconfont/iconfont.js"></script>
     <!-- endbuild -->
     
 

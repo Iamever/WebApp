@@ -97,7 +97,7 @@
 		</div>
 		<!-- 第三方支付：end -->
 
-		<div style="width: 10px ;height: 800px;"></div>
+		<!-- <div style="width: 10px ;height: 800px;"></div> -->
 
 		<!-- 卡券：start -->
 		<div class="ge-flex ge-flex-vc coupon-item third-party">
@@ -111,7 +111,8 @@
 				<p class="ge-check-main checked"></p>
 			</div>
 		</div>
-		<div class="ge-flex ge-flex-vc coupon-item third-party">
+		
+		<div class="ge-flex ge-flex-vc coupon-item third-party hidden" id="payway1">
 			<div><p class="icon-logo-wx"></p></div>
 			<div class="ge-flex-1">
 				<p class="font-dark">微信支付</p>
@@ -120,7 +121,7 @@
 				<p class="ge-check-main checked"></p>
 			</div>
 		</div>
-		<div class="ge-flex ge-flex-vc coupon-item third-party">
+		<div class="ge-flex ge-flex-vc coupon-item third-party hidden" id="payway2">
 			<div><p class="icon-logo-unionpay"></p></div>
 			<div class="ge-flex-1">
 				<p class="font-dark">银联</p>
@@ -129,6 +130,10 @@
 				<p class="ge-check-main checked"></p>
 			</div>
 		</div>
+		<div class="ge-flex ge-flex-cc coupon-item third-party" >
+			<p class="font-gray " id="paywaybtn">点击查看其它支付方式</p>
+		</div>
+
 		
 		<!-- 卡券：end -->
 		
@@ -157,6 +162,26 @@
     
     
    	<script>
+   		// 点击查看其它支付方式
+   		var show_pay_way = $('#paywaybtn'),
+   		pay1 = $('#payway1'),
+   		pay2 = $('#payway2'),
+   		flag = false; // pay1 pay2 隐藏
+
+   		show_pay_way.click(function() {
+   			if(flag){
+   				$(pay1).addClass('hidden');
+   				$(pay2).addClass('hidden');
+   				flag = !flag;
+   				$(show_pay_way).text('点击查看其它支付方式');
+   			}else{
+   				$(pay1).removeClass('hidden');
+   				$(pay2).removeClass('hidden');
+   				flag = !flag;
+   				$(show_pay_way).text('收起');
+   			}
+   		});
+
    		$('.ge-radio-green,.ge-check-main').click(function() {
 			$(this).toggleClass('checked');
 		});

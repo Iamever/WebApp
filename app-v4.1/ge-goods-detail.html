@@ -86,12 +86,28 @@
 </div>
 <div class="Tab">
     <!-- tab-header:start -->
-    <div class="tab-header-wrap " id="sticker">
-        <ul class="tab-header">
-            <li class="tab-header-item curr">商品</li>
-            <li class="tab-header-item">详情</li>
-            <li class="tab-header-item">评价</li>
-        </ul>
+    <div class="ge-flex ge-boxs tab-header-wrap ">
+        <div class="side-box">
+            <a href="Javascript:history.go()">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-xiangzuo1"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="ge-flex-1">
+            <ul class="tab-header">
+                <li class="tab-header-item curr">商品</li>
+                <li class="tab-header-item">详情</li>
+                <li class="tab-header-item">评价</li>
+            </ul>
+        </div>
+        <div class="side-box">
+        <a>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-fenxiang"></use>
+            </svg>
+        </a>
+        </div>
     </div>
     <!-- tab-header:end -->
     <!-- tab-body:start -->
@@ -174,7 +190,7 @@
                                 <div class="icon-more"></div>
                             </li>
                         </ul>
-                        <ul class="group">
+                        <ul class="group no-mg">
                             <li class="ge-flex  " >
                                 <p class="li-title">已选</p>
                                 <div class="ge-flex-1 li-content">
@@ -290,7 +306,7 @@
                 <!-- 更多推荐：end -->
 
                 <!-- 上拉显示图文详情：start -->
-                    <div class="ge-group-min btn-more" id="swipeUp"> 
+                    <div class="  btn-more" id="swipeUp"> 
                         <a href="javascript:;" class=" " color="gray" fs="26">点击显示图文详情</a>
                     </div>
                 <!-- 上拉显示图文详情：end -->
@@ -299,19 +315,86 @@
             </li>
             <li class="tab-body-item ">
                 <!-- 商品详情：start -->
-                <div class="goods-detail-pic curr">
-                    <div class="pic-box ge-square-box ge-lazy-pic">
-                        <img data-original="http://imgsrc.baidu.com/image/c0%3Dshijue%2C0%2C0%2C245%2C40/sign=9f058521ab8b87d6444fa35c6f61424d/54fbb2fb43166d22635322844c2309f79052d2fd.jpg"  alt="">
-                    </div>
-                    <div class="pic-box ge-square-box ge-lazy-pic">
-                        <img data-original="http://img.club.pchome.net/kdsarticle/2014/05small/13/a7afab3aca7bb2cba1f3acd23204f71d_1000x750.jpg"  alt="">
-                    </div>
+                <div class="detail-tab">
+                    <ul class="ge-flex ge-flex-cc detail-tab-header" >
+                        <li class="ge-flex-1 item curr">商品参数</li>
+                        <li class="ge-flex-1 item">规格参数</li>
+                        <li class="ge-flex-1 item">包装售后</li>
+                    </ul>
+                    <div class="detail-tab-content">
+                        <div class="item curr">
+                            <div class="goods-detail-pic curr">
+                                <div class="pic-box ge-square-box ge-lazy-pic">
+                                    <img data-original="http://imgsrc.baidu.com/image/c0%3Dshijue%2C0%2C0%2C245%2C40/sign=9f058521ab8b87d6444fa35c6f61424d/54fbb2fb43166d22635322844c2309f79052d2fd.jpg"  alt="">
+                                </div>
+                                <div class="pic-box ge-square-box ge-lazy-pic">
+                                    <img data-original="http://img.club.pchome.net/kdsarticle/2014/05small/13/a7afab3aca7bb2cba1f3acd23204f71d_1000x750.jpg"  alt="">
+                                </div>
 
-                    <div class="pic-box ge-square-box ge-lazy-pic">
-                        <img data-original="http://pic1.win4000.com/wallpaper/a/54b36240bb2ce.jpg"  alt="">
-                    </div>
-                    <div class="pic-box ge-square-box ge-lazy-pic">
-                        <img data-original="http://imglf1.ph.126.net/b3BDzvhOtiXaoCwNR2xieg==/6599322665981747818.jpg"   alt="">
+                                <div class="pic-box ge-square-box ge-lazy-pic">
+                                    <img data-original="http://pic1.win4000.com/wallpaper/a/54b36240bb2ce.jpg"  alt="">
+                                </div>
+                                <div class="pic-box ge-square-box ge-lazy-pic">
+                                    <img data-original="http://imglf1.ph.126.net/b3BDzvhOtiXaoCwNR2xieg==/6599322665981747818.jpg"   alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item abox">
+                            <p class="line">品牌：XXXX</p>
+                            <p class="line">品名：XXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="line">规格:XXXXXXXXXXXXXXXXXXX</p>
+                            <table border="1">
+                                <tbody>
+                                                            <tr>
+                                        <td style="width:30%;">品牌</td>
+                                        <td style="width:70%;">【Maserati】玛莎拉蒂</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">型号</td>
+                                        <td style="width:70%;">总裁</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">长宽高(mm)</td>
+                                        <td style="width:70%;">5262*1948*1481</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">轴距</td>
+                                        <td style="width:70%;">3171</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">额定功率（千瓦/转每分)</td>
+                                        <td style="width:70%;">301/5500</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">额定扭矩（牛顿米/转每分）</td>
+                                        <td style="width:70%;">550/1750-5000</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">气缸数/总排量</td>
+                                        <td style="width:70%;">V6/3.0T</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">变速箱</td>
+                                        <td style="width:70%;">8挡手自一体</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">油箱容积</td>
+                                        <td style="width:70%;">80</td>
+                                        </tr>
+                                                            <tr>
+                                        <td style="width:30%;">座位数</td>
+                                        <td style="width:70%;">5</td>
+                                        </tr>
+                                                        
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="item abox">
+                            <p class="line">1、XXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="line">2、XXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="line">3、XXXXXXXXXXXXXXXXXXXXXX</p>
+                            <p class="line">4、XXXXXXXXXXXXXXXXXXXXXX</p>
+                        </div>
                     </div>
                 </div>
                 <!-- 商品详情：end -->
@@ -412,9 +495,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="ge-group-min btn-more" > 
-                    <a href="#" class=" " color="gray" fs="26">点击显示更多</a>
+                    <div class="ge-group-min btn-more" > 
+                        <a href="#" class=" " color="gray" fs="26">点击显示更多</a>
+                    </div>
                 </div>
                 <!-- 商品评价：end -->
             </li>
@@ -579,7 +662,7 @@
             <li class="ge-flex ge-flex-ver ge-flex-cc flex "  fs="26">
                 <div class="icon">
                     <i class=" icon-cart"></i>
-                    <i class="count">2</i>
+                    <i class="count">12</i>
                 </div>
                 <p>购物车</p>
             </li>
@@ -605,11 +688,27 @@
     <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    
 
+    <script src="/iconfont/iconfont.js"></script>
 
 
     <script>
-      
+        // 详情页 tab
+        ;(function ($) {
+            var detail_tab = $('.detail-tab'),
+                detail_header = detail_tab.find('.detail-tab-header .item'),
+                detail_content = detail_tab.find('.detail-tab-content .item');
+
+            getCurr(detail_header,'curr');
+            
+            detail_header.click(function() {
+                var _index = $(this).index();
+
+                detail_content.eq(_index).addClass('curr').siblings().removeClass('curr');
+            });
+
+        })(jQuery);
 
 
         // 底部弹窗
@@ -770,7 +869,8 @@
               })
             }
 
-            $("#sticker").sticky({topSpacing:0,zIndex:9});
+            // $("#sticker").sticky({topSpacing:0,zIndex:9});
+            // $("#sticker-detail").sticky({topSpacing:40,zIndex:9});
 
         })(jQuery);
 

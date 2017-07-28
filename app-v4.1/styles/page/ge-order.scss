@@ -1,5 +1,108 @@
 $color-main:#fe9600;
 $color-bg:#f1f1f1;
+
+
+.ge-apage{
+	display:none;
+	position:fixed;
+	background:$color-bg;
+	z-index:9;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow:auto;
+	&.show{
+		display: block;
+	}
+	[fs='22']{
+		font-size: 0.23rem;
+	}
+	[fs='26']{
+		font-size: 0.27rem;
+	}
+	[fs='34']{
+		font-size: 0.35rem;
+	}
+	[color="gray"]{
+		color:#666;
+	}
+	[color="main"]{
+		color:$color-main;
+	}
+	.goods-box{
+		padding:0.2rem;
+		font-size:0.3rem;
+		position: relative;
+		line-height:1.5;
+		width: 100%;
+		overflow: hidden;
+		background:white;
+		border-bottom:1px solid #eee;
+		.goods-box-info{
+			-webkit-transition:all 0.3s;
+			-ms-transition:all 0.3s;
+			-o-transition:all 0.3s;
+			transition:all 0.3s;
+			.check-box{
+				width: 0.7rem;
+			}
+			.goods-pic{
+				width: 1.8rem;
+				height: 1.8rem;
+				border: 1px solid #cbcbcb;
+				border-radius:0.15rem;
+				overflow: hidden;
+				margin-right: 0.3rem;
+			}
+			.goods-price{
+				font-weight:600;
+				// line-height: 1;
+				&:before{
+					content: '￥';
+					font-size: 0.6em;
+				}
+			}
+			.goods-intergral{
+				font-weight:600;
+				line-height: 1;
+				&:before{
+					content: '积分';
+					font-size: 0.6em;
+					font-weight: normal;
+				}
+			}
+			.prefix-purple{
+				color:#661e8f;
+				font-style: normal;
+				border:1px solid #662e8f;
+				font-size: 0.2rem;
+				border-radius:0.05rem;
+				padding:0 0.08rem ;
+				margin-right:0.1rem;
+			}
+			.prefix-main{
+				color:$color-main;
+				font-style: normal;
+				border:1px solid $color-main;
+				font-size: 0.2rem;
+				border-radius:0.05rem;
+				padding:0 0.08rem ;
+				margin-right:0.1rem;
+			}
+			.prefix-main-solid{
+				color:white;
+				font-style: normal;
+				background:$color-main;
+				font-size: 0.2rem;
+				border-radius:0.05rem;
+				padding:0 0.08rem ;
+				margin-right:0.1rem;
+			}
+		}
+	}
+
+}
 .ge-order-item{
 	background:white;
 	cursor: pointer;

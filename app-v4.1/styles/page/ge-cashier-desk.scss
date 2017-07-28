@@ -31,6 +31,9 @@ $color-main:#fe9600;
 		padding:0.30rem 0.5rem 0.30rem 0.3rem;
 		border-radius:0.2rem;
 		cursor: pointer;
+		&.hidden{
+			display: none;
+		}
 		&.third-party{
 			padding:0.2rem 0.5rem 0.2rem 0.3rem;
 		}
