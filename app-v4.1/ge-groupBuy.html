@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拼团</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:css styles/ge-main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-groupBuy.css -->
+    <link rel="stylesheet" href="styles/page/ge-groupBuy.css">
+    <!-- endbuild -->
+
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+    
+
+    <!-- header:start -->
+    <div class="ge-comm-header-wrap">
+        <div class="ge-flex ge-comm-header">
+            <div class="side-box">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-xiangzuo1"></use>
+                </svg>
+            </div>
+            <div class="ge-flex-1 ge-flex ge-flex-cc center-box">
+                <p fs="28">一元团</p>
+            </div>
+            <div class="side-box">
+                <!-- <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-ge-fenxiang"></use>
+                </svg> -->
+            </div>
+        </div>
+    </div>
+    <!-- header:end -->
+    
+
+
+
+    <!-- 列表：start -->
+    <div class="ge-list">
+        <ul class="article">
+            <li class="ge-flex list">
+                <div class="ge-lazy-pic ge-square-box pic">
+                    <img src="images/goods.jpeg" alt="">
+                </div>
+                <div class="ge-flex-1 ge-flex ge-flex-ver text">
+                    <p fs="30" color="dark" class="ge-two-line">榜单|支正品口测试</p>
+                    <p fs="26" color="purple" class="ge-flex-1 apadding">27人已团</p>
+                    <div class="ge-flex ge-flex-vc" fs="26">
+                        <p class="ge-flex-1">
+                            <span color="purple" fs="34" fw="700">￥20.01</span>
+                            <s color="gray">￥39</s>
+                        </p>
+                        <a href="#" class="btn-purple" fs="24">去开团</a>
+                    </div>
+                </div>
+            </li>
+            <li class="ge-flex list">
+                <div class="ge-lazy-pic ge-square-box pic">
+                    <img src="images/goods.jpeg" alt="">
+                </div>
+                <div class="ge-flex-1 ge-flex ge-flex-ver text">
+                    <p fs="30" color="dark" class="ge-two-line">榜单|全球100支正品口测试球100支正品口测试球100支正品口测试球100支正品测试球100支正品口测试</p>
+                    <p fs="26" color="purple" class="ge-flex-1 apadding">27人已团</p>
+                    <div class="ge-flex ge-flex-vc" fs="26">
+                        <p class="ge-flex-1">
+                            <span color="purple" fs="34" fw="700">￥20.01</span>
+                            <s color="gray">￥39</s>
+                        </p>
+                        <a href="#" class="btn-purple" fs="24">去开团</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 列表：end -->
+
+
+
+
+
+
+
+    <!-- 返回顶部:start -->
+    <div class="ge-comm-back2top"></div>
+    <!-- 返回顶部:end -->
+
+
+
+
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    
+
+
+    <!-- build:js scripts/page/iconfont.js -->
+    <script src="iconfont/iconfont.js"></script>
+    <!-- endbuild -->
+
+    
+
+    <!-- build:js scripts/page/ge-back2top.js -->
+    <script src="scripts/ge-back2top.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+        /**
+         * 延迟加载
+         */
+        $('.ge-lazy-pic img').lazyload({effect : 'fadeIn'});
+
+        /**
+         * 轮播
+         */
+        $('.ge-comm-slick').slick({
+            arrows:false,
+            lazyLoad:'ondemand',
+            autoplay:5000,
+            dots:true,
+        })
+
+
+        /**
+         * 导航部分
+         */
+        ;(function($){
+
+            var nav = $('.ge-ad1-nav-wrap'),
+                show_item = $(nav).find('.ge-ad1-nav .nav-item'),
+                more_btn = $(nav).find('.more-btn'),
+                hidden_box = $(nav).find('.hidden-box'),
+                hidden_item = $(hidden_box).find('.nav-item'),
+                item = $(nav).find('.nav-item');
+            if(hidden_item.length > 0){
+                more_btn.addClass('curr');
+            }
+
+            more_btn.click(function() {
+                if($(hidden_box).hasClass('show')){
+                    $(this).removeClass('up')
+                    $(hidden_box).removeClass('show'); 
+                }else{
+                    $(hidden_box).addClass('show'); 
+                    $(this).addClass('up')
+                }
+            });
+
+
+            $(item).click(function() {
+                $(item).removeClass('curr');
+                $(this).addClass('curr');
+            });
+
+
+        })(jQuery)
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+
+body{
+	background:#fff;
+}
+
+.ge-share{
+	.big-TPadding{
+		padding-top:1rem;
+	}
+	.ge-time-box{
+		text-align: center;
+		.wrap{
+			display: inline-block;
+			padding:0.1rem 0;
+
+		}
+		.time{
+			background:#333;
+			color: #fff;
+			padding:0.1rem;
+			border-radius: 0.05rem;
+			position: relative;
+			margin-right: 0.1rem;
+			&:after{
+				content:":";
+				position:absolute;
+				right:-0.15rem;
+				color:#333;
+				font-weight: bold;
+			}
+			&:last-child{
+				&:after{
+					content:'';
+				}
+			}
+		}
+	}
+	.ge-center-box{
+		text-align: center;
+	}
+	.big-line{
+		line-height: 2;
+	}
+	.a-line{
+		line-height: 1.1;
+	}
+	[color="red"]{
+		color: #E52343;
+	}
+	[color="dark"]{
+		color: #333;
+	}
+	[color="gray"]{
+		color: #999;
+	}
+	[fs="24"]{
+		font-size: 0.24rem;
+	}
+	[fs="26"]{
+		font-size: 0.26rem;
+	}
+	[fs="28"]{
+		font-size: 0.28rem;
+	}
+	[fs="30"]{
+		font-size: 0.30rem;
+	}
+	[fs="32"]{
+		font-size: 0.32rem;
+	}
+	[fs="34"]{
+		font-size: 0.34rem;
+	}
+	[fw="400"]{
+		font-weight: normal;
+	}
+	[fw="700"]{
+		font-weight: bold;
+	}
+}

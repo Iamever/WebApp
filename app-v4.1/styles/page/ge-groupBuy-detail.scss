@@ -1,0 +1,163 @@
+$color-main:#ff8900;
+
+
+// tab-商品-商品支持
+.goods-support-wrap{
+	padding:0.34rem 0.24rem;
+	background:#f7f7f7;
+	.icon-support{
+		color:#666;
+		margin-right: 0.25rem;
+		font-size: 0.3rem;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 0.25rem;
+			height: 0.25rem;
+			background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgNJREFUeNq8Vt1RwkAQvmTw/UqQCsAKDBUYKzAU4IgVABUAYwHECsAKghUYKzBWQN590F3nO+Y875JcEt2ZnYNks9/td/tzQvyzBD7GHw9iTMs56Vh7fCAtzm5F0QsggTDAHWkMMJcw4CPpmsDLVoAEtqBljr/sZE/6SpprZhHpCBtSdksCXTcGRFQ7UMcO7slBWrM5ScsMbEhQfW1GGzjOKcNHKcBKj3OW2GwEJib694HFOENkKRlO22Yj+drSknCk5GfiMlqRfsK4s5CfDP4WvyKkhxGi4xQf9gTIjL3h7wWXTqi9v8E67QgyI2UqBc5uiXxIThFiJ8eu0bnOjZ6z75J9D7RaYtn0APZdRsZrrt+EK0BRqlpV3gMYl4Hp51kFpgBH4PzwB2Cq7bFIRal0ODvCeGIr/oZgPySseb8H3RkSqxOYDphrbe0k6DSpCdoCTJqA70byVIG2iexSzc5Qo47lymZtgHrTqEYXJ2WIHwVojTGaqkALHzC0zHMV1EB7x0XPdK14jlWA+src2VRoNy/o7klPzXsBfzvXPFTDV3iekQ0sAWN83kNVx6FBWY4+KJGRcduJoYG5J75ldwKJsmxyDUTCbTEMrJkc1NxBt1ptMvATRk9pgEQoqVi7q05tmwwansW85k4qtI61qbrhBR7nMkYEI6PZlxg/hyZJ9iXAAPOJ6+Rw7RJaAAAAAElFTkSuQmCC') no-repeat center center;
+			background-size:100%;
+			margin-right: 0.05rem;
+		}
+	}
+}
+
+
+
+// tab-商品-参数列表
+.goods-list-wrap{
+	.group{
+		margin-bottom: 0.1rem;
+		padding-left:0.24rem;
+		background:white;
+		&.no-mg{
+			margin-bottom: 0rem;
+			border-bottom:1px solid #eee;
+		}
+		li{
+			border-bottom:1px solid #eee;
+			padding: 0.37rem 0.12rem 0.1rem 0;
+			&:last-child{
+				border-bottom:none;
+			}
+			.icon-more{
+				position:relative;
+				width: 0.45rem;
+				height: 0.1rem;;
+				&:after{
+					content: '';
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					right: 0;
+					top: 0.1rem;;
+					background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAKCAYAAAD2Fg1xAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQtJREFUeNpiYBgmgBGf5N69ewWAVAAQKwDxAyDe4Ozs/IFYwydPmoahPzcvi2j9aWlpGPpnzZr1gSSPAD2RAKT6gVgASRhkiCPQMxeI8IQBkNqPTT/QMxeI8AQu/YVAzywgyiNAT4BC4DyaIciGKeKLGWhM3MenH1/MQGMCn35DoGceIAsy4TArAYchDFDxAAIBSkh/AgH9AaTqZyIzbykQkBegUF6BVAeR65EPNC6EPlDLIwsIWLKBgLkLKJTfQMAzC4jyCDAjgzJSIg5DCqHyOAEwI+PTnwiVxwmgGbkQl370jE5MPWIAzXj2QHwQFBKEPIFWeilAMyZcPyFPoJVe6PpB9QjWohsgwACxiGHtk+BrrQAAAABJRU5ErkJggg==') no-repeat center center;
+					background-size:100%;
+				}
+			}
+			.li-title{
+				color:#666;
+				font-size: 0.3rem;
+				margin-right:0.15rem;
+			}
+			.li-content{
+				font-size: 0.3rem;
+				.li-aline{
+					padding-bottom:0.25rem;
+					&.clear-padding{
+						padding-bottom:0;
+					}
+				}
+				span.li-icon{
+					margin-right:0.1rem ;
+					font-size: 0.24rem;
+					color:$color-main;
+					border:1px solid $color-main;
+					height: 0.36rem;
+					line-height: 0.36rem;
+					padding:0.05rem 0.1rem;
+					border-radius:0.08rem;
+					&.btn-icon{
+						display: inline-block;
+						margin-top: -0.1rem;
+						margin-bottom: 0.3rem;
+						color:#666;
+						border:1px solid #666;
+						&.curr{
+							color:$color-main;
+							border:1px solid $color-main;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.ge-groupBuy-viper{
+	background:white;
+	padding:0.2rem 0;
+	.avator{
+		width: 1rem;
+		border-radius: 100%;
+		overflow: hidden;
+		// border:1px solid #000;
+		margin:0 0.1rem;
+	}
+}
+
+
+
+.ge-groupBuy-goods{
+	background:#fff;
+	margin:0.1rem 0;
+	.ge-pic{
+		width: 2rem;
+		padding:0.1rem ;
+	}
+	.ge-goods-info{
+		padding:0 0.1rem;
+	}
+}
+.a-padding{
+	padding:0.1rem 0;
+}
+.two-padding{
+	padding:0.2rem 0;
+}
+.a-lineH{
+	line-height: 1.1;
+}
+.two-lineH{
+	line-height: 2;
+}
+
+[fs="26"]{
+	font-size:0.26rem;
+}
+[fs="30"]{
+	font-size:0.30rem;
+}
+[fs="32"]{
+	font-size:0.32rem;
+}
+[fw="400"]{
+	font-weight:normal;
+}
+[fw="700"]{
+	font-weight:bold;
+}
+[color="dark"]{
+	color:#333;
+}
+[color="gray"]{
+	color:#999;
+}
+[color="red"]{
+	color:#E31436;
+}
+[bg="white"]{
+	background:#fff;
+}

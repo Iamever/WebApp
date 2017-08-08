@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>参团详情</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:css styles/ge-main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-groupBuy-detail.css -->
+    <link rel="stylesheet" href="styles/page/ge-groupBuy-detail.css">
+    <!-- endbuild -->
+
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+    <!-- 商品：start -->
+    <div class="ge-flex ge-flex-vc ge-groupBuy-goods">
+        
+        <div class="ge-square-box ge-pic">
+            <img src="images/goods.jpeg" alt="">
+        </div>
+
+        <div class="ge-flex-1 ge-goods-info">
+            <p fs="30" color="dark" class="ge-two-line a-lineH">[1元拼团]美迪惠尔面膜 水润保湿免洗睡眠面水润保湿免洗睡眠面膜膏水润保湿免洗睡眠面膜膏膜膏</p>
+            <p fs="26" color="gray" class="two-padding">3人团 </p>
+            <p>
+                <span fs="32" color="red" fw="700">￥1</span>
+                <span fs="26" color="gray">拼团省12.9元</span>
+            </p>
+        </div>
+    </div>
+    <!-- 商品：end -->
+
+    <!-- 商品支持：start -->
+        <div class="ge-group-min goods-support-wrap">
+            <span class="icon-support">支持门店售后</span>
+            <span class="icon-support">支持快递</span>
+            <span class="icon-support">鹰速达</span>
+        </div>
+    <!-- 商品支持：end -->
+
+
+    <!-- 拼团人员：start -->
+    <div class="ge-flex ge-flex-hc ge-groupBuy-viper">
+        <div class="ge-square-box avator">
+            <img src="images/goods.jpeg" alt="">
+        </div>
+        <div class="ge-square-box avator">
+            <img src="images/goods1.jpeg" alt="">
+        </div>
+        <div class="ge-square-box avator">
+            <img src="images/goods.jpeg" alt="">
+        </div>
+    </div>
+    <!-- 拼团人员：end -->
+
+    <!-- 拼团进度：start -->
+    <div class="ge-flex ge-flex-hc two-padding" bg="white">
+        <p color="dark" fs="26">
+            拼团中，还差<span color="red">2</span>人，10:00:00后结束
+        </p>
+    </div>
+    <!-- 拼团进度：end -->
+
+    <!-- 参团按钮：start -->
+    <div bg="white" class="two-padding ge-group-min">
+        <div class="ge-comm-big-btn-main ">
+            <p fs="30">新人一键参团</p>
+        </div>
+    </div>
+    <!-- 参团按钮：end -->
+
+
+
+    <!-- 参数列表：start -->
+        <div class="goods-list-wrap">
+            <ul class="group">
+                <li class="ge-flex  " onclick="layerInfo('静态码：是直接对电话、地址、网址等信息进行编码（一般最多50个文字）， 所以无需联网也能扫描显示，缺点是生成的二维码图案非常复杂，不容易识别和打印，容错率低；而且印刷后内容无法变更，无法存储图片和文件。活码：是对所以无需联网也能扫描显示，缺点是生成的二维码图案非常复杂，不容易识别和打印，容错率低；而且印刷后内容无法变更，无法存储图片和文件。活码：是对一个分配的短网址进行编码，扫描后跳转到这个网址。这样将内容存储在云端，可以随时更新、可跟踪扫描统计，可存放图片视频、大量文字内容，同时图案简单易扫。一个分配的短网址进行编码，扫描后跳转到这个网址。这样将内容存储在云端，可以随时更新、可跟踪扫描统计，可存放图片视频、大量文字内容，同时图案简单易扫。 草料活码永久免费面向用户开放。草料经过近三年的积累，开发了活码管理系统，实现了活码的在线修改、后台管理等功能。')">
+                    <p class="li-title">拼团玩法</p>
+                    <div class="ge-flex-1 li-content">
+                        <div class="ge-flex ge-flex-vc li-aline">
+                            <span class="li-icon">规则说明</span>
+                        </div>
+                    </div>
+                    <div class="icon-more"></div>
+                </li>
+                <li class="ge-flex  " >
+                    <p class="li-title">参团需知</p>
+                    <div class="ge-flex-1 li-content">
+                        <div class="ge-flex ge-flex-vc li-aline " fs="26">
+                            <p class="ge-flex-1 ge-aline">1、支付拼团</p>
+                            <p class="ge-flex-1 ge-aline">2、邀请参团</p>
+                            <p class="ge-flex-1 ge-aline">3、人满成团</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+    <!-- 参数列表：end -->
+    
+    <div class="ge-flex ge-flex-cc two-padding">
+        <div class="ge-comm-big-btn-main-empty">
+            <p fs="30">去金鹰购商城</p>
+        </div>
+    </div>
+
+    <!-- 为您推荐：start -->
+    <p class="ge-flex ge-flex-hc two-padding" color="dark">
+        为您推荐
+    </p>
+    <!-- 为您推荐：end -->
+    <ul class="ge-comm-list">
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods0.jpeg" alt="">
+                    <img src="images/tips/hot.png" alt="" class="ge-tips-1">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="comm-item">
+            <div class="comm-wrap">
+                <div class="comm-pic ge-square-box ge-lazy-pic">
+                    <img data-original="images/goods.jpeg" alt="">
+                </div>
+                <div class="comm-text">
+                    <p class="text-name">
+                        <i>专柜商品</i>
+                        兰芝多效净肤洁面 优惠套装 金鹰A座1楼专柜金鹰A座1楼专柜
+                    </p>
+                    <div class="text-data">
+                        <p class="data-new-price">¥2035.00</p>
+                        <p class="data-old-price"><del>￥569</del></p>
+                        <p class="data-eval-num">2314人评价</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    
+
+
+    <!-- build:js scripts/page/iconfont.js -->
+    <script src="iconfont/iconfont.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/page/ge-slide-tab.js -->
+    <script src="scripts/ge-slide-tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/page/ge-back2top.js -->
+    <script src="scripts/ge-back2top.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+     // 拼团规则
+        function layerInfo(rule){
+            layer.open({
+                content: rule
+                ,btn: '我知道了'
+                ,className :'ge-layer'
+              });
+        }
+    </script>
+</body>
+</html>

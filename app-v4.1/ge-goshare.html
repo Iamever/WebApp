@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>去分享</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" >
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="/bower_components/swiper/dist/css/swiper.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:css styles/ge-main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/page/ge-goshare.css -->
+    <link rel="stylesheet" href="styles/page/ge-goshare.css">
+    <!-- endbuild -->
+
+</head>
+<script>
+    // 设置html基础fontSize，保证css中使用rem的单位生效
+    var _html = document.documentElement;
+    var _windowWidth = _html.clientWidth;
+    if(_windowWidth > 640){
+        _html.style.fontSize = 50 + 'px'; // 按照iphone6的尺寸显示在PC端
+    }else{
+        _html.style.fontSize = _windowWidth / 7.5 + 'px';
+    }
+</script>
+<body>
+    
+    <div class="ge-share">
+        
+        <div class="ge-time-box big-TPadding">
+            剩余
+            <div class="wrap" fs="28">
+                <span class="time">12</span>
+                <span class="time">12</span>
+                <span class="time">12</span>
+            </div>
+        </div>
+
+        <div class="ge-center-box big-TPadding" color="dark">
+            <p color="red" fs="34" class="big-line" fw="700">邀请没买过金鹰购商品的好友</p>
+            <p fs="28">还差<span color="red" class="a-line"> 2位新人</span>，点击右上角发送给朋友/群</p>
+        </div>
+    </div>
+    
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/layer/src/layer.js"></script>
+    <script src="/bower_components/jieyou_lazyload/lazyload.js"></script>
+    <script src="/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="/bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    
+
+
+    <!-- build:js scripts/page/iconfont.js -->
+    <script src="iconfont/iconfont.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/page/ge-slide-tab.js -->
+    <script src="scripts/ge-slide-tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/page/ge-back2top.js -->
+    <script src="scripts/ge-back2top.js"></script>
+    <!-- endbuild -->
+    
+    <script>
+        
+         //询问框
+          layer.open({
+            content: '您确定要刷新一下本页面吗？'
+            ,btn: ['刷新', '不要']
+            ,yes: function(index){
+              location.reload();
+              layer.close(index);
+            }
+          });
+    </script>
+</body>
+</html>

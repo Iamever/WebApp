@@ -144,8 +144,11 @@
                         <p class="main-name ge-two-line">
                             可瑞康爱他美 4段高级 Aptamil 金tamil 金装母婴装母婴tamil 金装母婴tamil 金装母婴用品 香港发货
                         </p>
+                        <p class="sub-name" color="red">
+                            该商品所有用户均可开团
+                        </p>
                         <p class="sub-name">
-                            可瑞康爱他美 4段高级 Apt母婴用品 香港发货可瑞康爱他美 4段高级 Aptamil 金装母婴用品 香港发货可瑞康爱他美 4段高级 Aptamil 金装母婴用品 香港发货
+                            #每人限购一件#
                         </p>
                     </div>
                 <!-- 商品名称部分：end -->
@@ -165,6 +168,15 @@
                 <!-- 参数列表：start -->
                     <div class="goods-list-wrap">
                         <ul class="group">
+                            <li class="ge-flex  " onclick="layerInfo('静态码：是直接对电话、地址、网址等信息进行编码（一般最多50个文字）， 所以无需联网也能扫描显示，缺点是生成的二维码图案非常复杂，不容易识别和打印，容错率低；而且印刷后内容无法变更，无法存储图片和文件。活码：是对所以无需联网也能扫描显示，缺点是生成的二维码图案非常复杂，不容易识别和打印，容错率低；而且印刷后内容无法变更，无法存储图片和文件。活码：是对一个分配的短网址进行编码，扫描后跳转到这个网址。这样将内容存储在云端，可以随时更新、可跟踪扫描统计，可存放图片视频、大量文字内容，同时图案简单易扫。一个分配的短网址进行编码，扫描后跳转到这个网址。这样将内容存储在云端，可以随时更新、可跟踪扫描统计，可存放图片视频、大量文字内容，同时图案简单易扫。 草料活码永久免费面向用户开放。草料经过近三年的积累，开发了活码管理系统，实现了活码的在线修改、后台管理等功能。')">
+                                <p class="li-title">拼团玩法</p>
+                                <div class="ge-flex-1 li-content">
+                                    <div class="ge-flex ge-flex-vc li-aline">
+                                        <span class="li-icon">规则说明</span>
+                                    </div>
+                                </div>
+                                <div class="icon-more"></div>
+                            </li>
                             <li class="ge-flex  " >
                                 <p class="li-title">领券</p>
                                 <div class="ge-flex-1 li-content">
@@ -659,16 +671,32 @@
     <div class="ge-comm-footer" position="bottom">
         <ul class="ge-flex" color="gray" fs="32">
             <li class="ge-flex ge-flex-ver ge-flex-cc flex curr" fs="26" ><i class="icon icon-star"></i><p>关注</p></li>
-            <li class="ge-flex ge-flex-ver ge-flex-cc flex "  fs="26">
+            <!-- <li class="ge-flex ge-flex-ver ge-flex-cc flex "  fs="26">
                 <div class="icon">
                     <i class=" icon-cart"></i>
                     <i class="count">12</i>
                 </div>
                 <p>购物车</p>
+            </li> -->
+            <li class="ge-flex ge-flex-ver ge-flex-cc flex "  fs="26">
+                <div class="icon">
+                    <i class=" icon-home"></i>
+                    <!-- <i class="count">12</i> -->
+                </div>
+                <p>首页</p>
             </li>
+            <li class="ge-flex-1  ge-flex  ge-flex-cc ge-flex-ver" color="white" bg="light-yellow" >
+                <p fs="24">￥299.00</p>
+                <p fs="28">单独购买</p>
+            </li>
+            <li class="ge-flex-1  ge-flex  ge-flex-cc ge-flex-ver" color="white" bg="yellow">
+                <p fs="24">￥2.00</p>
+                <p fs="28">3人团</p>
+            </li>
+
             <li class="ge-flex-1  ge-flex  ge-flex-cc hidden" color="white" bg="light-yellow">加入购物车</li>
             <li class="ge-flex-1 ge-flex ge-flex-cc hidden" color="white" bg="yellow">立即购买</li>
-            <li class="ge-flex-1 ge-flex ge-flex-cc" color="white" bg="gray">此商品已下架</li>
+            <li class="ge-flex-1 ge-flex ge-flex-cc hidden" color="white" bg="gray">此商品已下架</li>
         </ul>
     </div>
 </div>
@@ -916,6 +944,16 @@
             }
         })(jQuery);
 
+
+
+        // 拼团规则
+        function layerInfo(rule){
+            layer.open({
+                content: rule
+                ,btn: '我知道了'
+                ,className :'ge-layer'
+              });
+        }
 
         
     </script>
