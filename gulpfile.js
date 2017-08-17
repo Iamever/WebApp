@@ -19,7 +19,7 @@ gulp.task('styles', () => {
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.sass.sync({
-      outputStyle: 'compressed',
+      outputStyle: 'expanded',//compressed
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
